@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>Vertical Accretion — Expedition 1 candidate</title>
+<title>Vertical Accretion — Physical Vocabulary v12</title>
 <style>
 html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#b9c8c7;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}#stage{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}#chamberToggle{position:fixed;left:10px;top:10px;z-index:11;min-height:40px;padding:7px 11px;border:1px solid #31413a55;border-radius:8px;background:#eee7d1e8;color:#26352e;font:700 10px ui-monospace,monospace;letter-spacing:.04em}#hud{position:fixed;left:10px;top:58px;z-index:10;max-width:min(650px,calc(100vw - 20px));padding:8px 10px;border:1px solid #31413a33;border-radius:9px;background:#eee7d1d8;color:#26352e;font-size:10px;line-height:1.35}#hud.closed{display:none}#hud b{font-size:11px;letter-spacing:.04em}.row{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}button{font:10px ui-monospace,monospace;border:1px solid #52605788;border-radius:6px;background:#f3eddc;color:#26352e;padding:6px 9px}button.on{background:#394c42;color:#f5f0df}#status{opacity:.72;margin-top:4px}#perf{opacity:.72;margin-top:2px}#gpu{opacity:.58;margin-top:2px}#note{position:fixed;right:10px;bottom:9px;color:#273a3277;font-size:10px;pointer-events:none;text-align:right}#momControls{position:fixed;z-index:12;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));display:flex;gap:8px;justify-content:center;pointer-events:none}#momControls button{pointer-events:auto;flex:1 1 0;max-width:210px;min-height:48px;font-size:11px;font-weight:800;background:#f3eddcee;box-shadow:0 3px 14px #0003}#momControls button.on{background:#394c42;color:#f5f0df}#note{display:none!important}#fault{display:none;position:fixed;z-index:100;left:10px;right:10px;bottom:10px;max-height:45vh;overflow:auto;white-space:pre-wrap;padding:12px;border:2px solid #76261e;border-radius:8px;background:#f5dfcf;color:#501a16;font:12px/1.35 ui-monospace,monospace}
 </style><script>(function(){window.__LM_FAIL__=(scope,err)=>{const e=document.getElementById('fault');if(!e)return;const m=err&&(err.stack||err.message)?(err.stack||err.message):String(err);e.style.display='block';e.textContent='3D WORKS — VISIBLE FAILURE\n['+scope+']\n'+m};addEventListener('error',e=>window.__LM_FAIL__('window.error',e.error||e.message));addEventListener('unhandledrejection',e=>window.__LM_FAIL__('unhandledrejection',e.reason));})();</script></head><body>
@@ -27,12 +27,71 @@ This is distribution-layer subtraction, not a replacement interaction architectu
 -->
 
 <style>
-body{background:#101719;color:#e9dfc9}#momControls,#chamberToggle,#hud{display:none!important}#vaTop{position:fixed;z-index:14;top:16px;left:20px;right:20px;pointer-events:none;display:flex;justify-content:space-between;gap:12px}#vaTop h1{font:500 18px/1.2 Georgia,serif;letter-spacing:.15em;margin:0;color:#e9dfc9}#vaTop small{display:block;color:#a9aa9d;font-size:10px;letter-spacing:.07em;margin-top:7px}#vaBadge{font-size:10px;text-align:right;color:#c7b28e}#vaBar{position:fixed;z-index:15;bottom:max(14px,env(safe-area-inset-bottom));left:14px;right:14px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}#vaBar button,#vaPanel button{min-height:40px;background:#182123e8;border:1px solid #84908855;color:#e1d3b5;font-size:10px;padding:7px 12px}#vaBar button.on{background:#57482d}#vaPanel{position:fixed;z-index:16;right:14px;top:76px;bottom:76px;max-width:420px;width:calc(100% - 52px);overflow:auto;background:#101a1df2;border:1px solid #8a8d7155;padding:12px;font:11px/1.6 ui-monospace,monospace;color:#c4ccc7;display:none}#vaPanel.open{display:block}#vaPanel h2{font:16px Georgia,serif;color:#efdfbd;margin:10px 0}#vaPanel pre{white-space:pre-wrap;font:10px/1.5 ui-monospace,monospace}#vaCaption{position:fixed;z-index:12;left:20px;bottom:77px;max-width:min(590px,calc(100% - 40px));font:11px/1.6 ui-monospace,monospace;color:#ddccab;pointer-events:none;text-shadow:0 1px 5px #000}#vaBoot{position:fixed;z-index:80;top:40%;left:10%;right:10%;text-align:center;color:#ebd8b6;font:15px Georgia,serif}@media(max-width:600px){#vaTop{left:14px;top:14px}#vaTop h1{font-size:15px}#vaTop small{font-size:9px;max-width:230px}#vaBadge{font-size:9px}#vaCaption{bottom:122px;font-size:10px}#vaBar{gap:4px}#vaBar button{padding:7px 9px;min-height:42px}#vaPanel{bottom:119px}}
+body{background:#101719;color:#e9dfc9}#momControls,#chamberToggle,#hud{display:none!important}#vaTop{position:fixed;z-index:14;top:16px;left:20px;right:20px;pointer-events:none;display:flex;justify-content:space-between;gap:12px}#vaTop h1{font:500 18px/1.2 Georgia,serif;letter-spacing:.15em;margin:0;color:#e9dfc9}#vaTop small{display:block;color:#a9aa9d;font-size:10px;letter-spacing:.07em;margin-top:7px}#vaBadge{font-size:10px;text-align:right;color:#c7b28e}#vaBar{position:fixed;z-index:15;bottom:max(14px,env(safe-area-inset-bottom));left:14px;right:14px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}#vaBar button,#vaPanel button{min-height:40px;background:#182123e8;border:1px solid #84908855;color:#e1d3b5;font-size:10px;padding:7px 12px}#vaBar button.on{background:#57482d}#vaPanel{position:fixed;z-index:16;right:14px;top:76px;bottom:76px;max-width:420px;width:calc(100% - 52px);overflow:auto;background:#101a1df2;border:1px solid #8a8d7155;padding:12px;font:11px/1.6 ui-monospace,monospace;color:#c4ccc7;display:none}#vaPanel.open{display:block}#vaPanel h2{font:16px Georgia,serif;color:#efdfbd;margin:10px 0}#vaPanel pre{white-space:pre-wrap;font:10px/1.5 ui-monospace,monospace}#vaCaption{position:fixed;z-index:12;left:20px;bottom:77px;max-width:min(590px,calc(100% - 40px));font:11px/1.6 ui-monospace,monospace;color:#ddccab;pointer-events:none;text-shadow:0 1px 5px #000}#vaBoot{position:fixed;z-index:80;top:40%;left:10%;right:10%;text-align:center;color:#ebd8b6;font:15px Georgia,serif}@media(max-width:600px){#vaTop{left:14px;top:14px}#vaTop h1{font-size:15px}#vaTop small{font-size:9px;max-width:230px}#vaBadge{font-size:9px}#vaCaption{bottom:122px;font-size:10px}#vaBar{gap:4px}#vaSeedCtl{display:inline-flex;align-items:center;gap:5px}#vaSeedInput{width:72px;min-height:28px;box-sizing:border-box;border:1px solid #52605788;border-radius:6px;background:#f3eddc;color:#26352e;padding:5px 7px;font:10px ui-monospace,monospace}#vaBar button{padding:7px 9px;min-height:42px}#vaPanel{bottom:119px}}
 </style>
-<div id="vaBoot">Preparing the geological field…</div><header id="vaTop"><div><h1>VERTICAL ACCRETION</h1><small>DESCENT LAB / E1 · candidate<br>Three workers. Finite stock. Physical history.</small></div><div id="vaBadge">SEED 741<br>T + 0</div></header>
-<div id="vaCaption">Observing the first reachable ground.</div><nav id="vaBar"><button id="vaPause">PAUSE</button><button id="vaSpeed">PACE · 4×</button><button id="vaPan">ORBIT</button><button id="vaFrame">FRAME WORK</button><button id="vaInspect">INSPECT</button><button id="vaReset">REPLAY</button></nav>
-<aside id="vaPanel"><h2>Field instruments</h2><div id="vaMetrics"></div><div class="row"><button id="vaOverlay">ROUTES / SUPPORT</button><button id="vaRecover">RECOVER GRAPHICS</button><button id="vaStep">STEP 1s</button><button id="vaExport">EXPORT RECORD</button><button id="vaBreak">REMOVE LATEST SUPPORT</button></div><label>Slice thickness <select id="vaSlice"><option>4</option><option selected>8</option><option>16</option></select></label><h2>Persistent members</h2><select id="vaMember"><option value="">Choose a placed member</option></select><pre id="vaMemberInfo"></pre><h2>Embodied commitments</h2><pre id="vaAgents"></pre><h2>Physical history</h2><pre id="vaHistory"></pre><h2>Run semantics</h2><p>Natural ground is usable first. A loaded route permits at most 0.62 rise/run. Workers survey within 7 units, remove obstructing rock, or carry a finite member from the entrance and place it within reach. Spans are checked against geological feet and a 9-unit maximum support length. Old works persist. Spoil is Foundry granular matter and can require clearing.</p><p>Drag to orbit. ORBIT toggles pan; two fingers pan and pinch. Camera stays where you leave it. REPLAY resets this seed, retaining your camera. Support removal is a recorded laboratory intervention.</p><p>Physics scope: surface section, kinematic foot locomotion, deterministic support/length approximation. No enclosed cave navigation, stress analysis, or green material in E1.</p></aside>
-<script>setTimeout(()=>{if(!window.__VA_READY__)window.__LM_FAIL__('startup','Expedition did not initialize. The complete artifact requires a browser with WebGL2, ES modules and import maps. Check the earlier failure above.');},20000);</script>
+<div id="vaBoot">Preparing the geological field…</div><header id="vaTop"><div><h1>VERTICAL ACCRETION</h1><small>DESCENT LAB / PHYSICAL VOCABULARY v12<br>One dumb ECS worker. Finite stock. One descent. Explore when work is not local.</small></div><div id="vaBadge">SEED 741<br>T + 0</div></header>
+<div id="vaCaption">Observing the first reachable ground.</div><nav id="vaBar"><button id="vaPause">PAUSE</button><button id="vaSpeed">PACE · 4×</button><button id="vaPan">ORBIT</button><button id="vaFrame">FRAME WORK</button><button id="vaInspect">INSPECT</button><button id="vaKill">KILL JIM</button><span id="vaSeedCtl"><input id="vaSeedInput" type="number" step="1" value="741" aria-label="Simulation seed"><button id="vaRunSeed">RUN SEED</button></span><button id="vaReset">REPLAY</button></nav>
+<aside id="vaPanel"><h2>Field instruments</h2><div id="vaMetrics"></div><div class="row"><button id="vaOverlay">ROUTES / SUPPORT</button><button id="vaRecover">RECOVER GRAPHICS</button><button id="vaStep">STEP 1s</button><button id="vaExport">EXPORT RECORD</button><button id="vaBreak" style="display:none">REMOVE LATEST SUPPORT</button></div><label>Slice thickness <select id="vaSlice"><option>4</option><option selected>8</option><option>16</option></select></label><h2>Persistent members</h2><select id="vaMember"><option value="">Choose a placed member</option></select><pre id="vaMemberInfo"></pre><h2>Worker local state</h2><pre id="vaAgents"></pre><h2>Physical history</h2><pre id="vaHistory"></pre><h2>Run semantics</h2><p>Natural ground is usable first. A loaded route permits at most 0.62 rise/run. Workers survey within 7 units, remove obstructing rock, or carry a finite member from the entrance and place it within reach. Spans are checked against geological feet and a 9-unit maximum support length. Old works persist. Spoil is Foundry granular matter and can require clearing.</p><p>Drag to orbit. ORBIT toggles pan; two fingers pan and pinch. Camera stays where you leave it. RUN SEED rebuilds E1 at the selected seed. REPLAY rebuilds the current seed while retaining your camera. Simulation always advances through the ordinary fixed-step path; PACE changes observation speed only. Support removal is a recorded laboratory intervention.</p><p>Physics scope: surface section, kinematic foot locomotion, deterministic geological-foot support/length approximation. Support loss fractures scaffold visuals into gravity-driven debris; workers on failed works die physically, corpses persist, and replacement workers spawn at the entrance. No enclosed cave navigation or stress analysis.</p></aside>
+<script>
+/*
+ARCHAEOLOGY — DOMAIN-AGNOSTIC ECS TURN
+Legacy E1 workers remain intact as evidence and are not migrated here.
+Entities are identity. Components are authoritative plain state/capability. Systems continuously
+affect entities selected by component composition. Tags are non-authoritative semantic/index/
+provenance metadata. Factories are semantic authoring recipes; factory names are not runtime types.
+Factories may know semantic nouns. Systems know capabilities. Rendering should project component
+state, not invent parallel truth. This kernel deliberately contains no Vertical Accretion concepts.
+*/
+class SemanticECS{
+ constructor({startId=1}={}){this.nextId=startId;this.alive=new Set;this.components=new Map;this.tags=new Map;this.tagIndex=new Map;this.relationships=[];this.events=[];this.eventLimit=512;this.eventSerial=0;this.systems=[];this.factories=new Map;this.tick=0;}
+ create({components={},tags=[]}={}){const id=this.nextId++;this.alive.add(id);this.tags.set(id,[]);for(const [n,d] of Object.entries(components))this.set(id,n,d);for(const t of tags)this.tag(id,t);return id;}
+ destroy(id){if(!this.alive.delete(id))return false;for(const s of this.components.values())s.delete(id);for(const t of this.tags.get(id)||[])this._unindex(id,t);this.tags.delete(id);this.relationships=this.relationships.filter(r=>r.from!==id&&r.to!==id);return true;}
+ _store(n){let s=this.components.get(n);if(!s){s=new Map;this.components.set(n,s)}return s}
+ set(id,n,d){if(!this.alive.has(id))throw Error(`ECS set on dead entity ${id}`);this._store(n).set(id,d);return d}
+ get(id,n){return this.components.get(n)?.get(id)}
+ has(id,n){return this.components.get(n)?.has(id)||false}
+ remove(id,n){return this.components.get(n)?.delete(id)||false}
+ query(...names){if(!names.length)return [...this.alive].sort((a,b)=>a-b);const ss=names.map(n=>this.components.get(n));if(ss.some(x=>!x))return[];const small=ss.reduce((a,b)=>a.size<=b.size?a:b),out=[];for(const id of small.keys())if(this.alive.has(id)&&ss.every(x=>x.has(id)))out.push(id);return out.sort((a,b)=>a-b)}
+ _key(t){if(t===null)return"null";if(["string","number","boolean"].includes(typeof t))return`${typeof t}:${String(t)}`;if(t&&typeof t==="object"){if("key"in t)return`key:${String(t.key)}`;if("factory"in t)return`factory:${String(t.factory)}`;if("cohort"in t)return`cohort:${String(t.cohort)}`}return null}
+ _index(id,t){const k=this._key(t);if(k===null)return;let s=this.tagIndex.get(k);if(!s){s=new Set;this.tagIndex.set(k,s)}s.add(id)}
+ _unindex(id,t){const k=this._key(t),s=k===null?null:this.tagIndex.get(k);if(!s)return;s.delete(id);if(!s.size)this.tagIndex.delete(k)}
+ tag(id,t){if(!this.alive.has(id))throw Error(`ECS tag on dead entity ${id}`);this.tags.get(id).push(t);this._index(id,t);return t}
+ untag(id,pred){const keep=[];for(const t of this.tags.get(id)||[]){if(pred(t))this._unindex(id,t);else keep.push(t)}this.tags.set(id,keep)}
+ tagged(t){const k=this._key(t);return k===null?[]:[...(this.tagIndex.get(k)||[])].sort((a,b)=>a-b)}
+ relate(from,type,to,data=null){
+  if(!this.alive.has(from))throw Error(`ECS relation from dead entity ${from}`);
+  const existing=this.relationships.find(r=>r.from===from&&r.type===type&&r.to===to);
+  if(existing){existing.data=data;return existing}
+  const r={from,type,to,data};this.relationships.push(r);return r
+ }
+ unrelate(from,type,to){this.relationships=this.relationships.filter(r=>!(r.from===from&&r.type===type&&(to===undefined||r.to===to)))}
+ relations(id,{type=null,direction="both"}={}){
+  return this.relationships.filter(r=>(!type||r.type===type)&&((direction==="out"||direction==="both")&&r.from===id||(direction==="in"||direction==="both")&&r.to===id))
+ }
+ emit(kind,{entity=null,related=null,data=null,importance=.5}={}){
+  const e={serial:++this.eventSerial,tick:this.tick,kind,entity,related,data,importance};
+  this.events.push(e);if(this.events.length>this.eventLimit)this.events.splice(0,this.events.length-this.eventLimit);return e
+ }
+ recent({entity=null,kind=null,minImportance=0,limit=32}={}){
+  const out=[];for(let i=this.events.length-1;i>=0&&out.length<limit;i--){const e=this.events[i];
+    if(entity!==null&&e.entity!==entity&&e.related!==entity)continue;if(kind&&e.kind!==kind)continue;if(e.importance<minImportance)continue;out.push(structuredClone(e))}
+  return out
+ }
+ context(id,{eventLimit=16,hops=1}={}){
+  const root=this.inspect(id);if(!root)return null;const rel=this.relations(id),neighborIds=new Set;
+  if(hops>0)for(const r of rel){if(this.alive.has(r.from)&&r.from!==id)neighborIds.add(r.from);if(this.alive.has(r.to)&&r.to!==id)neighborIds.add(r.to)}
+  return{entity:root,relationships:structuredClone(rel),neighbors:[...neighborIds].sort((a,b)=>a-b).map(n=>this.inspect(n)),recentEvents:this.recent({entity:id,limit:eventLimit})}
+ }
+ registerSystem(name,requires,run,{order=0}={}){if(this.systems.some(s=>s.name===name))throw Error(`Duplicate ECS system ${name}`);this.systems.push({name,requires:[...requires],run,order,serial:this.systems.length});this.systems.sort((a,b)=>a.order-b.order||a.serial-b.serial);return this}
+ step(dt,context={}){for(const sys of this.systems)sys.run({ecs:this,ids:this.query(...sys.requires),dt,context,tick:this.tick});this.tick++}
+ registerFactory(name,recipe){if(this.factories.has(name))throw Error(`Duplicate ECS factory ${name}`);this.factories.set(name,recipe);return this}
+ spawn(name,options={}){const recipe=this.factories.get(name);if(!recipe)throw Error(`Unknown ECS factory ${name}`);const spec=recipe(options,this)||{},count=spec.count??options.count??1,ids=[];for(let i=0;i<count;i++){const components=typeof spec.components==="function"?spec.components(i):structuredClone(spec.components||{}),tags=typeof spec.tags==="function"?spec.tags(i):structuredClone(spec.tags||[]);tags.push({factory:name});ids.push(this.create({components,tags}))}return count===1?ids[0]:ids}
+ inspect(id){if(!this.alive.has(id))return null;const c={};for(const [n,s] of this.components)if(s.has(id))c[n]=structuredClone(s.get(id));return{id,components:c,tags:structuredClone(this.tags.get(id)||[])}}
+ snapshot(){return{tick:this.tick,entities:[...this.alive].sort((a,b)=>a-b).map(id=>this.inspect(id)),relationships:structuredClone(this.relationships),events:this.recent({limit:64}).reverse()}}
+}
+function createSemanticECSProbe(){const ecs=new SemanticECS;ecs.registerFactory("mover",({count=1,speed=1}={})=>({count,components:i=>({Position:{x:i,y:0},Velocity:{x:speed,y:0},Capacity:{value:1}}),tags:()=>["probe",{cohort:"kernel-self-test"}]}));ecs.registerSystem("integrate",["Position","Velocity"],({ecs,ids,dt})=>{for(const id of ids){const p=ecs.get(id,"Position"),v=ecs.get(id,"Velocity");p.x+=v.x*dt;p.y+=v.y*dt}},{order:100});const ids=ecs.spawn("mover",{count:2,speed:2});ecs.step(.5);const snap=ecs.snapshot();if(ids.length!==2||snap.entities[0].components.Position.x!==1||snap.entities[1].components.Position.x!==2)throw Error("SemanticECS neutral probe failed");return ecs}
+window.SemanticECS=SemanticECS;window.createSemanticECSProbe=createSemanticECSProbe;
+setTimeout(()=>{if(!window.__VA_READY__)window.__LM_FAIL__('startup','Expedition did not initialize. The complete artifact requires a browser with WebGL2, ES modules and import maps. Check the earlier failure above.');},20000);</script>
 
 <canvas id="stage"></canvas><button id="chamberToggle" type="button" aria-expanded="false">FOUNDRY ▾</button><div id="hud" class="closed"><b>WORLD LAB — 3D · FOUNDRY · T0</b>
 <div class="row"><button data-mode="orbit" class="on">LOOK</button><button data-mode="pan">DRAG CAMERA</button><button data-mode="focus">FOCUS LOCUS</button><button id="frameLocus">FRAME LOCUS</button><button id="homeLocus">LOCUS · CENTER</button><button id="viewPreset">VIEW · MINIATURE</button><button data-mode="spawn">SPAWN BALLS</button><button id="bucket">BUCKET · 10K</button><button data-mode="raise">RAISE</button><button data-mode="carve">CARVE</button><button data-mode="smooth">SMOOTH</button><button id="brush">BRUSH · MED</button><button id="meteor">☄ METEOR</button><button id="payloadKind">PAYLOAD · THUMPER</button><button id="payloadCall">CALL DOWN</button><button id="probeKind">PROBE · IK WALKER</button><button id="probeCall">DROP PROBE</button></div>
@@ -1060,7 +1119,9 @@ function yawLocalForwardToward(e,part,target,dt,rate=7){
 }
 const FLOATER_HOVER_HEIGHT=4.85; // shell center/top read at roughly twice the 3.72-unit Link Node pylon
 function gravitySystem(dt){
- for(const [id,b] of gravityBodies){const e=entities.get(id);if(!e)continue;const p=e.g.position,support=vaReady?vaSupport(p.x,p.z):payloadSupportY(p.x,p.z);
+ for(const [id,b] of gravityBodies){const e=entities.get(id);if(!e)continue;const p=e.g.position;
+  if(!b.grounded&&(b.vx||b.vz)){p.x+=(b.vx||0)*dt;p.z+=(b.vz||0)*dt;}
+  const support=vaReady?vaSupport(p.x,p.z):payloadSupportY(p.x,p.z);
   if(e.type==='FLOATER EGG'){
    // Floaters negotiate gravity with lift rather than being snapped to an offset support.
    // A soft vertical controller accelerates toward a terrain-relative hover datum.
@@ -1069,9 +1130,9 @@ function gravitySystem(dt){
    b.vy+=acc*dt;p.y+=b.vy*dt;b.grounded=false;
    if(p.y<support){p.y=support;b.vy=Math.max(0,b.vy)}
   }else{
-   if(p.y>support+.015){b.grounded=false;b.vy-=18*dt;p.y=Math.max(support,p.y+b.vy*dt);if(p.y<=support+.015){p.y=support;b.vy=0;b.grounded=true}}
-   else if(p.y<support-.015){p.y=support;b.vy=0;b.grounded=true}
-   else {p.y=support;b.vy=0;b.grounded=true}
+   if(p.y>support+.015){b.grounded=false;b.vy-=18*dt;p.y=Math.max(support,p.y+b.vy*dt);if(p.y<=support+.015){p.y=support;b.vy=0;b.grounded=true;b.vx=(b.vx||0)*.35;b.vz=(b.vz||0)*.35}}
+   else if(p.y<support-.015){p.y=support;b.vy=0;b.grounded=true;b.vx=(b.vx||0)*.35;b.vz=(b.vz||0)*.35}
+   else {p.y=support;b.vy=0;b.grounded=true;b.vx=(b.vx||0)*.35;b.vz=(b.vz||0)*.35}
    if(e.type==='JUMPER EGG')p.y+=e.g.userData.floatBob||.16;
   }
   syncEntityPosition(e)
@@ -1661,27 +1722,64 @@ document.getElementById('waterToggle').onclick=()=>{try{seaVolume.visible=!seaVo
 document.getElementById('wondersToggle').onclick=()=>{try{wonderRoot.visible=!wonderRoot.visible;const b=document.getElementById('wondersToggle');b.classList.toggle('on',wonderRoot.visible);b.textContent=wonderRoot.visible?'WONDERS · 25':'WONDERS · OFF'}catch(e){fail('wonders-toggle',e)}};
 document.getElementById('civToggle').onclick=()=>{try{civRoot.visible=!civRoot.visible;const b=document.getElementById('civToggle');b.classList.toggle('on',civRoot.visible);b.textContent=civRoot.visible?'CITIES · ON':'CITIES · OFF'}catch(e){fail('civ-toggle',e)}};
 document.getElementById('civPump').onclick=()=>{try{pumpCivilizationMatter()}catch(e){fail('civ-pump',e)}};
+/* MANUAL IMPLEMENTATION CLEANUP — explicit carrying capacity
+E1 workers have one payload capacity. Earlier code represented member and spoil cargo as two
+independent nullable slots, accidentally permitting dual carrying even though no experimental rule
+required it. Cargo is now one tagged payload: null, {kind:'member',id}, or {kind:'spoil',id}.
+Loaded traversal, planner eligibility, placement/deposit, rendering, snapshots, and inspection all
+consume that same state. Future stronger carriers should increase explicit capacity deliberately
+rather than add unrelated cargo fields. This changes accidental implementation latitude, not E1's
+intended physical vocabulary.
+*/
+/* MANUAL LEGIBILITY ITERATION — worker/cargo probe
+Seed 253538 made accumulated infrastructure highly legible while active causality remained obscure.
+This probe adds only derived visual cues: a small animated work beacon for active remove/place,
+a distinct stationary obstruction/isolation mark, and a visible three-stone proxy cluster attached
+to a worker while an existing physical spoil bearing is carried. The actual bearing remains the
+authoritative cargo and continues to be synchronized exactly as before. No task, path, timing,
+collision, support, stock, spoil, or job-selection rule is changed by these cues.
+*/
 /* E1: extend Foundry entity registry with independently queried capabilities. */
 let vaReady=false,vaRng=new RNG(741),vaTick=0,vaRunning=true,vaPace=4,vaLast=0,vaAccumulator=0,vaRevision=0;
-const vaWorkers=new Map(),vaCarry=new Map(),vaMaterials=new Map(),vaMembers=new Map(),vaCarried=new Map(),vaProvenance=new Map();
+const vaWorkerNav=new Map(),vaWorkerTask=new Map(),vaWorkerRole=new Map(),vaWorkerVisual=new Map(),vaCarry=new Map(),vaMaterials=new Map(),vaMembers=new Map(),vaMemberTorches=new Map(),vaCarried=new Map(),vaProvenance=new Map();
 const vaNodes=new Map(),vaEdges=new Map(),vaAbandoned=new Map(),vaHistory=[],vaHeightCache=new Map();
 const vaRoot=new THREE.Group(),vaOverlayRoot=new THREE.Group();scene.add(vaRoot,vaOverlayRoot);vaOverlayRoot.visible=false;
 const vaRay=new THREE.Raycaster(),vaDown=new THREE.Vector3(0,-1,0),vaOrigin=new THREE.Vector3();
 const vaTimber=new THREE.MeshStandardMaterial({color:0x8a6942,roughness:.92}),vaIron=new THREE.MeshStandardMaterial({color:0x5e6868,roughness:.78}),vaCloth=new THREE.MeshStandardMaterial({color:0xab9c77,roughness:1}),vaLamp=new THREE.MeshStandardMaterial({color:0xffce75,emissive:0xffa637,emissiveIntensity:3});
-let vaJob=null,vaFront=null,vaHome=null,vaJobSerial=0,vaMilestone=false,vaLastSurvey=-100,vaStoppedReason='',vaNaturalTrips=0,vaRemovalCount=0,vaSpoilDelivered=0;
-const vaStepSize=3,vaDt=1/30,vaSeed=741;
-function vaLog(kind,text,data={}){const event={id:'H'+(vaHistory.length+1),tick:vaTick,kind,text,...data};vaHistory.push(event);if(vaHistory.length>3000)throw Error('History bound reached; export and start another expedition.');document.getElementById('vaCaption').textContent=text;return event.id;}
-function vaKey(i,j){return i+','+j}function vaEdgeKey(a,b){return a<b?a+'|'+b:b+'|'+a}
+let vaFront=null,vaHome=null,vaMilestone=false,vaLastSurvey=-100,vaStoppedReason='',vaNaturalTrips=0,vaRemovalCount=0,vaSpoilDelivered=0;
+let vaLocalCandidates=[],vaHistorySerial=0,vaHistoryDropped=0;
+const vaStepSize=3,vaDt=1/30;let vaSeed=741;
+/* CLEAN BASELINE v11 — LOCAL PHYSICAL AUTHORITY
+   Workers perceive from embodied position, pursue world-space descent intent, and manipulate actual
+   material entities. No global job board, team/observer commitment, or shared exploration scheduler exists. */
+function vaLog(kind,text,data={}){
+ const event={id:'H'+(++vaHistorySerial),tick:vaTick,kind,text,...data};vaHistory.push(event);
+ if(vaHistory.length>3000){vaHistory.shift();vaHistoryDropped++;}
+ document.getElementById('vaCaption').textContent=text;return event.id;
+}
+function vaKey(i,j){return Number(i.toFixed(6))+','+Number(j.toFixed(6))}function vaEdgeKey(a,b){return a<b?a+'|'+b:b+'|'+a}
 // E1 has column-linear density. Sample the same X/Z diagonal as Foundry's tetrahedra.
 function vaRockY(x,z){if(!worksInsideMask(x,z))return WORKS_APPARATUS_TOP;const fx=clamp((x-MIN.x)/(MAX.x-MIN.x)*(NX-1),0,NX-1.001),fz=clamp((z-MIN.z)/(MAX.z-MIN.z)*(NZ-1),0,NZ-1.001),ix=Math.floor(fx),iz=Math.floor(fz),tx=fx-ix,tz=fz-iz;const h=(dx,dz)=>field[idx(ix+dx,1,iz+dz)]+MIN.y+(MAX.y-MIN.y)/(NY-1),a=h(0,0),b=h(1,0),c=h(0,1),d=h(1,1);return tx>=tz?a+(b-a)*tx+(d-b)*tz:a+(c-a)*tz+(d-c)*tx;}
-function vaOnMember(m,x,z){const a=m.a,b=m.b,dx=b.x-a.x,dz=b.z-a.z,l2=dx*dx+dz*dz,raw=((x-a.x)*dx+(z-a.z)*dz)/l2,t=clamp(raw,0,1),px=a.x+t*dx,pz=a.z+t*dz;return raw>=-.05&&raw<=1.05&&Math.hypot(x-px,z-pz)<.85?{y:THREE.MathUtils.lerp(a.y,b.y,t),t}:null;}
+function vaOnMember(m,x,z){const a=m.a,b=m.b,dx=b.x-a.x,dz=b.z-a.z,l2=dx*dx+dz*dz,raw=((x-a.x)*dx+(z-a.z)*dz)/l2,t=clamp(raw,0,1),px=a.x+t*dx,pz=a.z+t*dz;return raw>=-.05&&raw<=1.05&&Math.hypot(x-px,z-pz)<(m.kind==="staging"?.36:.85)?{y:THREE.MathUtils.lerp(a.y,b.y,t),t}:null;}
 function vaSupport(x,z,ceiling=Infinity){let h=vaRockY(x,z);for(const m of vaMembers.values())if(m.active){const s=vaOnMember(m,x,z);if(s&&s.y<=ceiling)h=Math.max(h,s.y);}return h;}
 function vaNode(i,j){const key=vaKey(i,j);if(vaNodes.has(key))return vaNodes.get(key);const x=-24+i*vaStepSize,z=j*vaStepSize;if(i<0||i>17||Math.abs(j)>4)return null;const n={id:key,i,j,x,z,y:vaSupport(x,z),seen:vaTick,modified:null};vaNodes.set(key,n);return n;}
 function vaVec(n){return new THREE.Vector3(n.x,n.y,n.z)}
-function vaNaturalOK(a,b){let last=vaSupport(a.x,a.z);if(Math.abs(last-a.y)>.24)return false;for(let k=1;k<=10;k++){const t=k/10,x=THREE.MathUtils.lerp(a.x,b.x,t),z=THREE.MathUtils.lerp(a.z,b.z,t),h=vaSupport(x,z);if(Math.abs(h-last)>.62*vaStepSize/10+.035)return false;last=h;}return Math.abs(last-b.y)<.24;}
-function vaRefresh(){vaHeightCache.clear();vaRevision++;for(const n of vaNodes.values())n.y=vaSupport(n.x,n.z);for(const e of vaEdges.values()){const a=vaNodes.get(e.a),b=vaNodes.get(e.b);e.active=e.member?!!vaMembers.get(e.member)?.active:vaNaturalOK(a,b);}vaConnect();}
+function vaNaturalOK(a,b){let last=vaSupport(a.x,a.z);if(Math.abs(last-a.y)>.24)return false;for(let k=1;k<=10;k++){const t=k/10,x=THREE.MathUtils.lerp(a.x,b.x,t),z=THREE.MathUtils.lerp(a.z,b.z,t),h=vaSupport(x,z);if(Math.abs(h-last)>.62*Math.hypot(b.x-a.x,b.z-a.z)/10+.001)return false;last=h;}return Math.abs(last-b.y)<.24;}
+/* CONSTRUCTED TRAVERSAL CLEARANCE — structural survival is not locomotion authority.
+   A member may remain physically intact while terrain intersects the walking corridor above it.
+   Sample the actual member deck against geological surface; modest tolerance admits contact/mesh
+   roughness, but a ridge standing materially above the deck makes the edge non-traversable.
+   This does not break or delete the member: excavation may later clear the same structure. */
+const VA_MEMBER_CLEARANCE_TOL=.22;
+function vaMemberTraversalOK(m){
+ if(!m?.active)return false;
+ const samples=Math.max(8,Math.ceil(m.a.distanceTo(m.b)/.25));
+ for(let k=1;k<samples;k++){const t=k/samples,x=THREE.MathUtils.lerp(m.a.x,m.b.x,t),z=THREE.MathUtils.lerp(m.a.z,m.b.z,t),deck=THREE.MathUtils.lerp(m.a.y,m.b.y,t);if(vaRockY(x,z)>deck+VA_MEMBER_CLEARANCE_TOL)return false;}
+ return true;
+}
+function vaRefresh(){vaHeightCache.clear();vaRevision++;for(const n of vaNodes.values())n.y=vaSupport(n.x,n.z);for(const e of vaEdges.values()){const a=vaNodes.get(e.a),b=vaNodes.get(e.b);if(e.member){const m=vaMembers.get(e.member),wasBlocked=!!e.clearanceBlocked,clear=vaMemberTraversalOK(m);e.active=!!m?.active&&clear;e.clearanceBlocked=!!m?.active&&!clear;if(e.clearanceBlocked&&!wasBlocked)vaLog('clearance-blocked','An intact constructed route intersects surviving terrain and is not physically traversable yet.',{edge:e.id,member:e.member});}else e.active=vaNaturalOK(a,b);}vaConnect();}
 function vaConnect(){for(const n of vaNodes.values())for(const [di,dj] of [[1,0],[0,1]]){const b=vaNodes.get(vaKey(n.i+di,n.j+dj));if(!b)continue;const key=vaEdgeKey(n.id,b.id),old=vaEdges.get(key);if(old?.member)continue;if(vaNaturalOK(n,b))vaEdges.set(key,old||{id:key,a:n.id,b:b.id,active:true,member:null,down:0,up:0,loadedDown:0,loadedUp:0});}}
-function vaSurvey(){for(const [id,w] of vaWorkers){const p=entities.get(id).g.position;for(let i=0;i<=17;i++)for(let j=-4;j<=4;j++){const x=-24+i*3,z=j*3;if(Math.hypot(p.x-x,p.z-z)<=7)vaNode(i,j);}}vaConnect();vaLastSurvey=vaTick;}
+function vaSurvey(){for(const id of vaECS.query('WorkerRole','Navigation','WorkState')){const p=entities.get(id).g.position;for(let i=0;i<=17;i++)for(let j=-4;j<=4;j++){const x=-24+i*3,z=j*3;if(Math.hypot(p.x-x,p.z-z)<=7)vaNode(i,j);}}vaConnect();vaLastSurvey=vaTick;}
 function vaPath(a,b){if(a===b)return[a];const q=[a],prev=new Map([[a,null]]);for(let k=0;k<q.length;k++){const n=q[k];for(const e of vaEdges.values()){if(!e.active)continue;const v=e.a===n?e.b:e.b===n?e.a:null;if(!v||prev.has(v))continue;prev.set(v,n);if(v===b){const out=[v];let p=n;while(p!==null){out.unshift(p);p=prev.get(p);}return out;}q.push(v);}}return null;}
 function vaReach(){const out=new Set([vaHome.id]),q=[vaHome.id];for(let k=0;k<q.length;k++)for(const e of vaEdges.values()){if(!e.active)continue;const v=e.a===q[k]?e.b:e.b===q[k]?e.a:null;if(v&&!out.has(v)){out.add(v);q.push(v);}}return out;}
 function vaEntity(type,g){scene.add(g);return createLiveEntity(type,g,vaTick*1000*vaDt);}
@@ -1690,46 +1788,813 @@ function vaMemberShape(g,a,b,feet){for(const side of [-.64,.64]){const dir=b.clo
 const len=a.distanceTo(b),dir=b.clone().sub(a).normalize();for(let k=0;k<=Math.ceil(len/.36);k++){const p=a.clone().lerp(b,k/Math.ceil(len/.36));const plank=new THREE.Mesh(new THREE.BoxGeometry(1.7,.12,.31),vaTimber);plank.position.copy(p).add(new THREE.Vector3(0,-.07,0));plank.rotation.y=Math.atan2(dir.x,dir.z);g.add(plank);}
 for(let k=0;k<2;k++){const p=k?b:a,foot=feet[k];for(const side of [-.64,.64]){const off=new THREE.Vector3(-dir.z,0,dir.x).multiplyScalar(side);vaBeam(g,p.clone().add(off),new THREE.Vector3(p.x,foot,p.z).add(off),.16);}}
 vaBeam(g,new THREE.Vector3(a.x,feet[0],a.z),b,.13);for(const p of [a,b])vaBeam(g,p,p.clone().add(new THREE.Vector3(0,.85,0)),.07,vaIron);vaBeam(g,a.clone().add(new THREE.Vector3(0,.85,0)),b.clone().add(new THREE.Vector3(0,.85,0)),.05,vaIron);}
-function vaAddLamp(p){const g=new THREE.Group();g.position.copy(p);pcyl(g,.04,.04,1.2,0,.6,0,vaIron,5);pbox(g,.13,.2,.13,0,1.25,0,vaLamp);vaRoot.add(g);const light=new THREE.PointLight(0xffb45e,25,11,1.7);light.position.set(p.x,p.y+1.6,p.z);vaRoot.add(light);}
-function vaMakeWorker(k){const g=new THREE.Group();pcyl(g,.15,.19,.54,0,.51,0,vaCloth,6);const head=new THREE.Mesh(new THREE.SphereGeometry(.17,7,5),vaCloth);head.position.y=.98;g.add(head);pbox(g,.34,.09,.3,0,1.13,0,vaIron);pbox(g,.09,.08,.06,0,1.1,.17,vaLamp);const legs=[];for(const x of [-.095,.095])legs.push(pbox(g,.1,.37,.12,x,.19,0,vaIron));const lamp=new THREE.PointLight(0xffc476,13,7,1.6);lamp.position.y=1.3;g.add(lamp);g.position.set(vaHome.x,vaHome.y,vaHome.z);const e=vaEntity('EXPEDITION WORKER',g);vaWorkers.set(e.id,{node:vaHome.id,path:null,at:0,progress:0,task:'observe',timer:0,job:null,legs,index:k,roundTrips:0});vaCarry.set(e.id,{entity:null,bearing:null});return e;}
+function vaAddLamp(p,memberId=null){const g=new THREE.Group();g.position.copy(p);pcyl(g,.04,.04,1.2,0,.6,0,vaIron,5);pbox(g,.13,.2,.13,0,1.25,0,vaLamp);const light=new THREE.PointLight(0xffb45e,25,11,1.7);light.position.set(0,1.6,0);g.add(light);const e=vaEntity('SCAFFOLD TORCH',g);gravityBodies.delete(e.id);if(memberId!=null)vaMemberTorches.set(memberId,e.id);return e.id;}
+function vaMakeWorker(k){const g=new THREE.Group();pcyl(g,.15,.19,.54,0,.51,0,vaCloth,6);const head=new THREE.Mesh(new THREE.SphereGeometry(.17,7,5),vaCloth);head.position.y=.98;g.add(head);pbox(g,.34,.09,.3,0,1.13,0,vaIron);pbox(g,.09,.08,.06,0,1.1,.17,vaLamp);const legs=[];for(const x of [-.095,.095])legs.push(pbox(g,.1,.37,.12,x,.19,0,vaIron));
+/* Manual legibility probe: these shapes externalize state already present in the worker/cargo
+   model. They do not participate in collision, support, planning, timing, or pathing. */
+const stateRoot=new THREE.Group();stateRoot.position.y=1.48;g.add(stateRoot);
+const halo=new THREE.Mesh(new THREE.TorusGeometry(.28,.035,5,12),vaLamp);halo.rotation.x=Math.PI/2;stateRoot.add(halo);
+const workMark=new THREE.Mesh(new THREE.OctahedronGeometry(.15,0),vaLamp);workMark.position.y=.28;stateRoot.add(workMark);
+const blockedMark=new THREE.Mesh(new THREE.BoxGeometry(.42,.08,.08),vaIron);blockedMark.position.y=.25;blockedMark.rotation.z=.65;stateRoot.add(blockedMark);
+const cargoRoot=new THREE.Group();cargoRoot.position.set(.34,.78,.04);g.add(cargoRoot);
+const spoilCargo=new THREE.Group();cargoRoot.add(spoilCargo);spoilCargo.visible=false;
+const lamp=new THREE.PointLight(0xffc476,13,7,1.6);lamp.position.y=1.3;g.add(lamp);g.position.set(vaHome.x,vaHome.y,vaHome.z);const e=vaEntity('EXPEDITION WORKER',g);vaECS.alive.add(e.id);vaECS.tags.set(e.id,['legacy-equivalent-worker']);vaECS.nextId=Math.max(vaECS.nextId,e.id+1);
+vaECS.set(e.id,'WorkerRole',{index:k});vaECS.set(e.id,'Navigation',{node:vaHome.id,path:null,at:0,progress:0,stranded:false});
+vaECS.set(e.id,'WorkState',{task:'idle',timer:0,job:null,claim:null,pickup:null,roundTrips:0,localWork:null,pendingEdge:null,descentIntent:null});
+vaECS.set(e.id,'Activity',{kind:'idle',phase:'select',target:null,purpose:null,elapsed:0,duration:0,startedTick:vaTick});
+vaECS.set(e.id,'WorkerVisual',{legs,stateRoot,halo,workMark,blockedMark,cargoRoot,spoilCargo});
+vaCarry.set(e.id,null);return e;}
+
+/* COLLAPSE CONSEQUENCE PASS — scaffold preservation is intentionally NOT a planning rule.
+   When a geological foot is lost, the visible scaffold fractures into gravity-driven plank/rod debris;
+   its torch is released; a worker physically standing on the failed member is thrown, dies, and persists
+   as a corpse entity. The same worker factory then creates a replacement at the entrance. Collapse is
+   deterministic physical history, not rollback. Cargo is released into the world rather than teleported. */
+/* SINGLE-DRONE RECOVERY FACTORY — active worker construction.
+   This is deliberately separate from vaMakeWorker and from the deprecated semantic worker branch.
+   It creates one embodied ECS drone with no team/project/commitment component. The orchestration
+   shell below is temporary and decomposable; physical entities remain authoritative. */
+function vaMakeDescentDrone({replayKnownRoute=false}={}){
+ const g=new THREE.Group();pcyl(g,.15,.19,.54,0,.51,0,vaCloth,6);
+ const head=new THREE.Mesh(new THREE.SphereGeometry(.17,7,5),vaCloth);head.position.y=.98;g.add(head);
+ pbox(g,.34,.09,.3,0,1.13,0,vaIron);pbox(g,.09,.08,.06,0,1.1,.17,vaLamp);
+ const legs=[];for(const x of [-.095,.095])legs.push(pbox(g,.1,.37,.12,x,.19,0,vaIron));
+ const stateRoot=new THREE.Group();stateRoot.position.y=1.48;g.add(stateRoot);
+ const halo=new THREE.Mesh(new THREE.TorusGeometry(.28,.035,5,12),vaLamp);halo.rotation.x=Math.PI/2;stateRoot.add(halo);
+ const workMark=new THREE.Mesh(new THREE.OctahedronGeometry(.15,0),vaLamp);workMark.position.y=.28;stateRoot.add(workMark);
+ const blockedMark=new THREE.Mesh(new THREE.BoxGeometry(.42,.08,.08),vaIron);blockedMark.position.y=.25;blockedMark.rotation.z=.65;stateRoot.add(blockedMark);
+ const cargoRoot=new THREE.Group();cargoRoot.position.set(.34,.78,.04);g.add(cargoRoot);
+ const spoilCargo=new THREE.Group();cargoRoot.add(spoilCargo);spoilCargo.visible=false;
+ const lamp=new THREE.PointLight(0xffc476,13,7,1.6);lamp.position.y=1.3;g.add(lamp);
+ g.position.set(vaHome.x,vaHome.y,vaHome.z);
+ const e=vaEntity('DESCENT DRONE',g);vaECS.alive.add(e.id);vaECS.tags.set(e.id,['worker','descent-drone','single-drone-recovery']);vaECS.nextId=Math.max(vaECS.nextId,e.id+1);
+ vaECS.set(e.id,'WorkerRole',{index:0,kind:'descent-drone'});
+ vaECS.set(e.id,'Navigation',{node:vaHome.id,path:null,at:0,progress:0,stranded:false});
+ vaECS.set(e.id,'WorkState',{task:'idle',timer:0,job:null,claim:null,pickup:null,roundTrips:0,localWork:null,pendingEdge:null,descentIntent:null,exploreVisited:{},exploreTrail:[],routeReplay:!!replayKnownRoute,routeReplayIndex:replayKnownRoute?0:null});
+ vaECS.set(e.id,'Activity',{kind:'idle',phase:'select',target:null,purpose:'observe local descent frontier',elapsed:0,duration:0,startedTick:vaTick});
+ vaECS.set(e.id,'WorkerVisual',{legs,stateRoot,halo,workMark,blockedMark,cargoRoot,spoilCargo});
+ vaCarry.set(e.id,null);return e;
+}
+
+/* ARCHAEOLOGY — THROW SPOIL, KEEP WORKING
+   Hauling spoil was rejected as ceremony that obscured the primary experiment. Excavated bearings
+   are now thrown immediately toward the known camp/rock-pile direction with a small ballistic arc;
+   inherited gravity/collision owns the flight and landing. Spoil creates no task. The worker stays
+   at the face and continues applying the proven legacy route carve while empirical obstruction
+   remains. This probe prioritizes making the access transformation legible.
+*/
+/* ARCHAEOLOGY — EXACT LEGACY CARVE RETRY
+   A previous ECS transfer weakened the proven vaRemove terrain operation by converging only one
+   third toward its target. That was rejected: it produced one small visible deformation followed
+   by diminishing/no useful work. The three-cut cadence is not terrain physics and is not encoded
+   here. TerrainManipulationSystem now executes the legacy route-shaped column mutation at full
+   strength. After each cut, its triggering failure evidence is retired; the worker hauls the one
+   representative rock and must physically retry locomotion. Only a new embodied failure can earn
+   another excavation. If a wall needs several cuts, that must emerge from its physical extent and
+   repeated failed progress, not an excavation counter or weakened carve.
+*/
+/* ARCHAEOLOGY — LEGACY CARVE, ECS OWNERSHIP
+   The intermediate worker-scale volumetric excavation attempts were rejected after becoming
+   illegible or failing to deform the coarse signed-density terrain. The accepted physical
+   mechanism was already present in legacy vaRemove(): operate on X/Z columns around the route
+   segment and drive each column's signed-density ceiling toward a usable traversal profile.
+   TerrainManipulationSystem now owns that operation. Systems know capabilities/evidence, not
+   legacy worker identity. For the current manual probe each stroke converges one third toward the
+   legacy target so the blocking wall should visibly require about three strokes. Bearing yield is
+   intentionally independent: exactly one representative physical rock per excavation stroke.
+*/
+/* ARCHAEOLOGY — THREE-CUT VISIBLE WORK LOOP
+   Manual acceptance target was made concrete: a blocking wall of this scale should require about
+   three excavation actions. Every excavation action unconditionally emits exactly one small
+   representative Foundry bearing. That same physical bearing falls under existing physics, is
+   picked up only because it is the worker's current work spoil, is carried at capacity one to the
+   known camp, and is physically released from hand height there. No teleport-to-stock arrangement.
+   The original locomotion failure remains unresolved across cuts, so after disposal the durable
+   descent drive returns the worker to the same work site. Only a later successful locomotion attempt
+   should retire the obstruction. Intended visible cadence:
+   wall -> cut -> rock falls -> carry -> physical drop at camp -> return, repeated ~3 times -> pass.
+*/
+/* ARCHAEOLOGY — BODY CLEARANCE + REPRESENTATIVE EXCAVATION
+   Inspection of the first visible spoil run showed an abstraction mismatch: coarse signed-density
+   terrain deformation was being converted into many worker-scale bearings, producing an absurd
+   rock/wall ratio and no useful physical read. Excavation now emits at most one representative
+   Foundry bearing per successful intervention. This is explicitly causal representation, not mass
+   conservation.
+
+   Locomotion now tests two independent requirements: viable foot support (grade/step) and clearance
+   for the entity's Body envelope. Positive signed density sampled through that envelope can produce
+   a body-clearance failure even when the next foot position is valid. Excavation follows the actual
+   attempted travel direction and removes a short horizontal worker-scale envelope through blocking
+   material rather than carving terrain downward. The wall supplies the face, Body supplies working
+   height/clearance scale, and the resulting representative bearing receives a small outward impulse
+   before ordinary Foundry gravity/collision owns it.
+*/
+/* ARCHAEOLOGY — COARSE-LATTICE SPOIL SPAWN FAILURE
+   First physical-spoil run visibly deformed terrain but spawned no rock. Diagnosis: the signed-
+   density field has ~2.7 world-unit vertical lattice spacing, while the initial worker-governed
+   excavation band was only about 1.1 units tall. A visible surface deformation could therefore be
+   produced without any lattice sample satisfying the narrow "removed material origin" sampler.
+   Correction preserves the semantic rule while respecting apparatus resolution: Body height still
+   determines desired work Y; the terrain cut includes the neighboring vertical lattice support
+   required to deform around that height; changed columns supply wall X/Z; representative matter
+   is born at the excavator-governed work Y. Any nonzero successful density removal now yields at
+   least one representative bearing. This is coarse material accounting, not calibrated mass.
+*/
+/* ARCHAEOLOGY — PHYSICAL SPOIL ORIGIN / MATTER IS NOT A TASK
+   Excavation no longer makes loose spoil intrinsically interesting. A rock is merely matter until
+   its physical relationship to the durable drive supplies evidence that it matters. The current
+   worker therefore does not automatically collect fresh spoil.
+
+   Representative spoil is born from locations that actually lost terrain density. The excavated
+   wall supplies X/Z; the excavator supplies the reachable vertical working band, centered at
+   Transform.y + Body.height * 0.5. Bearings are offset only slightly outward from the new face to
+   avoid starting embedded, then immediately belong to Foundry gravity/collision. They may fall at
+   the worker's feet, roll away, lodge in the cut, obstruct later motion, or become irrelevant.
+   This replaces the earlier convenient ground-relative spoil spawn.
+*/
+/* ARCHAEOLOGY — EMBODIED FRONTIER EVIDENCE
+   The first category-error correction was insufficient: the worker still reached the wall and
+   stood. The deeper problem was dual epistemology. Perception heuristically predicted blocked
+   terrain while locomotion independently discovered actual failure. The ECS worker now learns an
+   access frontier only from attempted movement rejected by the physical locomotion constraints.
+   Failed steps are bounded Memory evidence (from, attempted position, target, reason, count, tick)
+   and emit semantic events. Drive interprets recent failures as access pressure; actionable
+   excavation is aimed at the actual failed step. After terrain changes, nearby failure evidence is
+   retired so the worker must physically test the world again. Terrain samples remain proposals for
+   exploration, never authoritative declarations that access is blocked.
+*/
+/* ARCHAEOLOGY — BLOCKED-FRONTIER CATEGORY ERROR
+   First observed run: worker went directly to a wall and stood indefinitely.
+   Diagnosis: blocked-frontier was correctly derived as evidence of access pressure but was also
+   inserted into the selectable opportunity list. It could outscore excavate despite having no
+   actuator, allowing agency to repeatedly choose "this is blocked" as though observation were an
+   action. Correction: Frontier.blocked retains the evidence; only actionable responses compete in
+   Opportunities. Excavation score may derive from frontier salience, but the evidence itself is
+   never a commitment. This distinction should generalize: conditions generate affordances; they
+   are not affordances merely because they are salient.
+*/
+/* ARCHAEOLOGY — FIRST DRIVE / EXCAVATION LOOP
+   The first ECS worker now has durable Drive state: forward, downward, preserve usable access, and
+   clear obstruction. Drive is mutable component data, not a worker-system constant. Opportunity
+   derivation uses it to value frontier evidence. A blocked downward frontier can motivate bounded
+   terrain removal. Removal emits real Foundry bearings with provenance. Loose spoil becomes a
+   high-priority obstruction opportunity; carrying capacity one forces one-bearing trips to home,
+   where the same physical bearing is released into a persistent spoil stock area. The worker then
+   resumes the unchanged drive. Stock construction material is deliberately not attractive merely
+   because it is manipulable. No mine/haul/excavate sequence exists; temporary commitments are
+   repeatedly selected from current opportunities under the durable drive.
+*/
+/* ARCHAEOLOGY — SEMANTIC ECS INFRASTRUCTURE PASS
+   The generic kernel gained only primitives already demanded by observed use:
+   queryable directed relationships, bounded semantic events, and context projection.
+   Relationships describe current connections without becoming components or physics.
+   Events preserve selected historical evidence without logging every simulation tick.
+   context(entity) projects current components/tags + immediate relationships/neighbors + recent
+   significant events for model/human inspection. Domain systems decide which events are meaningful.
+   No Vertical Accretion vocabulary was added to the kernel. Infrastructure work stops here until
+   another observed pressure earns more.
+*/
+/* ARCHAEOLOGY — OPPORTUNITY / MANIPULATION PASS
+   Opportunities are ephemeral interpretations derived from remembered local evidence plus current
+   capabilities. They are not components on terrain/material and are rebuilt continuously.
+   Agency chooses among simultaneously available opportunities with deterministic seeded variation;
+   no behavior sequence is encoded. Manipulation now closes the first intentional physical loop:
+   perceive a real material entity -> optionally approach -> optionally acquire -> carry exactly that
+   entity -> optionally release it. Terrain modification and structural placement remain unexercised.
+*/
+/* ACTIVE VERTICAL ACCRETION ECS HANDLES */
+let vaECS=null,vaECSVisuals=new Map();const vaWorkerActivity=new Map();
+/* DEMONSTRATED ACCESS ROUTE — shared operational knowledge, not exploration memory.
+   The route contains only physical traversals actually completed from the entrance outward. It is
+   not a target coordinate, planner path, visited set, or promise that old geometry still works.
+   Replacement workers may replay it edge-by-edge; current physics validates every remembered step.
+   Worker-local exploration/failure evidence remains private and dies with the worker. */
+let vaKnownRoute=[];
+function vaRouteReset(){vaKnownRoute=vaHome?[vaHome.id]:[];}
+function vaRouteObserveTraversal(id,from,to){
+ const w=vaECS?.get(id,'WorkState'),a=vaECS?.get(id,'Activity');if(w?.routeReplay)return;
+ /* Exploratory DFS is private search, not automatically shared operational access. A route is
+    promoted by ordinary purposeful traversal; otherwise a dead-end probe could become the team's
+    inherited endpoint merely because it was visited once. */
+ if(a?.purpose?.includes('explore existing works')||a?.purpose?.includes('backtrack existing works'))return;
+ if(!vaKnownRoute.length&&vaHome)vaKnownRoute=[vaHome.id];
+ const endpoint=vaKnownRoute.at(-1);if(from!==endpoint||vaKnownRoute.includes(to))return;
+ vaKnownRoute.push(to);vaLog('route-memory',"A completed outward traversal extends the expedition's demonstrated access route.",{worker:id,from,to,length:vaKnownRoute.length});
+}
+function vaReplayKnownRoute(id){
+ const n=vaECS.get(id,'Navigation'),w=vaECS.get(id,'WorkState');if(!w?.routeReplay)return false;
+ let i=w.routeReplayIndex??0;
+ if(i>=vaKnownRoute.length-1){w.routeReplay=false;w.routeReplayIndex=null;vaLog('route-replay','Replacement reaches the last demonstrated access point; private local exploration begins fresh.',{worker:id,node:n.node,length:vaKnownRoute.length});return false;}
+ if(n.node!==vaKnownRoute[i]){
+  const found=vaKnownRoute.indexOf(n.node);if(found>=0){i=found;w.routeReplayIndex=i;}else{w.routeReplay=false;w.routeReplayIndex=null;vaLog('route-break','Replacement is no longer on the demonstrated route; shared replay ends and local perception resumes.',{worker:id,node:n.node});return false;}
+ }
+ const next=vaKnownRoute[i+1],edge=vaEdges.get(vaEdgeKey(n.node,next));
+ if(!edge?.active){
+  const oldLength=vaKnownRoute.length;vaKnownRoute=vaKnownRoute.slice(0,i+1);w.routeReplay=false;w.routeReplayIndex=null;
+  vaLog('route-break','Remembered access fails current physics. The shared route retracts to the last physically reached point.',{worker:id,node:n.node,failedNext:next,oldLength,newLength:vaKnownRoute.length});return false;
+ }
+ vaSetActivity(id,'traverse',{phase:'travel',target:next,purpose:'replay demonstrated expedition access'});n.path=[n.node,next];n.at=0;n.progress=0;w.routeReplayIndex=i+1;
+ vaLog('route-replay','Replacement follows one demonstrated traversal from the entrance route.',{worker:id,from:n.node,to:next,index:i+1});return true;
+}
+
 function vaStock(){for(let k=0;k<28;k++){const g=new THREE.Group();for(let j=0;j<3;j++)pbox(g,.16,.16,1.9,(j-1)*.18,.18,0,vaTimber);g.position.set(vaHome.x-1.5-(k%4)*.52,vaHome.y+.15+Math.floor(k/8)*.4,vaHome.z-2.8+(Math.floor(k/4)%2)*2.1);const e=vaEntity('MATERIAL',g);gravityBodies.delete(e.id);vaMaterials.set(e.id,{kind:'member bundle',state:'stock',origin:'entrance stock',parent:null});}}
-function vaSetPath(id,target){const w=vaWorkers.get(id);if(w.path&&w.path.at(-1)===target)return true;const p=vaPath(w.node,target);if(!p)return false;w.path=p;w.at=0;w.progress=0;return true;}
-function vaMove(id){const e=entities.get(id),w=vaWorkers.get(id),c=vaCarry.get(id);if(!w.path||w.at>=w.path.length-1){w.path=null;return true;}const aid=w.path[w.at],bid=w.path[w.at+1],edge=vaEdges.get(vaEdgeKey(aid,bid));if(!edge?.active){w.path=null;w.stranded=true;w.task='isolated after support loss';return false;}const a=vaNodes.get(aid),b=vaNodes.get(bid),dist=Math.hypot(a.x-b.x,a.y-b.y,a.z-b.z);w.progress+=(c.entity||c.bearing!==null?1.5:2)*vaDt/dist;const t=Math.min(1,w.progress);e.g.position.set(THREE.MathUtils.lerp(a.x,b.x,t),vaSupport(THREE.MathUtils.lerp(a.x,b.x,t),THREE.MathUtils.lerp(a.z,b.z,t)),THREE.MathUtils.lerp(a.z,b.z,t));e.g.rotation.y=Math.atan2(b.x-a.x,b.z-a.z);w.legs.forEach((m,k)=>m.rotation.x=Math.sin(vaTick*.35+k*Math.PI)*.35);if(t>=1){w.node=bid;w.at++;w.progress=0;const down=b.y<a.y;if(down)edge.down++;else edge.up++;if(c.entity||c.bearing!==null){if(down)edge.loadedDown++;else edge.loadedUp++;}if(!edge.member)vaNaturalTrips++;if(edge.member&&edge.down&&edge.up&&edge.loadedDown&&edge.loadedUp&&!edge.certified){edge.certified=vaLog('logistics','Repeated loaded travel is now evidenced in both directions.',{edge:edge.id,member:edge.member});}if(w.at>=w.path.length-1){w.path=null;return true;}}return false;}
-function vaPickStock(id){const c=vaCarry.get(id);for(const [mid,m] of vaMaterials)if(m.state==='stock'){m.state='carried';m.carrier=id;c.entity=mid;return mid;}return null;}
-function vaSyncCargo(){for(const [id,c] of vaCarry){const p=entities.get(id).g.position;if(c.entity){const e=entities.get(c.entity);e.g.position.set(p.x,p.y+.78,p.z);e.g.rotation.y=entities.get(id).g.rotation.y;}if(c.bearing!==null){bx[c.bearing]=p.x;by[c.bearing]=p.y+.8;bz[c.bearing]=p.z;}}}
-function vaBlocked(a,b){let count=0;for(let i=0;i<MAX_BALLS;i++)if(balive[i]&&!vaCarried.has(i)){const dx=b.x-a.x,dz=b.z-a.z,t=clamp(((bx[i]-a.x)*dx+(bz[i]-a.z)*dz)/(dx*dx+dz*dz),0,1);if(Math.hypot(bx[i]-a.x-t*dx,bz[i]-a.z-t*dz)<1.1&&Math.abs(by[i]-vaSupport(bx[i],bz[i]))<1)count++;}return count>=5;}
-function vaChooseJob(){if(vaJob)return;const reachable=vaReach();let best=null;for(const aid of reachable){const a=vaNodes.get(aid);for(const [di,dj] of [[1,0],[0,1],[0,-1]]){const b=vaNodes.get(vaKey(a.i+di,a.j+dj));if(!b||reachable.has(b.id)||vaAbandoned.get(a.id+'>'+b.id)>=2)continue;const dy=b.y-a.y;if(Math.abs(b.z)>9)continue;const endY=a.y-1.45,foot=vaRockY(b.x,b.z),height=endY-foot;let op=height<0?'remove':'place';if(op==='place'&&(height<-.2||height>9||!Array.from(vaMaterials.values()).some(m=>m.state==='stock')))continue;const score=b.i*4-Math.abs(b.j)*1.6-(op==='remove'?1:2)-Math.max(0,height)*.22;if(!best||score>best.score)best={a:a.id,b:b.id,op,score,endY};}}
-const farthest=[...reachable].map(k=>vaNodes.get(k)).sort((a,b)=>b.i-a.i||Math.abs(a.j)-Math.abs(b.j))[0];if(farthest&&(!best||farthest.i>=vaNodes.get(best.b).i)&&vaWorkers.size){vaFront=farthest;const lead=[...vaWorkers].find(([id,w])=>w.index===0&&!vaCarry.get(id).entity&&vaCarry.get(id).bearing===null);if(lead&&lead[1].node!==farthest.id){lead[1].task='observe';vaSetPath(lead[0],farthest.id);return;}}
-if(!best){const sorted=[...reachable].map(k=>vaNodes.get(k)).sort((a,b)=>b.i-a.i||Math.abs(a.j)-Math.abs(b.j));const n=sorted[0];if(n&&n.id!==vaFront?.id){vaFront=n;for(const [id,w] of vaWorkers)if(w.task==='observe')vaSetPath(id,n.id);}else if(n?.i===17&&!vaStoppedReason){vaStoppedReason='Section horizon reached; inspect the accumulated record.';vaLog('horizon',vaStoppedReason);}return;}
-vaFront=vaNodes.get(best.a);vaJob={id:'J'+(++vaJobSerial),...best,owner:null,started:vaTick,parent:vaFront.modified||vaPath(vaHome.id,vaFront.id)?.slice(1).map((key,k,arr)=>vaEdges.get(vaEdgeKey(k?arr[k-1]:vaHome.id,key))?.member).filter(Boolean).map(id=>vaMembers.get(id).event).at(-1)||null,work:0};vaLog('encounter',best.op==='remove'?'Excessive rise interrupts the loaded route. A worker commits to removal.':'A drop exceeds the loaded grade. A worker commits to supported placement.',{job:vaJob.id,from:best.a,to:best.b,op:best.op,parent:vaJob.parent});}
-function vaRemove(job,id){const a=vaNodes.get(job.a),b=vaNodes.get(job.b),target=Math.min(a.y-.35,b.y-.1),oldY=b.y;let changed=0;terrainDeformation.mutate('worker removal',()=>{for(let z=1;z<NZ-1;z++)for(let x=1;x<NX-1;x++){const p=wp(x,0,z),dx=b.x-a.x,dz=b.z-a.z,t=clamp(((p.x-a.x)*dx+(p.z-a.z)*dz)/(dx*dx+dz*dz),0,1),dist=Math.hypot(p.x-a.x-t*dx,p.z-a.z-t*dz);if(dist>3.8)continue;const blend=clamp((3.8-dist)/1.5,0,1),old=vaRockY(p.x,p.z),line=THREE.MathUtils.lerp(a.y,target,t),ceiling=THREE.MathUtils.lerp(old,Math.min(old,line),blend);for(let y=1;y<NY-1;y++){const q=idx(x,y,z),wy=wp(x,y,z).y,limit=ceiling-wy;if(field[q]>limit+.0001){changed+=field[q]-limit;field[q]=limit;}}}});hcacheDirty=true;vaRefresh();vaRemovalCount++;if(Math.abs(oldY-b.y)<.02){const key=a.id+'>'+b.id;vaAbandoned.set(key,(vaAbandoned.get(key)||0)+1);if(vaAbandoned.get(key)>=2)vaLog('abandon','Repeated removal no longer earns access here; retain the cut and seek another local opportunity.',{from:a.id,to:b.id,job:job.id});}const event=vaLog('remove','Rock removed at the working face; spoil enters the physical bearing field.',{job:job.id,worker:id,node:b.id,oldY,newY:b.y,parent:job.parent,representedYield:Math.min(12,Math.max(1,Math.ceil(changed/200)))});b.modified=event;for(let k=0;k<Math.min(12,Math.max(1,Math.ceil(changed/200)));k++){const t=(k%4)/3,p=vaVec(a).lerp(vaVec(b),.2+t*.25),bi=spawnBallRaw(p.x,vaSupport(p.x,p.z)+.7,p.z,0,0,0,.7);if(bi)vaProvenance.set(bi-1,{event,source:b.id,delivered:false});}job.work=0;vaJob=null;vaSurvey();}
-function vaPlace(job,id){const a=vaNodes.get(job.a),b=vaNodes.get(job.b),c=vaCarry.get(id),mid=c.entity;if(!mid)throw Error('Placement without embodied material');const p=vaVec(a),q=new THREE.Vector3(b.x,job.endY,b.z),feet=[vaRockY(a.x,a.z),vaRockY(b.x,b.z)];if(p.y-feet[0]>9||q.y-feet[1]>9||p.distanceTo(q)>3.5){vaLog('rejected','Placement exceeds available support or reach.',{job:job.id});vaJob=null;return;}
-const e=entities.get(mid);e.g.traverse(q=>q.geometry?.dispose());e.g.clear();e.g.position.set(0,0,0);e.g.rotation.set(0,0,0);vaMemberShape(e.g,p,q,feet);vaMaterials.get(mid).state='placed';delete vaMaterials.get(mid).carrier;vaMaterials.get(mid).parent=job.parent;c.entity=null;
-const event=vaLog('place','A carried member now bears a graded surface on geological feet.',{job:job.id,entity:mid,from:a.id,to:b.id,parent:job.parent,feet});vaMembers.set(mid,{id:mid,a:p,b:q,feet,active:true,event,created:vaTick,parent:job.parent,loadLimit:3});b.y=q.y;b.modified=event;vaEdges.set(vaEdgeKey(a.id,b.id),{id:vaEdgeKey(a.id,b.id),a:a.id,b:b.id,member:mid,active:true,down:0,up:0,loadedDown:0,loadedUp:0});vaRefresh();vaAddLamp(q);vaJob=null;vaSurvey();}
-function vaClaimSpoil(id){const w=vaWorkers.get(id),reachable=vaReach();let best=null;for(const [bi,prov] of vaProvenance){if(!balive[bi]||(prov.delivered&&Math.hypot(bx[bi]-vaHome.x,bz[bi]-vaHome.z)<4)||vaCarried.has(bi)||prov.claim)continue;let near=null,nd=2;for(const key of reachable){const n=vaNodes.get(key),d=Math.hypot(bx[bi]-n.x,bz[bi]-n.z);if(d<nd&&Math.abs(by[bi]-n.y)<2){nd=d;near=n;}}if(!near)continue;const p=vaPath(w.node,near.id);if(p&&(!best||p.length<best.dist))best={bi,node:near.id,dist:p.length};}if(best){vaProvenance.get(best.bi).claim=id;w.pickup=best;w.task='collect spoil';vaSetPath(id,best.node);return true;}return false;}
-function vaWorkerSystem(){for(const [id,w] of vaWorkers){const c=vaCarry.get(id);if(w.stranded)continue;if(w.path){vaMove(id);continue;}
-if(w.task==='collect spoil'){const bi=w.pickup.bi;if(balive[bi]&&!vaCarried.has(bi)){c.bearing=bi;vaCarried.set(bi,id);bearingClaims[bi]=id;w.task='haul spoil upward';vaSetPath(id,vaHome.id);}else w.task='observe';continue;}
-if(w.task==='haul spoil upward'){const bi=c.bearing;if(w.node!==vaHome.id){vaSetPath(id,vaHome.id);continue;}if(bi!==null){vaCarried.delete(bi);bearingClaims[bi]=0;bx[bi]=vaHome.x-2.1;by[bi]=vaHome.y+.6;bz[bi]=vaHome.z+2.3;const prov=vaProvenance.get(bi);prov.delivered=true;prov.claim=null;c.bearing=null;vaSpoilDelivered++;w.roundTrips++;if(vaSpoilDelivered===1||vaSpoilDelivered%6===0)vaLog('carry','Excavated material carried back to the entrance stock area.',{worker:id,bearing:bi,origin:prov.event,count:vaSpoilDelivered});}w.task='observe';continue;}
-if(vaJob?.owner===id){const j=vaJob;if(j.op==='place'&&!c.entity){if(w.node!==vaHome.id){w.task='retrieve material';vaSetPath(id,vaHome.id);continue;}if(!vaPickStock(id)){vaStoppedReason='Construction stock exhausted';vaJob=null;continue;}w.task='carry member downward';vaSetPath(id,j.a);continue;}if(w.node!==j.a){w.task=j.op==='place'?'carry member downward':'approach rock face';vaSetPath(id,j.a);continue;}const a=vaNodes.get(j.a),b=vaNodes.get(j.b);if(vaBlocked(a,b)){w.task='waiting for spoil clearance';continue;}w.task=j.op==='remove'?'remove':'place / support';j.work+=vaDt;if(j.work>2.8){if(j.op==='remove')vaRemove(j,id);else vaPlace(j,id);w.task='observe';}continue;}
-if(w.task!=='observe')w.task='observe';if(!vaJob&&w.index===0&&vaFront&&w.node!==vaFront.id){vaSetPath(id,vaFront.id);continue;}if(vaJob&&!vaJob.owner&&w.index===0){vaJob.owner=id;w.job=vaJob.id;continue;}if(vaClaimSpoil(id))continue;if(vaJob&&!vaJob.owner){vaJob.owner=id;w.job=vaJob.id;continue;}if(vaFront&&w.node!==vaFront.id){w.task='observe';vaSetPath(id,vaFront.id);}
+function vaSetPath(id,target){const n=vaECS.get(id,"Navigation");if(n.path&&n.path.at(-1)===target)return true;const p=vaPath(n.node,target);if(!p)return false;n.path=p;n.at=0;n.progress=0;return true;}
+function vaMove(id){const e=entities.get(id),n=vaECS.get(id,"Navigation"),w=vaECS.get(id,"WorkState"),v=vaECS.get(id,"WorkerVisual"),c=vaCarry.get(id);if(!n.path||n.at>=n.path.length-1){n.path=null;return true;}const aid=n.path[n.at],bid=n.path[n.at+1],edge=vaEdges.get(vaEdgeKey(aid,bid));if(edge?.member){const m=vaMembers.get(edge.member);if(m?.active&&!vaMemberTraversalOK(m)){edge.active=false;edge.clearanceBlocked=true;}}if(!edge?.active){
+ const failedEdge=edge,stillHomeReachable=vaReach().has(n.node);n.path=null;n.at=0;n.progress=0;
+ /* A stale route after terrain refresh is not support-loss isolation. Replan from the worker's
+    current node whenever that node still belongs to the home-reachable graph. Only actual
+    disconnection earns persistent stranded state. */
+ if(stillHomeReachable){n.stranded=false;const act=vaECS.get(id,"Activity");if(act){act.kind="idle";act.phase="select";act.target=null;act.purpose="route invalidated; replan";act.elapsed=0;act.duration=0;act.startedTick=vaTick;}w.task="idle";vaLog("reroute","Terrain revision invalidated this worker's planned edge; its activity returns locally to selection.",{worker:id,edge:failedEdge?.id||vaEdgeKey(aid,bid),node:n.node});}
+ else {n.stranded=true;const act=vaECS.get(id,"Activity");if(act){act.kind="isolated";act.phase="stranded";act.target=null;act.purpose="current node disconnected from home";act.elapsed=0;act.duration=0;act.startedTick=vaTick;}w.task="isolated";vaLog("isolation","Worker's current node is no longer connected to home after route loss.",{worker:id,edge:failedEdge?.id||vaEdgeKey(aid,bid),node:n.node});}
+ return false;}const a=vaNodes.get(aid),b=vaNodes.get(bid),dist=Math.hypot(a.x-b.x,a.y-b.y,a.z-b.z);n.progress+=(c?1.5:2)*vaDt/dist;const t=Math.min(1,n.progress);e.g.position.set(THREE.MathUtils.lerp(a.x,b.x,t),vaSupport(THREE.MathUtils.lerp(a.x,b.x,t),THREE.MathUtils.lerp(a.z,b.z,t)),THREE.MathUtils.lerp(a.z,b.z,t));e.g.rotation.y=Math.atan2(b.x-a.x,b.z-a.z);v.legs.forEach((m,k)=>m.rotation.x=Math.sin(vaTick*.35+k*Math.PI)*.35);if(t>=1){n.node=bid;n.at++;n.progress=0;vaRouteObserveTraversal(id,aid,bid);const down=b.y<a.y;if(down)edge.down++;else edge.up++;if(c){if(down)edge.loadedDown++;else edge.loadedUp++;}if(!edge.member)vaNaturalTrips++;if(edge.member&&edge.down&&edge.up&&edge.loadedDown&&edge.loadedUp&&!edge.certified){edge.certified=vaLog("logistics","Repeated loaded travel is now evidenced in both directions.",{edge:edge.id,member:edge.member});}if(n.at>=n.path.length-1){n.path=null;return true;}}return false;}
+function vaRemove(job,id){const a=vaNodes.get(job.a),b=vaNodes.get(job.b),target=Math.min(a.y-.35,b.y-.1),oldY=b.y;let changed=0;terrainDeformation.mutate('worker removal',()=>{for(let z=1;z<NZ-1;z++)for(let x=1;x<NX-1;x++){const p=wp(x,0,z),dx=b.x-a.x,dz=b.z-a.z,t=clamp(((p.x-a.x)*dx+(p.z-a.z)*dz)/(dx*dx+dz*dz),0,1),dist=Math.hypot(p.x-a.x-t*dx,p.z-a.z-t*dz);if(dist>3.8)continue;const blend=clamp((3.8-dist)/1.5,0,1),old=vaRockY(p.x,p.z),line=THREE.MathUtils.lerp(a.y,target,t),ceiling=THREE.MathUtils.lerp(old,Math.min(old,line),blend);for(let y=1;y<NY-1;y++){const q=idx(x,y,z),wy=wp(x,y,z).y,limit=ceiling-wy;if(field[q]>limit+.0001){changed+=field[q]-limit;field[q]=limit;}}}});hcacheDirty=true;vaRefresh();vaRemovalCount++;if(Math.abs(oldY-b.y)<.02){const key=a.id+'>'+b.id;vaAbandoned.set(key,(vaAbandoned.get(key)||0)+1);if(vaAbandoned.get(key)>=2)vaLog('abandon','Repeated removal no longer earns access here; retain the cut and seek another local opportunity.',{from:a.id,to:b.id,job:job.id});}const event=vaLog('remove','Rock removed at the working face; one representative spoil bearing enters the physical field.',{job:job.id,worker:id,node:b.id,oldY,newY:b.y,parent:job.parent,representedYield:1});b.modified=event;{const p=vaVec(a).lerp(vaVec(b),.3),bi=spawnBallRaw(p.x,vaSupport(p.x,p.z)+.7,p.z,0,0,0,.7);if(bi)vaProvenance.set(bi-1,{event,source:b.id,delivered:false});}job.work=0;vaSurvey();return true;}
+function vaPlace(job,id){
+ const a=vaNodes.get(job.a),b=vaNodes.get(job.b),c=vaCarry.get(id),mid=c?.kind==="member"?c.id:null;
+ if(!mid)throw Error("Placement without embodied material");
+ const p=vaVec(a),q=new THREE.Vector3(b.x,job.endY,b.z),feet=[vaRockY(a.x,a.z),vaRockY(b.x,b.z)];
+ if(p.y-feet[0]>9||q.y-feet[1]>9||p.distanceTo(q)>3.5){
+  vaLog("rejected","Placement exceeds available support or reach.",{job:job.id});
+  vaSurvey();return false;
+ }
+ const e=entities.get(mid);e.g.traverse(q=>q.geometry?.dispose());e.g.clear();e.g.position.set(0,0,0);e.g.rotation.set(0,0,0);vaMemberShape(e.g,p,q,feet);
+ vaMaterials.get(mid).state="placed";delete vaMaterials.get(mid).carrier;vaMaterials.get(mid).parent=job.parent;vaCarry.set(id,null);
+ const event=vaLog("place","A carried member now bears a graded surface on geological feet.",{job:job.id,entity:mid,from:a.id,to:b.id,parent:job.parent,feet});
+ vaMembers.set(mid,{id:mid,a:p,b:q,feet,active:true,event,created:vaTick,parent:job.parent,loadLimit:3});b.y=q.y;b.modified=event;
+ vaEdges.set(vaEdgeKey(a.id,b.id),{id:vaEdgeKey(a.id,b.id),a:a.id,b:b.id,member:mid,active:true,down:0,up:0,loadedDown:0,loadedUp:0});
+ vaRefresh();vaAddLamp(q,mid);vaSurvey();return true;
+}
+function vaClaimSpoil(id){const n=vaECS.get(id,'Navigation'),w=vaECS.get(id,'WorkState');if(vaCarry.get(id))return false;const reachable=vaReach();let best=null;for(const [bi,prov] of vaProvenance){if(!balive[bi]||prov.delivered||vaCarried.has(bi)||prov.claim)continue;let near=null,nd=2;for(const key of reachable){const n=vaNodes.get(key),d=Math.hypot(bx[bi]-n.x,bz[bi]-n.z);if(d<nd&&Math.abs(by[bi]-n.y)<2){nd=d;near=n;}}if(!near)continue;const p=vaPath(n.node,near.id);if(p&&(!best||p.length<best.dist))best={bi,node:near.id,dist:p.length};}if(best){vaProvenance.get(best.bi).claim=id;w.pickup=best;w.task='collect spoil';vaSetPath(id,best.node);return true;}return false;}
+/* LIVE WORLD-SPACE DESCENT PROBE
+   No global possibility/job/commitment pipeline participates here. The drone may act only on an
+   edge originating at the node it physically occupies. Candidate geometry is sampled locally and
+   tie-broken deterministically. The transient edge observation is not persistent world authority. */
+function vaDirectSupportTargetProtected(node){
+ for(const m of vaMembers.values())if(m.active){
+  if(Math.hypot(node.x-m.a.x,node.z-m.a.z)<1.0||Math.hypot(node.x-m.b.x,node.z-m.b.z)<1.0)return true;
+ }
+ return false;
+}
+function vaClassifyDescentEdge(a,b){
+ if(!a||!b)return null;
+ a.y=vaSupport(a.x,a.z);b.y=vaSupport(b.x,b.z);
+ const edgeKey=vaEdgeKey(a.id,b.id),existing=vaEdges.get(edgeKey);
+ const liveMember=existing?.member&&vaMembers.get(existing.member)?.active&&vaMemberTraversalOK(vaMembers.get(existing.member));
+ const naturalTraversable=!liveMember&&vaNaturalOK(a,b);
+ let op,evidence,endY=a.y-1.45;
+ if(liveMember||naturalTraversable){op='traverse';evidence=liveMember?'live-member':'current-natural-grade';}
+ else{
+  const foot=vaRockY(b.x,b.z),height=endY-foot;
+  op=height<0?'remove':'place';
+  if(op==='remove'&&vaDirectSupportTargetProtected(b))return null;
+  if(op==='place'&&(height<-.2||height>9||vaVec(a).distanceTo(new THREE.Vector3(b.x,endY,b.z))>3.5))return null;
+  evidence=op==='remove'?'current-terrain-obstruction':'current-unsupported-gap';
+ }
+ return {id:'L'+vaTick,key:'local:'+edgeKey,a:a.id,b:b.id,op,endY,parent:a.modified||null,work:0,evidence};
+}
+function vaIntentFromEdge(edge){
+ const a=vaNodes.get(edge.a),b=vaNodes.get(edge.b);if(!a||!b)return null;
+ const dx=b.x-a.x,dz=b.z-a.z,len=Math.hypot(dx,dz)||1;
+ return {originX:a.x,originZ:a.z,targetX:b.x,targetZ:b.z,dirX:dx/len,dirZ:dz/len,createdTick:vaTick,cuts:0};
+}
+function vaResolveWorldIntent(id){
+ const nav=vaECS.get(id,'Navigation'),ws=vaECS.get(id,'WorkState'),intent=ws.descentIntent;
+ if(!intent)return null;
+ vaSurvey();
+ const occupied=vaNodes.get(nav.node);if(!occupied)return null;
+ occupied.y=vaSupport(occupied.x,occupied.z);
+ /* Intent is world-space. Topology and support are freshly derived every resolution. Reacquire the
+    target sample nearest the remembered target point rather than trusting an old edge identity. */
+ let target=null,best=Infinity;
+ for(const n of vaNodes.values()){
+  const d=Math.hypot(n.x-intent.targetX,n.z-intent.targetZ);
+  if(d<best){best=d;target=n;}
+ }
+ if(!target||best>vaStepSize*.55)return null;
+ target.y=vaSupport(target.x,target.z);
+ /* If physical consequence/recovery moved the worker away from the approach point, walk only to a
+    currently reachable local foothold aligned with the same world-space heading. */
+ if(Math.hypot(occupied.x-intent.originX,occupied.z-intent.originZ)>.55){
+  let approach=null,ad=Infinity;
+  for(const key of vaReach()){
+   const n=vaNodes.get(key),d=Math.hypot(n.x-intent.originX,n.z-intent.originZ);if(d<ad&&vaPath(occupied.id,n.id)){ad=d;approach=n;}
+  }
+  if(approach&&approach.id!==occupied.id&&ad<vaStepSize*.75)return {id:'IR'+vaTick,key:'intent-reposition:'+approach.id,a:occupied.id,b:approach.id,op:'reposition',evidence:'world-intent-approach'};
+ }
+ const classified=vaClassifyDescentEdge(occupied,target);
+ if(!classified)return null;
+ classified.intent=true;classified.continuing=true;classified.score=Number.POSITIVE_INFINITY;
+ return classified;
+}
+function vaLocalEdge(id){
+ vaSurvey();
+ const nav=vaECS.get(id,'Navigation'),ws=vaECS.get(id,'WorkState'),occupied=vaNodes.get(nav.node);if(!occupied)return null;
+ occupied.y=vaSupport(occupied.x,occupied.z);
+ const reachable=vaReach();
+ if(occupied.i>=17){vaStoppedReason='BOTTOM · Sev reached the section horizon.';vaRunning=false;return null;}
+
+ /* First resolve unfinished geometric intent against CURRENT physics. Individual cuts may rewrite
+    support/topology completely; the remembered target point and heading survive that rewrite. */
+ if(ws.descentIntent){
+  const continued=vaResolveWorldIntent(id);
+  if(continued){vaLocalCandidates=[continued];vaFront=occupied;return continued;}
+  vaLog('intent','World-space descent intent became physically invalid; worker will choose a fresh local heading.',{worker:id,intent:{...ws.descentIntent}});
+  ws.descentIntent=null;
+ }
+
+ /* Bounded embodied perception. Nearby reachable origins are only vantage points. Intervention
+    candidates still extend from one such physical foothold into presently unreachable geometry. */
+ const origins=[];
+ for(const key of reachable){
+  const o=vaNodes.get(key);if(!o)continue;
+  const dist=Math.hypot(o.x-occupied.x,o.z-occupied.z);if(dist>7.01)continue;
+  const path=vaPath(occupied.id,o.id);if(!path)continue;
+  o.y=vaSupport(o.x,o.z);origins.push({o,path,dist});
+ }
+ origins.sort((x,y)=>x.dist-y.dist||x.o.id.localeCompare(y.o.id));
+ const dirs=[[1,0],[0,-1],[0,1]],candidates=[];
+ for(const origin of origins){
+  const a=origin.o;
+  for(const [di,dj] of dirs){
+   const b=vaNode(a.i+di,a.j+dj);if(!b)continue;b.y=vaSupport(b.x,b.z);
+   if(reachable.has(b.id))continue;
+   const classified=vaClassifyDescentEdge(a,b);if(!classified||vaLocallyExcluded(id,a,b))continue;
+   const {op,evidence,endY}=classified;
+   const forward=b.i*120,descent=(occupied.y-b.y)*6,lateral=Math.abs(b.j)*1.4,reposition=origin.path.length*.8,opCost=op==='remove'?5:op==='place'?8:0;
+   candidates.push({id:'L'+vaTick,key:'local:'+vaEdgeKey(a.id,b.id),a:a.id,b:b.id,op,score:forward+descent-lateral-reposition-opCost,endY,parent:a.modified||null,work:0,evidence,originPath:origin.path});
+  }
+ }
+ candidates.sort((x,y)=>y.score-x.score||x.key.localeCompare(y.key));
+ vaLocalCandidates=candidates;vaFront=occupied;
+ const pick=candidates[0]||null;if(!pick)return null;
+ if(pick.a!==occupied.id)return {id:'R'+vaTick,key:'reposition:'+pick.a,a:occupied.id,b:pick.a,op:'reposition',score:pick.score,targetEdge:pick,evidence:'bounded-local-vantage'};
+ return pick;
+}
+function vaSetActivity(id,kind,{phase="start",target=null,purpose=null,duration=0}={}){
+ const a=vaECS.get(id,"Activity"),w=vaECS.get(id,"WorkState");
+ if(!a||!w)throw Error(`Worker ${id} missing Activity or WorkState`);
+ a.kind=kind;a.phase=phase;a.target=target;a.purpose=purpose;a.elapsed=0;a.duration=duration;a.startedTick=vaTick;
+ w.task=kind;
+}
+function vaActivityIdle(id,purpose="available"){
+ const n=vaECS.get(id,"Navigation");if(!n)throw Error(`Worker ${id} missing Navigation`);
+ n.path=null;n.at=0;n.progress=0;
+ vaSetActivity(id,"idle",{phase:"select",purpose});
+}
+function vaStartLocalWork(id,work){
+ const ws=vaECS.get(id,'WorkState');ws.localWork=work;
+ vaSetActivity(id,work.op==='remove'?'excavate':'place-member',{phase:'work',target:work.key,purpose:'local '+work.op,duration:2.8});
+ return true;
+}
+function vaStartSpoilCollection(id){
+ if(!vaClaimSpoil(id))return false;const w=vaECS.get(id,'WorkState'),pick=w.pickup;
+ vaSetActivity(id,'collect-spoil',{phase:'travel',target:pick?.bi??null,purpose:'retrieve loose spoil'});return true;
+}
+function vaStartMemberRetrieval(id,edge){
+ const n=vaECS.get(id,'Navigation'),w=vaECS.get(id,'WorkState');w.pendingEdge=edge;
+ vaSetActivity(id,'retrieve-member',{phase:n.node===vaHome.id?'pickup':'travel-home',target:vaHome.id,purpose:'fetch one physical member for local edge'});
+ if(n.node!==vaHome.id&&!vaSetPath(id,vaHome.id)){w.pendingEdge=null;vaActivityIdle(id,'home path unavailable');return false}return true;
+}
+/* WORKER EXPLORATION FALLBACK — no inherited frontier knowledge.
+   When local descent perception finds no actionable edge, a worker searches the physical works by
+   walking active traversable edges. Search memory belongs to that worker only: visited footholds and
+   a backtrack trail. Every arrival returns to the ordinary local descent probe before exploration may
+   continue. This is deliberately not a global work/frontier query. */
+function vaExploreWorks(id){
+ const nav=vaECS.get(id,'Navigation'),ws=vaECS.get(id,'WorkState');if(!nav||!ws)return false;
+ const here=nav.node;if(!here)return false;
+ if(ws.exploreRevision!==vaRevision){ws.exploreVisited={};ws.exploreTrail=[];ws.exploreRevision=vaRevision;}ws.exploreVisited??={};ws.exploreTrail??=[];ws.exploreVisited[here]=true;
+ const neighbors=[];
+ for(const e of vaEdges.values()){
+  if(!e.active)continue;
+  const other=e.a===here?e.b:e.b===here?e.a:null;if(!other)continue;
+  if(!vaNodes.has(other))continue;neighbors.push(other);
+ }
+ /* Prefer forward/deeper known footholds, then stable node identity. This only orders immediately
+    adjacent traversable choices; it does not inspect them for future work. */
+ neighbors.sort((aa,bb)=>{const a=vaNodes.get(aa),b=vaNodes.get(bb);return (b?.i??0)-(a?.i??0)||String(aa).localeCompare(String(bb));});
+ const next=neighbors.find(k=>!ws.exploreVisited[k]);
+ if(next){
+  ws.exploreTrail.push(here);ws.exploreVisited[next]=true;
+  vaSetActivity(id,'traverse',{phase:'travel',target:next,purpose:'explore existing works for a new working face'});
+  if(!vaSetPath(id,next)){ws.exploreTrail.pop();delete ws.exploreVisited[next];vaActivityIdle(id,'exploration edge became unavailable');return true;}
+  vaLog('explore','Worker finds no local descent work and walks an unvisited traversable edge.',{worker:id,from:here,to:next});return true;
+ }
+ /* No unvisited adjacent edge: retreat along the worker's own trail until a still-reachable foothold
+    is found. Broken history is simply discarded; collapse may have erased the route behind us. */
+ while(ws.exploreTrail.length){
+  const back=ws.exploreTrail.pop();if(back===here)continue;
+  const path=vaPath(here,back);if(!path)continue;
+  vaSetActivity(id,'traverse',{phase:'travel',target:back,purpose:'backtrack existing works while searching for work'});
+  if(vaSetPath(id,back)){vaLog('explore','Worker backtracks through existing works after exhausting a local branch.',{worker:id,from:here,to:back});return true;}
+ }
+ return false;
+}
+function vaSelectActivity(id,ecs){
+ const n=ecs.get(id,'Navigation'),w=ecs.get(id,'WorkState'),c=vaCarry.get(id);
+ if(w.routeReplay&&vaReplayKnownRoute(id))return;
+ if(n.stranded){n.stranded=false;vaSetActivity(id,'idle',{phase:'select',purpose:'reprobe after route change'});}
+ if(c?.kind==='spoil'){vaActivityIdle(id,'spoil cargo awaits return handling');return;}
+ if(c?.kind==='member'){
+  /* SEV PLANK RETURN — cargo is authoritative. Once a physical member is acquired, ordinary route
+     selection is suspended. Resolve the existing world-space descent intent against fresh geometry
+     and physically return to its approach before attempting placement. Never clear the intent merely
+     because fetching the member moved the worker away from the face. */
+  const edge=vaResolveWorldIntent(id);
+  if(edge?.op==='reposition'){
+   w.pendingEdge=null;
+   vaSetActivity(id,'traverse',{phase:'travel',target:edge.b,purpose:'return with carried member to descent face'});
+   if(!vaSetPath(id,edge.b))vaActivityIdle(id,'carried member return path unavailable');
+   return;
+  }
+  if(edge?.op==='place'&&(edge.stagedFrom||edge.a)===n.node){w.pendingEdge=edge;vaStartLocalWork(id,edge);return;}
+  if(edge?.op==='traverse'){
+   /* The intended crossing became naturally/member traversable while Sev was away. Keep the plank
+      embodied and stop explicitly rather than silently inventing a use for it. */
+   vaStoppedReason='PHYSICAL DIAGNOSTIC · Sev returned carrying a plank, but the intended edge no longer requires that member.';
+   vaRunning=false;vaLog('terminal',vaStoppedReason,{worker:id,member:c.id,intent:w.descentIntent?{...w.descentIntent}:null});return;
+  }
+  /* If the intent can no longer be resolved, leave the plank embodied in Sev's hands and expose the
+     condition. A later recovery policy may deliberately set it down; this probe must not lose cargo. */
+  vaStoppedReason='PHYSICAL DIAGNOSTIC · Sev carries a plank but his descent intent cannot be reacquired.';
+  vaRunning=false;vaLog('terminal',vaStoppedReason,{worker:id,member:c.id,intent:w.descentIntent?{...w.descentIntent}:null});return;
+ }
+ if(vaStartSpoilCollection(id))return;
+ const edge=vaLocalEdge(id);if(!edge){
+  if(vaExploreWorks(id))return;
+  if(!vaStoppedReason){vaStoppedReason='DIAGNOSTIC STOP · worker exhausted the entire currently traversable works and found no viable local descent intent.';vaRunning=false;vaLog('terminal',vaStoppedReason,{worker:id,node:n.node,visited:Object.keys(w.exploreVisited||{}).length});}
+  return;
+ }
+ if(edge.op==='reposition'){
+  vaSetActivity(id,'traverse',{phase:'travel',target:edge.b,purpose:'walk to locally perceived working vantage'});
+  if(!vaSetPath(id,edge.b)){vaActivityIdle(id,'local vantage route unavailable');}return;
+ }
+ if(edge.op==='traverse'){
+  vaSetActivity(id,'traverse',{phase:'travel',target:edge.b,purpose:'cross locally selected edge'});
+  if(!vaSetPath(id,edge.b)){vaActivityIdle(id,'local traversal unavailable');}return;
+ }
+ if(edge.op==='remove'){if(!w.descentIntent)w.descentIntent=vaIntentFromEdge(edge);vaStartLocalWork(id,edge);return;}
+ if(edge.op==='place'){
+  if(!w.descentIntent)w.descentIntent=vaIntentFromEdge(edge);
+  if(![...vaMaterials.values()].some(m=>m.state==='stock')){
+   vaStoppedReason='PLANK EXHAUSTION · local descent requires a member and no stock remains.';vaRunning=false;
+   vaLog('terminal',vaStoppedReason,{worker:id,edge:edge.key});return;
+  }
+  vaStartMemberRetrieval(id,edge);return;
+ }
+}
+function vaAsyncWorkerSystem({ecs,ids,dt}){
+ for(const id of ids){
+  const n=ecs.get(id,"Navigation"),w=ecs.get(id,"WorkState"),a=ecs.get(id,"Activity"),c=vaCarry.get(id);
+
+  if(n.stranded&&a.kind!=="isolated"){vaSetActivity(id,"isolated",{phase:"stranded",purpose:"current node disconnected from home"});}
+  if(a.kind==="isolated")continue;
+
+  /* Spoil already in hand preempts this worker only. */
+  if(c?.kind==="spoil"&&a.kind!=="return-spoil"){
+   vaSetActivity(id,"return-spoil",{phase:n.node===vaHome.id?"deposit":"travel-home",target:vaHome.id,purpose:"return acquired spoil"});
+   if(n.node!==vaHome.id)vaSetPath(id,vaHome.id);
+  }
+
+  if(a.kind==="idle"){vaSelectActivity(id,ecs);continue;}
+
+
+  if(a.kind==="retrieve-member"){
+   if(a.phase==="travel-home"){
+    if(n.node===vaHome.id||vaMove(id)){a.phase="pickup";n.path=null}
+    continue;
+   }
+   if(a.phase==="pickup"){
+    const mid=vaPickStock(id);
+    if(mid!=null)vaActivityIdle(id,"member acquired; reassess current world");
+    else vaActivityIdle(id,"stock unavailable");
+    continue;
+   }
+  }
+
+  if(a.kind==="collect-spoil"){
+   const bi=w.pickup?.bi;
+   if(a.phase==="travel"){
+    if(n.path){vaMove(id);continue}
+    a.phase="pickup";
+   }
+   if(a.phase==="pickup"){
+    if(bi!=null&&balive[bi]&&!vaCarried.has(bi)&&vaWorkReach(id,new THREE.Vector3(bx[bi],by[bi],bz[bi])).ok){
+     vaCarry.set(id,{kind:"spoil",id:bi});vaCarried.set(bi,id);bearingClaims[bi]=id;w.pickup=null;
+     vaSetActivity(id,"return-spoil",{phase:n.node===vaHome.id?"deposit":"travel-home",target:vaHome.id,purpose:"return acquired spoil"});
+     if(n.node!==vaHome.id)vaSetPath(id,vaHome.id);
+    }else{if(bi!=null){const prov=vaProvenance.get(bi);if(prov?.claim===id)prov.claim=null}w.pickup=null;vaActivityIdle(id,"spoil unavailable");}
+    continue;
+   }
+  }
+
+  if(a.kind==="return-spoil"){
+   const bi=vaCarry.get(id)?.kind==="spoil"?vaCarry.get(id).id:null;
+   if(bi==null){vaActivityIdle(id,"spoil cargo absent");continue}
+   if(a.phase==="travel-home"){
+    if(n.node===vaHome.id||vaMove(id)){a.phase="deposit";n.path=null}
+    continue;
+   }
+   if(a.phase==="deposit"){
+    vaCarried.delete(bi);bearingClaims[bi]=0;bx[bi]=vaHome.x-2.1;by[bi]=vaHome.y+.6;bz[bi]=vaHome.z+2.3;
+    const prov=vaProvenance.get(bi);if(prov){prov.delivered=true;prov.claim=null}vaCarry.set(id,null);vaSpoilDelivered++;w.roundTrips++;
+    if(vaSpoilDelivered===1||vaSpoilDelivered%6===0)vaLog("carry","Excavated material carried back to the entrance stock area.",{worker:id,bearing:bi,origin:prov?.event,count:vaSpoilDelivered});
+    vaActivityIdle(id,"spoil deposited");continue;
+   }
+  }
+
+  if(a.kind==='traverse'){
+   if(n.node===a.target||vaMove(id)){n.path=null;if(w.descentIntent){const t=w.descentIntent;if(Math.hypot(entities.get(id).g.position.x-t.targetX,entities.get(id).g.position.z-t.targetZ)<.2&&!w.staging)w.descentIntent=null;}vaActivityIdle(id,'local edge crossed; reprobe');}
+   continue;
+  }
+
+  if(a.kind==='excavate'||a.kind==='place-member'){
+   const work=w.localWork;
+   if(!work||(work.stagedFrom||work.a)!==n.node){w.localWork=null;vaActivityIdle(id,'local edge invalidated');continue;}
+   if(a.kind==='place-member'&&c?.kind!=='member'){w.localWork=null;vaActivityIdle(id,'placement cargo absent');continue;}
+   if(a.phase==='work'){
+    const aa=vaNodes.get(work.a),bb=vaNodes.get(work.b);
+    if(vaBlocked(aa,bb)){a.phase='blocked';a.purpose='waiting for physical spoil clearance';continue;}
+    a.elapsed+=dt;if(a.elapsed<a.duration)continue;
+    /* Last-responsible-moment local revalidation. No strategic/global planner call. */
+    const current=vaLocalEdge(id);
+    if(!current||current.key!==work.key||(current.op!==work.op&&!(work.op==='stage'&&current.op==='place'))){w.localWork=null;vaActivityIdle(id,'local physical affordance changed; reprobe');continue;}
+    let ok=false;
+    if(work.op==='remove')ok=vaRemove(work,id);else ok=vaPlace(work,id);
+    w.localWork=null;w.pendingEdge=null;if(vaStoppedReason)continue;
+    if(ok&&work.op==='remove'&&w.descentIntent)w.descentIntent.cuts=(w.descentIntent.cuts||0)+1;
+    vaActivityIdle(id,ok?(work.op==='remove'?'excavation complete; retain world-space intent and handle its spoil':'placement complete; retain intent until physically crossed'):'physical action rejected');
+    continue;
+   }
+   if(a.phase==='blocked'){
+    const aa=vaNodes.get(work.a),bb=vaNodes.get(work.b);if(!vaBlocked(aa,bb)){a.phase='work';a.elapsed=0;a.purpose=work.op;}continue;
+   }
+  }
+ }}
+
+/* PHYSICAL VOCABULARY v12. Components own capability and disposition; topology is a cache. */
+const vaEnvelope={radius:3.2,shoulder:.8};
+let vaWorkAudit=[],vaReachFailures=0,vaLandingCuts=0,vaCliffThrows=0;
+function vaWorkReach(id,p){const e=entities.get(id),body=gravityBodies.get(id);if(!e)return {ok:false,reason:'worker absent'};const envelope=vaECS.get(id,'WorkingEnvelope')||vaEnvelope,foot=e.g.position,origin=foot.clone().add(new THREE.Vector3(0,envelope.shoulder,0)),distance=origin.distanceTo(p);const supported=Math.abs(foot.y-vaSupport(foot.x,foot.z))<.16&&body?.grounded!==false;return {ok:supported&&distance<=envelope.radius+1e-6,reason:!supported?'no current physical support':distance>envelope.radius?'outside working envelope':'within working envelope',distance,origin:origin.toArray(),target:p.toArray()};}
+function vaReachRecord(id,kind,points){const gates=points.map(p=>vaWorkReach(id,p)),ok=gates.every(g=>g.ok);if(!ok)vaReachFailures++;vaWorkAudit.push({tick:vaTick,worker:id,kind,ok,gates});if(vaWorkAudit.length>2000)vaWorkAudit.shift();return ok;}
+function vaStopPhysical(id,reason,data={}){vaStoppedReason='PHYSICAL LIMIT · '+reason;vaRunning=false;vaLog('terminal',vaStoppedReason,{worker:id,...data});vaSetActivity(id,'limited',{phase:'physical-limit',purpose:reason});return false;}
+function vaPhysicalNode(x,z){const i=(x+24)/3,j=z/3,key=vaKey(i,j);if(vaNodes.has(key))return vaNodes.get(key);const n={id:key,i,j,x,z,y:vaSupport(x,z),seen:vaTick,modified:null};vaNodes.set(key,n);return n;}
+function vaLinkNatural(a,b){if(!vaNaturalOK(a,b))return false;const key=vaEdgeKey(a.id,b.id);if(!vaEdges.get(key)?.member)vaEdges.set(key,{id:key,a:a.id,b:b.id,active:true,member:null,down:0,up:0,loadedDown:0,loadedUp:0});return true;}
+function vaExcavationSamples(id,job){
+ const a=vaNodes.get(job.a),b=vaNodes.get(job.b),p=entities.get(id).g.position,dx=b.x-a.x,dz=b.z-a.z,len=Math.hypot(dx,dz),ux=dx/len,uz=dz/len,out=[];
+ // Cut a near landing/approach, never the entire distant corridor. Lattice support is explicit.
+ for(let z=1;z<NZ-1;z++)for(let x=1;x<NX-1;x++){
+  const q=wp(x,0,z),along=(q.x-p.x)*ux+(q.z-p.z)*uz,across=Math.abs((q.x-p.x)*uz-(q.z-p.z)*ux);
+  if(along<.35||along>2.85||across>1.65)continue;
+  const old=vaRockY(q.x,q.z),ceiling=Math.min(old,(vaECS.get(id,'WorkState').descentIntent?.cutDatum??p.y)+Math.max(0,along)*(b.y>p.y+.7?.40:-.30));
+  if(old-ceiling<.015)continue;
+  const top=new THREE.Vector3(q.x,old,q.z),bottom=new THREE.Vector3(q.x,ceiling,q.z);
+  if(vaWorkReach(id,top).ok&&vaWorkReach(id,bottom).ok)out.push({x,z,old,ceiling,top,bottom});
+ }
+ return out;
+}
+vaRemove=function(job,id){
+ const intent=vaECS.get(id,'WorkState').descentIntent;if(intent&&intent.cutDatum==null)intent.cutDatum=entities.get(id).g.position.y;const samples=vaExcavationSamples(id,job),b=vaNodes.get(job.b);
+ if(!samples.length)return vaRememberLimit(id,job,'No useful cut remains within reach from this working elevation; inspect other reachable footholds.');
+ if(!vaReachRecord(id,'excavate-landing',samples.flatMap(s=>[s.top,s.bottom])))return false;
+ const oldY=b.y;terrainDeformation.mutate('reachable landing cut',()=>{for(const s of samples)for(let y=1;y<NY-1;y++){const q=idx(s.x,y,s.z);field[q]=Math.min(field[q],s.ceiling-wp(s.x,y,s.z).y);}});
+ vaRefresh();vaRemovalCount++;vaLandingCuts++;
+ const event=vaLog('remove','Worker cuts a reachable landing and widens its approach; the distant face remains intact.',{worker:id,node:b.id,oldY,newY:b.y,parent:job.parent,affordance:'landing/approach',columns:samples.map(s=>[s.top.x,s.top.z,s.old,s.ceiling]),representedYield:1});b.modified=event;
+ const p=entities.get(id).g.position,bi=spawnBallRaw(p.x,p.y+.6,p.z,0,0,0,.05);if(bi)vaProvenance.set(bi-1,{event,source:b.id,delivered:false});vaSurvey();return true;
+};
+const vaBaselineClassify=vaClassifyDescentEdge;
+vaClassifyDescentEdge=function(a,b){const work=vaBaselineClassify(a,b);if(work)work.endY=a.y-Math.min(1.45,Math.hypot(b.x-a.x,b.z-a.z)*.483333333);return work;};
+const vaBaselineResolve=vaResolveWorldIntent;
+vaResolveWorldIntent=function(id){
+ const work=vaBaselineResolve(id);if(work&&['remove','place'].includes(work.op)&&vaLocallyExcluded(id,vaNodes.get(work.a),vaNodes.get(work.b)))return null;if(!work||work.op==='reposition'||work.op==='traverse')return work;
+ const n=vaECS.get(id,'Navigation'),ws=vaECS.get(id,'WorkState');if(work.a!==n.node)return work;
+ const a=vaNodes.get(work.a),b=vaNodes.get(work.b),distance=Math.hypot(b.x-a.x,b.z-a.z);
+ if(work.op==='remove'&&distance>.8){
+  // New landing earns progression only by walking it; no teleport to freshly cut topology.
+  for(const d of [1.5,1,.5]){if(d>=distance-.2)continue;const t=d/distance,x=a.x+(b.x-a.x)*t,z=a.z+(b.z-a.z)*t,probe={x,z,y:vaSupport(x,z)};
+   if(!vaNaturalOK(a,probe))continue;const step=vaPhysicalNode(x,z);vaLinkNatural(a,step);ws.descentIntent.originX=step.x;ws.descentIntent.originZ=step.z;delete ws.descentIntent.cutDatum;vaLog('landing-access','A newly usable near foothold must be physically traversed before work continues.',{worker:id,from:a.id,to:step.id});return {id:'LA'+vaTick,key:'landing:'+step.id,a:a.id,b:step.id,op:'reposition',evidence:'reachable landing'};
+  }
+ }
+ return work;
+};
+function vaStageSpec(id,work){const a=vaNodes.get(work.a),b=vaNodes.get(work.b),p=vaVec(a),q=new THREE.Vector3(b.x,work.endY,b.z),end=p.clone().lerp(q,.5);const dir=q.clone().sub(p);dir.y=0;dir.normalize();const back=p.clone().addScaledVector(dir,-.55);back.y=vaSupport(back.x,back.z);let parent=null;for(const m of vaMembers.values())if(m.active&&m.kind!=='staging'&&vaOnMember(m,a.x,a.z)&&Math.abs(vaOnMember(m,a.x,a.z).y-a.y)<.15){parent=m.id;break;}if(parent&&vaMembers.get(parent).kind==='staging')return null;return {p,end,back,parent,rock:vaRockY(a.x,a.z)};}
+const vaBaselineStartWork=vaStartLocalWork;
+vaStartLocalWork=function(id,work){
+ if(work.op==='place'&&!work.stagedFrom){
+  const a=vaNodes.get(work.a),b=vaNodes.get(work.b),points=[vaVec(a),new THREE.Vector3(b.x,work.endY,b.z)];
+  if(!points.every(p=>vaWorkReach(id,p).ok)){
+   const spec=vaStageSpec(id,work);if(!spec||!vaWorkReach(id,spec.end).ok)return vaStopPhysical(id,'no reachable staging attachment for this span.');
+   work={...work,op:'stage',span:{...work}};vaReachFailures++;vaLog('reach-blocked','The far joint is outside reach. A short physical staging beam is needed first.',{worker:id,from:work.a,to:work.b});
+  }
+ }
+ return vaBaselineStartWork(id,work);
+};
+function vaPlaceStage(job,id){
+ const spec=vaStageSpec(id,job.span),c=vaCarry.get(id);if(!spec||c?.kind!=='member')return false;
+ if(!vaReachRecord(id,'attach-staging',[spec.p,spec.end,spec.back]))return false;
+ if(!spec.parent&&Math.abs(spec.p.y-spec.rock)>.2)return vaStopPhysical(id,'staging requires geological contact or a surviving full member.');
+ const mid=c.id,e=entities.get(mid);e.g.traverse(q=>q.geometry?.dispose());e.g.clear();e.g.position.set(0,0,0);e.g.rotation.set(0,0,0);
+ const dir=spec.end.clone().sub(spec.p).normalize(),off=new THREE.Vector3(-dir.z,0,dir.x).normalize();
+ for(const side of [-.27,.27])vaBeam(e.g,spec.back.clone().addScaledVector(off,side),spec.end.clone().addScaledVector(off,side),.15);
+ const deck=new THREE.Mesh(new THREE.BoxGeometry(.68,.1,spec.p.distanceTo(spec.end)),vaTimber);deck.position.copy(spec.p).add(spec.end).multiplyScalar(.5);deck.rotation.y=Math.atan2(dir.x,dir.z);deck.rotation.x=-Math.asin(dir.y);e.g.add(deck);
+ const event=vaLog('stage','One carried timber bundle becomes a narrow cantilever working platform.',{worker:id,entity:mid,attachment:spec.parent||'rock',from:spec.p.toArray(),to:spec.end.toArray()});
+ vaMaterials.get(mid).state='placed';delete vaMaterials.get(mid).carrier;vaCarry.set(id,null);
+ const a=vaNodes.get(job.a),step=vaPhysicalNode(spec.end.x,spec.end.z);step.y=spec.end.y;step.modified=event;
+ vaMembers.set(mid,{id:mid,kind:'staging',a:spec.p,b:spec.end,feet:[spec.rock,vaRockY(spec.end.x,spec.end.z)],attachment:spec.parent,back:spec.back,backRock:vaRockY(spec.back.x,spec.back.z),active:true,event,created:vaTick,parent:job.parent,loadLimit:1});
+ vaEdges.set(vaEdgeKey(a.id,step.id),{id:vaEdgeKey(a.id,step.id),a:a.id,b:step.id,member:mid,active:true,down:0,up:0,loadedDown:0,loadedUp:0});vaRefresh();
+ const ws=vaECS.get(id,'WorkState');ws.staging={member:mid,node:step.id,span:{...job.span},origin:[a.x,a.z]};
+ vaSurvey();return true;
+}
+const vaBaselinePlace=vaPlace;
+vaPlace=function(job,id){if(job.op==='stage')return vaPlaceStage(job,id);const a=vaNodes.get(job.a),b=vaNodes.get(job.b);if(!vaReachRecord(id,'place-member',[vaVec(a),new THREE.Vector3(b.x,job.endY,b.z)]))return vaStopPhysical(id,'both span joints must be within working reach.');const ok=vaBaselinePlace(job,id);if(ok){const ws=vaECS.get(id,'WorkState');ws.staging=null;vaLog('staging-use','The worker erected the full span from the physical midpoint platform.',{worker:id,from:a.id,to:b.id});}return ok;};
+
+/* BLOCKED CONSTRUCTED ROUTE -> LOCAL EXCAVATION EVIDENCE
+   Traversal clearance is an observation, not a terminal state. If an intact member attached to the
+   worker's current foothold is blocked by surviving geology, expose that obstruction through the
+   ordinary reachable excavation actuator. The member grants a working face, not permission to pass:
+   vaExcavationSamples still limits mutation to terrain contacts inside the worker's supported 3.2u
+   envelope. After every cut vaRefresh re-tests the same persistent member. If no useful obstruction
+   sample is physically reachable, this adapter contributes no action and the ordinary repertoire may
+   legitimately exhaust. No special repair project, tunnel action, reach multiplier, or global plan. */
+const vaLocalEdgeBeforeClearanceExcavation=vaLocalEdge;
+function vaBlockedMemberExcavation(id){
+ const nav=vaECS.get(id,'Navigation'),ws=vaECS.get(id,'WorkState');if(!nav?.node||!ws)return null;
+ const options=[];
+ for(const edge of vaEdges.values()){
+  if(!edge.member||!edge.clearanceBlocked)continue;
+  const m=vaMembers.get(edge.member);if(!m?.active)continue;
+  const other=edge.a===nav.node?edge.b:edge.b===nav.node?edge.a:null;if(!other)continue;
+  const a=vaNodes.get(nav.node),b=vaNodes.get(other);if(!a||!b)continue;
+  const job={id:'C'+vaTick,key:'clearance:'+edge.id,a:a.id,b:b.id,op:'remove',endY:b.y,parent:m.event||a.modified||null,work:0,evidence:'surviving-terrain-blocks-constructed-traversal',clearanceMember:m.id};
+  const samples=vaExcavationSamples(id,job);if(!samples.length)continue;
+  const nearest=Math.min(...samples.flatMap(s=>[vaWorkReach(id,s.top).distance,vaWorkReach(id,s.bottom).distance]));
+  options.push({job,nearest});
+ }
+ options.sort((x,y)=>x.nearest-y.nearest||x.job.key.localeCompare(y.job.key));
+ const pick=options[0]?.job||null;
+ if(pick&&ws.clearanceEvidence!==pick.key){ws.clearanceEvidence=pick.key;vaLog('clearance-work','Blocked constructed traversal exposes reachable surviving terrain as ordinary local excavation work.',{worker:id,edge:pick.key.slice('clearance:'.length),member:pick.clearanceMember});}
+ return pick;
+}
+vaLocalEdge=function(id){
+ const clearance=vaBlockedMemberExcavation(id);
+ if(clearance)return clearance;
+ const ws=vaECS.get(id,'WorkState');if(ws)ws.clearanceEvidence=null;
+ return vaLocalEdgeBeforeClearanceExcavation(id);
+};
+const vaResolveLanding=vaResolveWorldIntent;
+vaResolveWorldIntent=function(id){const ws=vaECS.get(id,'WorkState'),nav=vaECS.get(id,'Navigation'),stage=ws.staging;if(!stage)return vaResolveLanding(id);const m=vaMembers.get(stage.member);if(!m?.active){ws.staging=null;return vaResolveLanding(id);}if(nav.node!==stage.node)return {id:'SR'+vaTick,key:'stage-approach:'+stage.node,a:nav.node,b:stage.node,op:'reposition',evidence:'walk onto staging'};return {...stage.span,stagedFrom:stage.node};};
+// Spoil destination policy and transport are independent of excavation.
+function vaChooseDisposition(id){const nav=vaECS.get(id,'Navigation'),p=entities.get(id).g.position,policy=vaECS.get(id,'SpoilPolicy')?.mode||'cliff';if(policy==='cliff'){
+ const options=[];for(const n of vaNodes.values()){if(Math.hypot(n.x-p.x,n.z-p.z)>7)continue;const path=vaPath(nav.node,n.id);if(!path)continue;for(let k=0;k<8;k++){const angle=k*Math.PI/4,dx=Math.cos(angle),dz=Math.sin(angle),x=n.x+dx*2.4,z=n.z+dz*2.4,drop=n.y-vaSupport(x,z);if(drop<2.0||!worksInsideMask(x,z))continue;const release=new THREE.Vector3(n.x+dx*.65,n.y+.95,n.z+dz*.65);if(vaRockY(release.x,release.z)>release.y-.2)continue;options.push({node:n.id,dx,dz,drop,path: path.length});}}
+ options.sort((a,b)=>a.path-b.path||b.drop-a.drop||a.node.localeCompare(b.node)||a.dx-b.dx);if(options.length)return {...options[0],mode:'cliff'};
+ }return {node:vaHome.id,mode:'home'};}
+function vaSpoilSystem({ecs,ids}){for(const id of ids){const c=vaCarry.get(id),nav=ecs.get(id,'Navigation'),a=ecs.get(id,'Activity');if(c?.kind!=='spoil')continue;let d=ecs.get(id,'Disposition');if(!d){d=vaChooseDisposition(id);ecs.set(id,'Disposition',d);vaSetActivity(id,'dispose-spoil',{phase:'travel',target:d.node,purpose:d.mode==='cliff'?'carry to locally observed drop edge':'carry to entrance fallback'});}
+ if(nav.node!==d.node){if(!nav.path&&!vaSetPath(id,d.node)){ecs.remove(id,'Disposition');vaActivityIdle(id,'disposal route changed');continue;}vaMove(id);continue;}
+ const p=entities.get(id).g.position,bi=c.id;if(d.mode==='cliff'&&p.y-vaSupport(p.x+d.dx*2.4,p.z+d.dz*2.4)<2.0){ecs.remove(id,'Disposition');continue;}
+ vaCarried.delete(bi);bearingClaims[bi]=0;bx[bi]=p.x+(d.dx||0)*.65;by[bi]=p.y+.95;bz[bi]=p.z+(d.dz||0)*.65;bvx[bi]=(d.dx||0)*3;bvy[bi]=1.8;bvz[bi]=(d.dz||0)*3;
+ const prov=vaProvenance.get(bi);if(prov){prov.delivered=true;prov.claim=null;prov.disposition=d.mode;prov.releaseTick=vaTick;prov.releasePosition=[bx[bi],by[bi],bz[bi]];}
+ vaCarry.set(id,null);vaSpoilDelivered++;if(d.mode==='cliff')vaCliffThrows++;ecs.remove(id,'Disposition');vaLog('dispose',d.mode==='cliff'?'The carried spoil bearing is thrown over a locally observed cliff; gravity owns its landing.':'The carried spoil bearing is released at the entrance.',{worker:id,bearing:bi,policy:d.mode,position:[bx[bi],by[bi],bz[bi]],velocity:[bvx[bi],bvy[bi],bvz[bi]]});vaActivityIdle(id,'spoil released');
 }}
-function vaStructureSystem(){for(const [id,m] of vaMembers){if(!m.active)continue;const feet=[vaRockY(m.a.x,m.a.z),vaRockY(m.b.x,m.b.z)];if(m.broken||feet.some((f,k)=>f<m.feet[k]-.5)){m.active=false;const e=entities.get(id),center=m.a.clone().add(m.b).multiplyScalar(.5);for(const child of e.g.children)child.position.sub(center);e.g.position.copy(center);gravityBodies.set(id,{vy:0,grounded:false});vaLog('support failure','Loss of a geological foot closes the route; its member falls.',{entity:id,cause:m.broken?'recorded intervention':'terrain removed'});vaRefresh();}}}
+vaClaimSpoil=function(id){if(vaCarry.get(id))return false;const p=entities.get(id).g.position,nav=vaECS.get(id,'Navigation'),ws=vaECS.get(id,'WorkState');let best=null;for(const [bi,pr] of vaProvenance){if(!balive[bi]||pr.delivered||pr.claim||vaCarried.has(bi)||Math.hypot(bx[bi]-p.x,bz[bi]-p.z)>7)continue;for(const n of vaNodes.values()){if(Math.hypot(bx[bi]-n.x,bz[bi]-n.z)>1.9||Math.abs(by[bi]-n.y)>2)continue;const path=vaPath(nav.node,n.id);if(path&&(!best||path.length<best.dist))best={bi,node:n.id,dist:path.length};}}if(!best)return false;vaProvenance.get(best.bi).claim=id;ws.pickup=best;vaSetPath(id,best.node);return true;};
+const vaBaseWorker=vaMakeDescentDrone;
+vaMakeDescentDrone=function(){const e=vaBaseWorker();vaECS.set(e.id,'WorkingEnvelope',{...vaEnvelope});vaECS.set(e.id,'SpoilPolicy',{mode:'cliff'});return e;};
+const vaBaseWorkerSystem=vaAsyncWorkerSystem;
+vaAsyncWorkerSystem=function(ctx){for(const id of ctx.ids){if(vaCarry.get(id)?.kind==='spoil')continue;vaBaseWorkerSystem({...ctx,ids:[id]});}};
+vaStructureSystem=function(){let changed=false;for(const [id,m] of vaMembers){if(!m.active)continue;let lost;if(m.kind==='staging')lost=m.attachment?!vaMembers.get(m.attachment)?.active:(vaRockY(m.a.x,m.a.z)<m.feet[0]-.5||vaRockY(m.back.x,m.back.z)<m.backRock-.5);else lost=[vaRockY(m.a.x,m.a.z),vaRockY(m.b.x,m.b.z)].some((f,k)=>f<m.feet[k]-.5);if(m.broken||lost){m.active=false;vaFractureMember(id,m,m.broken?'recorded intervention':m.kind==='staging'?'staging attachment lost':'terrain removed');changed=true;}}if(changed)vaRefresh();};
+const vaBaseReset=vaReset;
+vaReset=function(){vaWorkAudit=[];vaReachFailures=vaLandingCuts=vaCliffThrows=0;vaHistorySerial=vaHistoryDropped=0;vaBaseReset();vaECS.registerSystem('physical-spoil-disposition',['WorkerRole','Cargo','SpoilPolicy','Activity','Navigation'],vaSpoilSystem,{order:90});};
+const vaBaseSnapshot=vaSnapshot;
+vaSnapshot=function(){const s=vaBaseSnapshot();s.version='Physical vocabulary v12 candidate';s.stoppedReason=vaStoppedReason;s.physicalVocabulary={envelope:vaEnvelope,reachFailures:vaReachFailures,landingCuts:vaLandingCuts,cliffThrows:vaCliffThrows,audit:vaWorkAudit};return s;};
+// Failed physical probes are worker-local evidence, not tasks. Exhaust alternatives by walking.
+function vaLimitKey(a,b){return [a.x,a.z,b.x,b.z].map(x=>x.toFixed(3)).join(':');}
+function vaLocallyExcluded(id,a,b){return Object.values(vaECS.get(id,'LocalLimits')||{}).some(m=>Math.abs(vaSupport(m.origin[0],m.origin[1])-m.originY)<.6&&Math.abs(vaSupport(m.target[0],m.target[1])-m.targetY)<.6&&Math.hypot(b.x-m.target[0],b.z-m.target[1])<1.1&&Math.hypot(a.x-m.origin[0],a.z-m.origin[1])<3.1);}
+function vaRememberLimit(id,job,reason){const a=vaNodes.get(job.a),b=vaNodes.get(job.b),ws=vaECS.get(id,'WorkState');let memory=vaECS.get(id,'LocalLimits');if(!memory){memory={};vaECS.set(id,'LocalLimits',memory);}memory[vaLimitKey(a,b)]={revision:vaRevision,tick:vaTick,reason,origin:[a.x,a.z],target:[b.x,b.z],originY:vaSupport(a.x,a.z),targetY:vaSupport(b.x,b.z)};vaLog('local-limit',reason,{worker:id,from:a.id,to:b.id,revision:vaRevision});ws.descentIntent=null;ws.localWork=null;return false;}
+const vaInstrumentSnapshot=vaSnapshot;
+vaSnapshot=function(){const s=vaInstrumentSnapshot();s.consequences={corpses:[...entities.values()].filter(e=>e.type==='WORKER CORPSE').map(e=>({id:e.id,position:e.g.position.toArray()})),debris:[...entities.values()].filter(e=>e.parentMaterial!=null).map(e=>({id:e.id,parent:e.parentMaterial,position:e.g.position.toArray()}))};for(const a of s.agents){a.envelope=vaECS.get(a.id,'WorkingEnvelope');a.disposition=vaECS.get(a.id,'Disposition')||null;a.localLimits=vaECS.get(a.id,'LocalLimits')||{};}return s;};
+const vaInstrumentUI=vaUI;
+vaUI=function(){vaInstrumentUI();const stock=[...vaMaterials.values()].filter(m=>m.state==='stock').length,stages=[...vaMembers.values()].filter(m=>m.kind==='staging'),full=[...vaMembers.values()].filter(m=>m.kind!=='staging');document.getElementById('vaMetrics').innerHTML+=`<br>WORKING REACH · ${vaEnvelope.radius}u from shoulder, current support required<br>${vaLandingCuts} approach/landing cuts · ${vaCliffThrows} cliff throws<br>${stages.filter(m=>m.active).length}/${stages.length} surviving staging platforms · ${full.filter(m=>m.active).length}/${full.length} full spans<br>${vaReachFailures} far-joint constraints · ${[...entities.values()].filter(e=>e.type==='WORKER CORPSE').length} persistent corpses`;
+ for(const id of vaECS.query('WorkerRole')){const p=entities.get(id).g.position,w=vaECS.get(id,'WorkState');document.getElementById('vaAgents').textContent+=`\n  position ${p.toArray().map(v=>v.toFixed(2)).join(', ')}\n  working reach ${vaEnvelope.radius}u · supported ${vaWorkReach(id,p).ok}\n  locally ruled-out approaches ${Object.keys(vaECS.get(id,'LocalLimits')||{}).length}\n  staging ${w.staging?.member||'none'} · spoil policy ${vaECS.get(id,'SpoilPolicy')?.mode}`;}
+ document.getElementById('vaPause').textContent=vaRunning?'PAUSE':'RESUME';};
+
+function vaCollapseImpulse(id,scale=1){const a=((id*1103515245+vaTick*12345)>>>0)/4294967295*Math.PI*2;return {vx:Math.cos(a)*scale,vz:Math.sin(a)*scale,vy:1.5+(((id*2654435761)>>>0)%100)/100*2.2};}
+function vaMakeDebrisFromChild(child,parentId,index){
+ const wp=new THREE.Vector3(),wq=new THREE.Quaternion(),ws=new THREE.Vector3();child.updateWorldMatrix(true,false);child.matrixWorld.decompose(wp,wq,ws);
+ if(child.parent)child.parent.remove(child);scene.add(child);child.position.copy(wp);child.quaternion.copy(wq);child.scale.copy(ws);
+ const e=vaEntity(index%3===0?'BROKEN ROD':'BROKEN PLANK',child);e.g.position.copy(wp);e.g.quaternion.copy(wq);e.g.scale.copy(ws);e.parentMaterial=parentId;
+ const kick=vaCollapseImpulse(e.id,.9);gravityBodies.set(e.id,{vy:kick.vy,vx:kick.vx,vz:kick.vz,grounded:false});return e.id;
+}
+function vaReleaseWorkerCargoOnDeath(id){const c=vaCarry.get(id);if(!c)return;
+ if(c.kind==='member'){const e=entities.get(c.id);if(e){const kick=vaCollapseImpulse(e.id,.7);gravityBodies.set(e.id,{vy:kick.vy,vx:kick.vx,vz:kick.vz,grounded:false});}const mat=vaMaterials.get(c.id);if(mat){mat.state='loose';delete mat.carrier;}}
+ if(c.kind==='spoil'){vaCarried.delete(c.id);const p=vaProvenance.get(c.id);if(p)delete p.claim;bearingClaims[c.id]=0;}
+ vaCarry.set(id,null);
+}
+function vaKillWorker(id,{memberId=null,observer=false}={}){const e=entities.get(id);if(!e||e.type==='WORKER CORPSE')return null;
+ vaReleaseWorkerCargoOnDeath(id);const p=e.g.position.clone();
+ vaWorkerRole.delete(id);vaWorkerNav.delete(id);vaWorkerTask.delete(id);vaWorkerVisual.delete(id);vaWorkerActivity.delete(id);vaCarry.delete(id);if(vaECS){vaECS.alive.delete(id);for(const store of vaECS.components.values())store.delete(id);}
+ e.type='WORKER CORPSE';e.g.userData.corpse=true;e.g.rotation.z=.55;const kick=vaCollapseImpulse(id,observer?.45:1.25);gravityBodies.set(id,{vy:kick.vy+(observer?.35:1.3),vx:kick.vx,vz:kick.vz,grounded:false});
+ vaLog('death',observer?'Observer kills the active worker; the corpse remains in the physical field.':'Worker is thrown by scaffold failure and dies; the corpse remains in the physical field.',{worker:id,member:memberId,observer,position:p.toArray()});
+ const replacement=vaMakeDescentDrone({replayKnownRoute:true});vaLog('replacement','A new worker spawns at the expedition entrance with demonstrated route memory available for replay.',{worker:replacement.id,predecessor:id});return replacement.id;
+}
+function vaKillWorkerOnCollapse(id,memberId){return vaKillWorker(id,{memberId});}
+function vaKillActiveWorker(){const id=vaECS?.query('WorkerRole')[0];if(id==null){vaLog('intervention','Observer requested worker succession, but no active worker exists.');return null;}vaLog('intervention','Observer forces worker succession.',{worker:id});return vaKillWorker(id,{observer:true});}
+function vaFractureMember(id,m,cause){const e=entities.get(id);if(!e)return;
+ const victims=[];for(const wid of [...vaWorkerRole.keys()]){const we=entities.get(wid);if(!we)continue;const hit=vaOnMember(m,we.g.position.x,we.g.position.z);if(hit&&Math.abs(we.g.position.y-hit.y)<1.8)victims.push(wid);}
+ const children=[...e.g.children];for(let i=0;i<children.length;i++)vaMakeDebrisFromChild(children[i],id,i);
+ e.g.visible=false;gravityBodies.delete(id);const mat=vaMaterials.get(id);if(mat)mat.state='broken';
+ const torchId=vaMemberTorches.get(id);if(torchId!=null){const t=entities.get(torchId);if(t){const kick=vaCollapseImpulse(torchId,1.1);gravityBodies.set(torchId,{vy:kick.vy+1,vx:kick.vx,vz:kick.vz,grounded:false});}vaMemberTorches.delete(id);}
+ for(const wid of victims)vaKillWorkerOnCollapse(wid,id);
+ vaLog('support failure','Loss of a geological foot fractures the scaffold; planks, rods, torch, and any worker on it enter physics.',{entity:id,cause,victims});
+}
+function vaStructureSystem(){let changed=false;for(const [id,m] of vaMembers){if(!m.active)continue;const feet=[vaRockY(m.a.x,m.a.z),vaRockY(m.b.x,m.b.z)];if(m.broken||feet.some((f,k)=>f<m.feet[k]-.5)){m.active=false;vaFractureMember(id,m,m.broken?'recorded intervention':'terrain removed');changed=true;}}if(changed)vaRefresh();}
 function vaEvidence(){if(vaMilestone)return;for(const e of vaEdges.values()){if(!e.member||e.down<2||e.up<2||e.loadedDown<2||e.loadedUp<2)continue;const m=vaMembers.get(e.member),later=vaHistory.find(h=>h.tick>m.created&&(h.kind==='place'||h.kind==='remove')&&h.parent===m.event);if(later){vaMilestone={tick:vaTick,edge:e.id,member:e.member,down:e.down,up:e.up,loadedDown:e.loadedDown,loadedUp:e.loadedUp,later:later.id};vaLog('milestone','Causal chain evidenced: loaded return access now supports subsequent physical work.',vaMilestone);}}}
-function vaFixedStep(){vaTick++;if(vaTick-vaLastSurvey>=30){vaSurvey();vaChooseJob();}vaStructureSystem();vaWorkerSystem();vaSyncCargo();gravitySystem(vaDt);updateChamber(vaTick*1000*vaDt,vaDt);vaEvidence();}
-function vaFrame(now){if(!vaReady)return;if(!vaLast)vaLast=now;const elapsed=Math.min(.12,(now-vaLast)/1000);vaLast=now;if(vaRunning)vaAccumulator+=elapsed*vaPace;let n=0;while(vaAccumulator>=vaDt&&n++<24){vaFixedStep();vaAccumulator-=vaDt;}if(vaTick%15===0||!vaRunning)vaUI();}
-function vaSnapshot(){const slices={};const size=+document.getElementById('vaSlice').value;for(const n of vaNodes.values()){const key=Math.floor(n.y/size)*size;(slices[key]??=[]).push(n.id);}return{version:'E1',seed:vaSeed,tick:vaTick,seconds:vaTick*vaDt,revision:vaRevision,parameters:{step:vaDt,sight:7,loadedGrade:.62,supportLength:9,sliceThickness:size},milestone:vaMilestone,job:vaJob,agents:[...vaWorkers].map(([id,w])=>({id,node:w.node,task:w.task,position:entities.get(id).g.position.toArray(),cargo:vaCarry.get(id),roundTrips:w.roundTrips})),abandoned:[...vaAbandoned],stock:[...vaMaterials].map(([id,m])=>({id,...m})),members:[...vaMembers].map(([id,m])=>({...m,a:m.a.toArray(),b:m.b.toArray()})),nodes:[...vaNodes.values()],edges:[...vaEdges.values()],slices,spoil:[...vaProvenance].map(([i,p])=>({i,...p,position:[bx[i],by[i],bz[i]],alive:!!balive[i]})),history:vaHistory};}
-function vaUI(){const r=vaReach(),depth=vaHome.y-Math.min(...[...r].map(k=>vaNodes.get(k).y)),stock=[...vaMaterials.values()].filter(m=>m.state==='stock').length;document.getElementById('vaBadge').innerHTML='SEED '+vaSeed+'<br>T + '+Math.floor(vaTick/30)+' s';document.getElementById('vaMetrics').innerHTML=`Reachable descent ${depth.toFixed(1)} u · ${r.size} sampled surfaces<br>${vaMembers.size} members · ${stock} stock · ${ballCount} spoil bearings<br>${vaRemovalCount} removals · ${vaSpoilDelivered} returned spoil<br>${vaNaturalTrips} natural edge traversals · tick ${vaTick}<br>${vaMilestone?'✓ Causal milestone recorded at '+Math.floor(vaMilestone.tick/30)+' s':'Causal chain under observation'}${vaStoppedReason?'<br>'+vaStoppedReason:''}`;document.getElementById('vaAgents').textContent=[...vaWorkers].map(([id,w])=>'E'+id+' · '+w.task+'\n  surface '+w.node+' · '+(vaCarry.get(id).entity?'member E'+vaCarry.get(id).entity:vaCarry.get(id).bearing!==null?'bearing '+vaCarry.get(id).bearing:'unladen')).join('\n');document.getElementById('vaHistory').textContent=vaHistory.slice(-16).reverse().map(h=>h.id+' @'+(h.tick/30).toFixed(1)+'s '+h.text).join('\n\n');vaInspectMember();if(vaOverlayRoot.visible)vaDrawOverlay();}
+function vaExpeditionSpoilPhysics(dt){
+ const g=GRAVITIES[gravityIndex][1];
+ for(const [i] of vaProvenance){
+  if(!balive[i]||vaCarried.has(i))continue;
+  bvy[i]+=g*dt;bx[i]+=bvx[i]*dt;by[i]+=bvy[i]*dt;bz[i]+=bvz[i]*dt;
+  const floor=groundHeight(bx[i],bz[i],Math.max(by[i],by[i]-bvy[i]*dt)+BALL_R)+BALL_R;
+  if(g<0&&by[i]<floor){by[i]=floor;bvy[i]=Math.abs(bvy[i])*.13;bvx[i]*=.82;bvz[i]*=.82;}
+ }
+}
+function vaPickStock(id){
+ if(vaCarry.get(id))return null;
+ for(const [mid,m] of vaMaterials)if(m.state==="stock"){m.state="carried";m.carrier=id;vaCarry.set(id,{kind:"member",id:mid});return mid;}
+ return null;
+}
+function vaSyncCargo(){for(const id of vaECS.query("WorkerRole","Navigation","WorkState","WorkerVisual","Cargo")){const c=vaCarry.get(id),n=vaECS.get(id,"Navigation"),w=vaECS.get(id,"WorkState"),v=vaECS.get(id,"WorkerVisual"),entity=entities.get(id),p=entity.g.position;if(c?.kind==="member"){const e=entities.get(c.id);e.g.position.set(p.x,p.y+.78,p.z);e.g.rotation.y=entity.g.rotation.y;}if(c?.kind==="spoil"){bx[c.id]=p.x;by[c.id]=p.y+.8;bz[c.id]=p.z;}
+const act=vaECS.get(id,"Activity"),working=(act?.kind==="place-member"||act?.kind==="excavate")&&act.phase==="work",blocked=act?.phase==="blocked",isolated=act?.kind==="isolated",stationary=!n.path;
+v.stateRoot.visible=stationary&&(working||blocked||isolated);v.halo.visible=working;v.workMark.visible=working;v.blockedMark.visible=blocked||isolated;
+v.stateRoot.rotation.y=vaTick*.025;v.workMark.rotation.y=vaTick*.08;v.spoilCargo.visible=c?.kind==="spoil";
+if(c?.kind==="spoil"){const pulse=1+.10*Math.sin(vaTick*.18);v.spoilCargo.scale.setScalar(pulse);}}}
+function vaBlocked(a,b){let count=0;for(let i=0;i<MAX_BALLS;i++)if(balive[i]&&!vaCarried.has(i)){const dx=b.x-a.x,dz=b.z-a.z,t=clamp(((bx[i]-a.x)*dx+(bz[i]-a.z)*dz)/(dx*dx+dz*dz),0,1);if(Math.hypot(bx[i]-a.x-t*dx,bz[i]-a.z-t*dz)<1.1&&Math.abs(by[i]-vaSupport(bx[i],bz[i]))<1)count++;}return count>=5;}
+function vaFixedStepCore(fast=false){vaTick++;if(vaTick-vaLastSurvey>=30){vaSurvey();}vaStructureSystem();if(vaECS)vaECS.step(vaDt,{worldTick:vaTick});vaSyncCargo();gravitySystem(vaDt);if(fast)vaExpeditionSpoilPhysics(vaDt);else updateChamber(vaTick*1000*vaDt,vaDt);vaEvidence();}
+function vaFixedStep(){vaFixedStepCore(false);}
+
+function vaFrame(now){if(!vaReady)return;if(!vaLast)vaLast=now;const elapsed=Math.min(.12,(now-vaLast)/1000);vaLast=now;if(vaRunning)vaAccumulator+=elapsed*vaPace;let n=0;while(vaRunning&&vaAccumulator>=vaDt&&n++<24){vaFixedStep();vaAccumulator-=vaDt;}if(vaTick%15===0||!vaRunning)vaUI();}
+function vaSnapshot(){const slices={};const size=+document.getElementById('vaSlice').value;for(const n of vaNodes.values()){const key=Math.floor(n.y/size)*size;(slices[key]??=[]).push(n.id);}return{version:'E1',seed:vaSeed,tick:vaTick,seconds:vaTick*vaDt,revision:vaRevision,parameters:{step:vaDt,sight:7,loadedGrade:.62,supportLength:9,sliceThickness:size},milestone:vaMilestone,localCandidates:vaLocalCandidates.map(x=>({...x})),agents:vaECS.query('WorkerRole','Navigation','WorkState','Activity').map(id=>{const n=vaECS.get(id,'Navigation'),w=vaECS.get(id,'WorkState'),a=vaECS.get(id,'Activity');return{id,node:n.node,activity:{...a},position:entities.get(id).g.position.toArray(),cargo:vaCarry.get(id),descentIntent:w.descentIntent?{...w.descentIntent}:null,exploreVisited:Object.keys(w.exploreVisited||{}).length,roundTrips:w.roundTrips,routeReplay:!!w.routeReplay,routeReplayIndex:w.routeReplayIndex??null}}),knownRoute:[...vaKnownRoute],abandoned:[...vaAbandoned],stock:[...vaMaterials].map(([id,m])=>({id,...m})),members:[...vaMembers].map(([id,m])=>({...m,a:m.a.toArray(),b:m.b.toArray()})),nodes:[...vaNodes.values()],edges:[...vaEdges.values()],slices,spoil:[...vaProvenance].map(([i,p])=>({i,...p,position:[bx[i],by[i],bz[i]],alive:!!balive[i]})),history:{dropped:vaHistoryDropped,events:vaHistory},recovery:{localCandidateCount:vaLocalCandidates.length,workerCount:vaECS.query('WorkerRole').length}};}
+function vaUI(){const seedInput=document.getElementById('vaSeedInput');if(document.activeElement!==seedInput)seedInput.value=vaSeed;const r=vaReach(),depth=vaHome.y-Math.min(...[...r].map(k=>vaNodes.get(k).y)),stock=[...vaMaterials.values()].filter(m=>m.state==='stock').length;document.getElementById('vaBadge').innerHTML='SEED '+vaSeed+'<br>T + '+Math.floor(vaTick/30)+' s';document.getElementById('vaMetrics').innerHTML=`Reachable descent ${depth.toFixed(1)} u · ${r.size} sampled surfaces<br>${vaMembers.size} members · ${stock} stock · ${ballCount} spoil bearings<br>${vaRemovalCount} removals · ${vaSpoilDelivered} disposed spoil · ${vaNaturalTrips} natural traversals<br>tick ${vaTick}<br>AUTHORITY · Sev / runtime Worker entity · local edge only<br>SHARED ACCESS · ${vaKnownRoute.length} demonstrated route nodes; physics revalidates replay<br>LOCAL PERCEPTION · bounded 7u search → world-space descent intent → reacquire current face → repeated deform/place → cross${vaSeed===741&&vaStoppedReason&&vaRemovalCount===0?'<br><b>VALIDATION FAIL · seed 741 terminated with zero excavation.</b>':''}${vaStoppedReason?'<br><b>'+vaStoppedReason+'</b>':''}`;document.getElementById('vaAgents').textContent=vaECS?vaECS.query('WorkerRole','Navigation','WorkState').map(id=>{const n=vaECS.get(id,'Navigation'),w=vaECS.get(id,'WorkState'),a=vaECS.get(id,'Activity'),c=vaCarry.get(id);return 'E'+id+' · '+a.kind+' / '+a.phase+'\n  node '+n.node+(c?' · carrying '+c.kind+' '+c.id:'')+'\n  local '+(w.localWork?.key||w.pendingEdge?.key||'none')+' · intent '+(w.descentIntent?('('+w.descentIntent.targetX.toFixed(1)+','+w.descentIntent.targetZ.toFixed(1)+') cuts '+(w.descentIntent.cuts||0)):'none')+'\n  '+(a.purpose||'')}).join('\n'):'';document.getElementById('vaHistory').textContent=vaHistory.slice(-16).reverse().map(h=>h.id+' @'+(h.tick/30).toFixed(1)+'s '+h.text).join('\n\n');vaInspectMember();if(vaOverlayRoot.visible)vaDrawOverlay();}
 function vaInspectMember(){const select=document.getElementById('vaMember');const old=select.value;if(select.options.length!==vaMembers.size+1){select.innerHTML='<option value="">Choose a placed member</option>'+[...vaMembers].map(([id,m])=>'<option value="'+id+'">E'+id+' · '+m.event+'</option>').join('');select.value=old;}const m=vaMembers.get(+select.value);document.getElementById('vaMemberInfo').textContent=m?JSON.stringify({entity:m.id,event:m.event,parentAccess:m.parent,active:m.active,feet:m.feet,edges:[...vaEdges.values()].filter(e=>e.member===m.id)},null,2):'Select a member to inspect its support, provenance, and observed traffic.';}
 let vaOverlayStamp="";
 function vaDrawOverlay(){const stamp=vaRevision+":"+vaNodes.size+":"+vaEdges.size;if(stamp===vaOverlayStamp)return;vaOverlayStamp=stamp;while(vaOverlayRoot.children.length){const c=vaOverlayRoot.children[0];c.geometry?.dispose();c.material?.dispose();vaOverlayRoot.remove(c);}for(const e of vaEdges.values()){const a=vaVec(vaNodes.get(e.a)),b=vaVec(vaNodes.get(e.b));a.y+=.25;b.y+=.25;const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints([a,b]),new THREE.LineBasicMaterial({color:!e.active?0xe57c5a:e.member?0xffd17c:0x95adab,depthTest:false,transparent:true,opacity:.8}));vaOverlayRoot.add(l);}}
-function vaGeology(){const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a),0,1);return t*t*(3-2*t);};for(let z=0;z<NZ;z++)for(let y=0;y<NY;y++)for(let x=0;x<NX;x++){const p=wp(x,y,z),ridge=5.6*Math.exp(-Math.pow((p.x+13)/2.8,2))+11*Math.exp(-Math.pow((p.x-6)/2.4,2)),drop=11*smooth(-5,0,p.x)+14*smooth(10,14,p.x)+12*smooth(22,26,p.x),walls=20*smooth(10,29,-p.z),ripple=(fbm(p.x*.065,p.z*.065,vaSeed)-.5)*2.5;const h=19-.28*(p.x+24)+ridge-drop+walls+ripple;field[idx(x,y,z)]=h-p.y;}initial.set(field);rebuild();hcacheDirty=true;vaHeightCache.clear();}
-function vaReset(){vaReady=false;for(const e of entities.values())e.g.traverse(q=>q.geometry?.dispose());clearPayloads();clearBalls();for(const c of [...vaRoot.children]){c.traverse(q=>q.geometry?.dispose());vaRoot.remove(c);}for(const m of [vaWorkers,vaCarry,vaMaterials,vaMembers,vaCarried,vaProvenance,vaNodes,vaEdges,vaAbandoned,vaHeightCache])m.clear();vaOverlayStamp="";vaHistory.length=0;nextEntityId=1;vaTick=0;vaRevision=0;vaRng=new RNG(vaSeed);vaJob=null;vaJobSerial=0;vaLastSurvey=-100;vaMilestone=false;vaStoppedReason='';vaNaturalTrips=vaRemovalCount=vaSpoilDelivered=0;vaAccumulator=0;vaLast=0;vaGeology();vaHome=vaNode(0,0);vaFront=vaHome;vaStock();for(let i=0;i<3;i++)vaMakeWorker(i);vaAddLamp(vaVec(vaHome));vaReady=true;vaSurvey();vaLog('origin','Three workers begin on natural ground with 28 physical member bundles.');vaUI();}
-function vaBoot(){mat.onBeforeCompile=shader=>{shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vaRockPos;').replace('#include <begin_vertex>','#include <begin_vertex>\nvaRockPos=position;');shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying vec3 vaRockPos;').replace('#include <color_fragment>','#include <color_fragment>\nfloat grain=sin(vaRockPos.x*13.7+sin(vaRockPos.z*9.3))*sin(vaRockPos.y*16.1); float bedding=sin(vaRockPos.y*2.7+sin(vaRockPos.x*.45+vaRockPos.z*.28)*.38); diffuseColor.rgb*=vec3(.82,.98,1.16)*(.88+.10*bedding+.055*grain);');};scene.background.set(0x101719);scene.fog=new THREE.FogExp2(0x101719,.0032);hemi.intensity=1.65;sun.intensity=2.8;fill.intensity=.65;sun.position.set(-25,60,45);apparatusMat.color.set(0x232a29);mat.color.set(0xffffff);ballMat.color.set(0x9b9382);ballMat.metalness=.08;ballMat.roughness=.9;bearingOrdinaryColor.set(0xa69a80);seaVolume.visible=wonderRoot.visible=civRoot.visible=false;vaReset();view.target.set(-5,-2,0);view.distance=153;view.yaw=.30;view.pitch=.76;applyView();document.getElementById('vaBoot').remove();window.__VA_READY__=true;
-window.VerticalAccretion={snapshot:vaSnapshot,audit(){let maxSurfaceError=0;for(let k=0;k<40;k++){const x=-26+(k%10)*5,z=-8+Math.floor(k/10)*5;vaOrigin.set(x,MAX.y+2,z);vaRay.set(vaOrigin,vaDown);const h=vaRay.intersectObject(terrain,false)[0];if(h)maxSurfaceError=Math.max(maxSurfaceError,Math.abs(h.point.y-vaRockY(x,z)));}return{maxSurfaceError,renderer:renderer.info.memory,stockConserved:vaMaterials.size===28,invalidMembers:[...vaMembers.values()].filter(m=>m.active&&(m.a.distanceTo(m.b)>3.5||m.a.y-m.feet[0]>9.001||m.b.y-m.feet[1]>9.001)).map(m=>m.id)};},advance(n){vaRunning=false;for(let k=0;k<n;k++)vaFixedStep();vaUI();return vaSnapshot();},reset:vaReset,pause(){vaRunning=false;},camera(){return{target:view.target.toArray(),distance:view.distance,yaw:view.yaw,pitch:view.pitch};},breakSupport(){const m=[...vaMembers.values()].filter(m=>m.active).at(-1);if(m){m.broken=true;vaLog('intervention','Observer removes a member foot.',{entity:m.id});}},terrainProbe(x,z){return{rock:vaRockY(x,z),support:vaSupport(x,z)};}};
-document.getElementById('vaRecover').onclick=()=>document.getElementById('recover').click();document.getElementById('vaMember').onchange=vaInspectMember;document.getElementById('vaPause').onclick=()=>{vaRunning=!vaRunning;document.getElementById('vaPause').textContent=vaRunning?'PAUSE':'RESUME';};document.getElementById('vaSpeed').onclick=()=>{vaPace=vaPace===1?4:vaPace===4?8:1;document.getElementById('vaSpeed').textContent='PACE · '+vaPace+'×';};document.getElementById('vaPan').onclick=()=>{selectMode(mode==='pan'?'orbit':'pan');document.getElementById('vaPan').textContent=mode==='pan'?'PAN':'ORBIT';};document.getElementById('vaFrame').onclick=()=>{cameraFlight=null;view.target.copy(vaVec(vaFront||vaHome));view.distance=62;view.pitch=.72;applyView();};document.getElementById('vaInspect').onclick=()=>{document.getElementById('vaPanel').classList.toggle('open');vaUI();};document.getElementById('vaReset').onclick=()=>vaReset();document.getElementById('vaOverlay').onclick=()=>{vaOverlayRoot.visible=!vaOverlayRoot.visible;vaUI();};document.getElementById('vaStep').onclick=()=>window.VerticalAccretion.advance(30);document.getElementById('vaBreak').onclick=()=>window.VerticalAccretion.breakSupport();document.getElementById('vaExport').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(vaSnapshot(),null,2)],{type:'application/json'}));a.download='vertical_accretion_seed741_tick'+vaTick+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+/* Manual seed inspection: 741 is the accepted E1 geological control. Other seeds vary
+   parameters of the same descent grammar rather than invoking Foundry's arbitrary terrain shuffle.
+   This deliberately changes pressure, not ontology: ridges, staged descent, cross-wall pressure,
+   broad relief, and local ripple remain the vocabulary. */
+function vaGeologyParameters(seed){
+  const control={slope:.28,base:19,r1x:-13,r1w:2.8,r1h:5.6,r2x:6,r2w:2.4,r2h:11,
+    d1a:-5,d1b:0,d1h:11,d2a:10,d2b:14,d2h:14,d3a:22,d3b:26,d3h:12,
+    wallA:10,wallB:29,wallH:20,broadAmp:0,broadFreq:.026,broadAngle:0,rippleAmp:2.5};
+  if(seed===741)return control;
+  const r=new RNG((seed^0x6d2b79f5)>>>0||1),sym=n=>(r.next()*2-1)*n;
+  const g={...control};
+  g.base+=sym(1.5); g.slope=clamp(g.slope+sym(.10),.16,.40);
+  g.r1x+=sym(4.0); g.r1w=clamp(g.r1w+sym(.9),1.8,4.0); g.r1h=clamp(g.r1h+sym(3.4),2.5,9.0);
+  g.r2x+=sym(5.0); g.r2w=clamp(g.r2w+sym(.9),1.5,3.6); g.r2h=clamp(g.r2h+sym(5.0),6.0,16.0);
+  const d1Shift=sym(3.0),d2Shift=sym(4.0),d3Shift=sym(3.0);
+  g.d1a+=d1Shift;g.d1b+=d1Shift;g.d1h=clamp(g.d1h+sym(4),6,15);
+  g.d2a+=d2Shift;g.d2b+=d2Shift;g.d2h=clamp(g.d2h+sym(5),8,19);
+  g.d3a+=d3Shift;g.d3b+=d3Shift;g.d3h=clamp(g.d3h+sym(4),7,16);
+  const wallShift=sym(4);g.wallA+=wallShift;g.wallB+=wallShift;g.wallH=clamp(g.wallH+sym(7),12,27);
+  g.broadAmp=2.5+r.next()*5.5;g.broadFreq=.018+r.next()*.022;g.broadAngle=r.next()*Math.PI*2;
+  g.rippleAmp=2.0+r.next()*3.0;
+  return g;
+}
+function vaGeology(){const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a),0,1);return t*t*(3-2*t);},g=vaGeologyParameters(vaSeed),ca=Math.cos(g.broadAngle),sa=Math.sin(g.broadAngle);for(let z=0;z<NZ;z++)for(let y=0;y<NY;y++)for(let x=0;x<NX;x++){const p=wp(x,y,z),ridge=g.r1h*Math.exp(-Math.pow((p.x-g.r1x)/g.r1w,2))+g.r2h*Math.exp(-Math.pow((p.x-g.r2x)/g.r2w,2)),drop=g.d1h*smooth(g.d1a,g.d1b,p.x)+g.d2h*smooth(g.d2a,g.d2b,p.x)+g.d3h*smooth(g.d3a,g.d3b,p.x),walls=g.wallH*smooth(g.wallA,g.wallB,-p.z),broad=g.broadAmp?((fbm((p.x*ca+p.z*sa)*g.broadFreq,(-p.x*sa+p.z*ca)*g.broadFreq,vaSeed^0x51ed270b)-.5)*2*g.broadAmp):0,ripple=(fbm(p.x*.065,p.z*.065,vaSeed)-.5)*g.rippleAmp;const h=g.base-g.slope*(p.x+24)+ridge-drop+walls+broad+ripple;field[idx(x,y,z)]=h-p.y;}initial.set(field);rebuild();hcacheDirty=true;vaHeightCache.clear();}
+/* ROUTE MEMORY INTEGRATION — 2026-09-26
+   Successful access-route work is promoted without importing the deprecated flag experiment.
+   Team memory is deliberately narrow: an ordered entrance-outward sequence of traversals that a
+   worker actually completed. It grants no traversal and reveals no frontier. A replacement starts
+   with fresh LocalLimits/exploreVisited/exploreTrail, but may replay this demonstrated route. Each
+   remembered edge must still be active when attempted. If current physics rejects the next edge,
+   shared knowledge retracts to the replacement's last physically reached node and ordinary local
+   exploration resumes there. Flags remain archaeology only: coordinate markers were rejected as a
+   substitute for demonstrated operational access in a deformable/collapsible world. The visible KILL JIM
+   intervention exists only to exercise succession and route replay without manufacturing a scaffold failure.
+*/
+/* ACTIVE SINGLE-DRONE RECOVERY — 2026-09-26
+   Finish line: one newly constructed ECS worker reaches the section horizon/bottom or consumes all
+   usable physical plank entities while pursuing one continuous descent. There is no peer-worker
+   coordination in this probe. The worker's temporary orchestration is deliberately sequential and
+   decomposable: observe -> select local edge intervention -> excavate -> move its one physical spoil
+   entity -> reobserve; or acquire one physical member -> transport -> revalidate -> place -> reobserve.
+   Switchback geometry remains an emergent consequence of the existing local topology/terrain score.
+   Future functionality should migrate responsibilities out of this shell rather than enlarge it.
+   Material identity is ECS/world truth: one excavation emits one bearing; one stock member entity can
+   be carried/placed once. No abstract logistics count authorizes duplicate physical cargo.
+*/
+function vaReset(){vaReady=false;for(const v of vaECSVisuals.values()){v.g.traverse(q=>q.geometry?.dispose());scene.remove(v.g);}vaECSVisuals.clear();for(const e of entities.values())e.g.traverse(q=>q.geometry?.dispose());clearPayloads();clearBalls();for(const c of [...vaRoot.children]){c.traverse(q=>q.geometry?.dispose());vaRoot.remove(c);}for(const m of [vaWorkerNav,vaWorkerTask,vaWorkerRole,vaWorkerVisual,vaWorkerActivity,vaCarry,vaMaterials,vaMembers,vaMemberTorches,vaCarried,vaProvenance,vaNodes,vaEdges,vaAbandoned,vaHeightCache])m.clear();vaOverlayStamp="";vaHistory.length=0;nextEntityId=1;vaTick=0;vaRevision=0;vaRng=new RNG(vaSeed);vaLocalCandidates=[];vaLastSurvey=-100;vaMilestone=false;vaStoppedReason='';vaNaturalTrips=vaRemovalCount=vaSpoilDelivered=0;vaAccumulator=0;vaLast=0;vaGeology();vaHome=vaNode(0,0);vaFront=vaHome;vaRouteReset();vaStock();vaECSVisuals.clear();
+vaECS=new SemanticECS({startId:1});vaECS.components.set('Cargo',vaCarry);vaECS.components.set('Navigation',vaWorkerNav);vaECS.components.set('WorkState',vaWorkerTask);vaECS.components.set('WorkerRole',vaWorkerRole);vaECS.components.set('WorkerVisual',vaWorkerVisual);vaECS.components.set('Activity',vaWorkerActivity);
+vaECS.registerSystem('deterministic-asynchronous-worker-activities',['WorkerRole','Navigation','WorkState','WorkerVisual','Cargo','Activity'],vaAsyncWorkerSystem,{order:100});
+const drone=vaMakeDescentDrone();
+vaReady=true;vaSurvey();vaLog('origin','Local physical descent probe begins.',{entity:drone.id,behavior:'local-probe-excavate-spoil-place-cross-explore-reprobe'});vaUI();}
+function vaBoot(){mat.onBeforeCompile=shader=>{shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vaRockPos;').replace('#include <begin_vertex>','#include <begin_vertex>\nvaRockPos=position;');shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying vec3 vaRockPos;').replace('#include <color_fragment>','#include <color_fragment>\nfloat grain=sin(vaRockPos.x*13.7+sin(vaRockPos.z*9.3))*sin(vaRockPos.y*16.1); float bedding=sin(vaRockPos.y*2.7+sin(vaRockPos.x*.45+vaRockPos.z*.28)*.38); diffuseColor.rgb*=vec3(.82,.98,1.16)*(.88+.10*bedding+.055*grain);');};scene.background.set(0x101719);scene.fog=new THREE.FogExp2(0x101719,.0032);hemi.intensity=1.65;sun.intensity=2.8;fill.intensity=.65;sun.position.set(-25,60,45);apparatusMat.color.set(0x232a29);mat.color.set(0xffffff);ballMat.color.set(0x9b9382);ballMat.metalness=.08;ballMat.roughness=.9;bearingOrdinaryColor.set(0xa69a80);seaVolume.visible=wonderRoot.visible=civRoot.visible=false;vaReset();{const boot=document.getElementById('vaBoot');if(boot)boot.remove();window.__VA_READY__=true;window.__VA_RESULT__=null;}view.target.set(-5,-2,0);view.distance=153;view.yaw=.30;view.pitch=.76;applyView();
+let semanticECSProbe=null;try{semanticECSProbe=createSemanticECSProbe();}catch(e){fail('semantic-ecs-probe',e)}window.SemanticECSProbe=()=>semanticECSProbe?.snapshot();window.VerticalAccretionECS=()=>vaECS?.snapshot();window.VerticalAccretionContext=id=>vaECS?.context(id);
+window.VerticalAccretion={snapshot:vaSnapshot,audit(){let maxSurfaceError=0;for(let k=0;k<40;k++){const x=-26+(k%10)*5,z=-8+Math.floor(k/10)*5;vaOrigin.set(x,MAX.y+2,z);vaRay.set(vaOrigin,vaDown);const h=vaRay.intersectObject(terrain,false)[0];if(h)maxSurfaceError=Math.max(maxSurfaceError,Math.abs(h.point.y-vaRockY(x,z)));}return{maxSurfaceError,renderer:renderer.info.memory,stockConserved:vaMaterials.size===28,invalidMembers:[...vaMembers.values()].filter(m=>m.active&&(m.a.distanceTo(m.b)>3.5||m.a.y-m.feet[0]>9.001||m.b.y-m.feet[1]>9.001)).map(m=>m.id)};},advance(n){vaRunning=false;for(let k=0;k<n&&!vaStoppedReason;k++)vaFixedStep();vaUI();return vaSnapshot();},reset:vaReset,pause(){vaRunning=false;},setSpoilPolicy(mode){if(!['cliff','home'].includes(mode))throw Error('Unknown spoil policy');for(const id of vaECS.query('WorkerRole')){vaECS.set(id,'SpoilPolicy',{mode});vaECS.remove(id,'Disposition');}vaLog('policy','Spoil destination policy changed.',{mode});},workingReach(id,x,y,z){return vaWorkReach(id,new THREE.Vector3(x,y,z));},camera(){return{target:view.target.toArray(),distance:view.distance,yaw:view.yaw,pitch:view.pitch};},breakSupport(){const m=[...vaMembers.values()].filter(m=>m.active).at(-1);if(m){m.broken=true;vaLog('intervention','Observer removes a member foot.',{entity:m.id});}},terrainProbe(x,z){return{rock:vaRockY(x,z),support:vaSupport(x,z)};},killWorker:vaKillActiveWorker};
+document.getElementById('vaRecover').onclick=()=>document.getElementById('recover').click();document.getElementById('vaMember').onchange=vaInspectMember;document.getElementById('vaPause').onclick=()=>{vaRunning=!vaRunning;document.getElementById('vaPause').textContent=vaRunning?'PAUSE':'RESUME';};document.getElementById('vaSpeed').onclick=()=>{vaPace=vaPace===1?4:vaPace===4?16:vaPace===16?32:1;document.getElementById('vaSpeed').textContent='PACE · '+vaPace+'×';};document.getElementById('vaPan').onclick=()=>{selectMode(mode==='pan'?'orbit':'pan');document.getElementById('vaPan').textContent=mode==='pan'?'PAN':'ORBIT';};document.getElementById('vaFrame').onclick=()=>{cameraFlight=null;view.target.copy(vaVec(vaFront||vaHome));view.distance=62;view.pitch=.72;applyView();};document.getElementById('vaInspect').onclick=()=>{document.getElementById('vaPanel').classList.toggle('open');vaUI();};document.getElementById('vaKill').onclick=()=>{vaKillActiveWorker();vaUI();};document.getElementById('vaReset').onclick=()=>{vaReset();};
+document.getElementById('vaRunSeed').onclick=()=>{try{const input=document.getElementById('vaSeedInput'),n=Number(input.value);if(!Number.isSafeInteger(n)||n<1||n>0x7fffffff)throw Error('Seed must be an integer from 1 to 2147483647.');vaSeed=n;vaReset();}catch(e){fail('seed-reset',e)}};
+document.getElementById('vaSeedInput').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('vaRunSeed').click();});document.getElementById('vaOverlay').onclick=()=>{vaOverlayRoot.visible=!vaOverlayRoot.visible;vaUI();};document.getElementById('vaStep').onclick=()=>window.VerticalAccretion.advance(30);document.getElementById('vaBreak').onclick=()=>window.VerticalAccretion.breakSupport();document.getElementById('vaExport').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(vaSnapshot(),null,2)],{type:'application/json'}));a.download='vertical_accretion_seed'+vaSeed+'_tick'+vaTick+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 }
 
-document.getElementById('recover').onclick=()=>{try{if(runtime.graphicsLost){graphicsStatus('browser still owns lost context · waiting');return}stopRendering();renderer.dispose();renderer=makeRenderer();positionAttr.needsUpdate=true;normalAttr.needsUpdate=true;colorAttr.needsUpdate=true;rockTexture.needsUpdate=true;resize();document.getElementById('fault').style.display='none';graphicsStatus('renderer rebuilt');startRendering()}catch(e){fail('manual-recover',e)}};try{vaBoot();resize();graphicsStatus('ready · Vertical Accretion E1');startRendering()}catch(e){fail('expedition boot',e)}
+document.getElementById('recover').onclick=()=>{try{if(runtime.graphicsLost){graphicsStatus('browser still owns lost context · waiting');return}stopRendering();renderer.dispose();renderer=makeRenderer();positionAttr.needsUpdate=true;normalAttr.needsUpdate=true;colorAttr.needsUpdate=true;rockTexture.needsUpdate=true;resize();document.getElementById('fault').style.display='none';graphicsStatus('renderer rebuilt');startRendering()}catch(e){fail('manual-recover',e)}};try{vaBoot();resize();graphicsStatus('ready · Physical Vocabulary v12');startRendering()}catch(e){fail('expedition boot',e)}
 </script>
 <script type="text/plain" id="works-e8-city-machine-archaeology">
 3D · WORKS — E8.0 / CITY-MACHINE MORPHOLOGY + BIOME PROVENANCE
@@ -2836,59 +3701,72 @@ WORLD LAB HANDOFF v0.01 — WORKS QUIET CONTROL SURFACE
 The inheritance-facing WORKS play strip adds RESET as a fourth persistent bottom control. It invokes the same authoritative RESET WORKS behavior as the laboratory control rather than creating a second reset path. The quiet surface is now WORLD / DEPLOY / PAYLOAD / RESET; deeper laboratory controls remain collapsed and preserved.
 </script>
 <script type="text/plain" id="vertical-accretion-current-semantics">
-# Vertical Accretion E1 — current semantics
+# Vertical Accretion — physical vocabulary candidate v12
 
-The README and VERTICAL_ACCRETION_DESIGN remain authoritative. This is a separate candidate, not an accepted index.html replacement. Foundry's retained density mesh, marching tetrahedra, terrain mutation boundary, granular arrays/solver, entity registry, gravity component/system, camera gestures and failure handlers are inherited. Older embedded WORKS descriptions are historical, not this run's active rules.
+## Authority and scope
+This section is the current implementation description. The v11 expansion contract and the original E1 contract below remain design lineage/future direction; they do not activate additional workers or superseded planners. The supplied Physical Vocabulary Expedition brief governs this pass. There is exactly one active worker, with replacements from the same factory after death. The original ECS kernel, 42×38×42 density field, retained mesher, camera, material registry, fixed 1/30-second step, finite 28-bundle stock and local descent/exploration architecture are retained. No automatic fast-forward occurs on boot.
 
-E1 is a bounded open geological surface section. Vertical lattice and plinth depth are extended because the ancestral table prevented descent. Exact terrain triangle support replaces the ancestral highest-neighbor lookup for this run: that conservative lookup would teleport matter upward at a steep cliff. No overhanging cave traversal is claimed.
+## Working envelope
+WorkingEnvelope is worker capability data: tool-contact radius 3.2 world units centered 0.8 units above the worker's feet. Current physical support is required. Excavation validates the existing surface and resulting ceiling of each changed lattice column immediately before mutation. Placement validates both deck joints from the worker's actual position; staging validates its near attachment, back attachment and far tip. Perception cannot waive these gates. INSPECT/EXPORT RECORD expose successful/rejected contact audits, current position and limits.
 
-Three embodied workers share a work commitment and carry physical members and spoil. Components extend Foundry entities: locomotion, carrying, work, material provenance and supported member. Local perception adds nearby natural surfaces to a persistent discovered graph. Its edges are bidirectional and sampled for loaded grade. Planning sees only discovered ground plus the adjacent work horizon. Supported placements respond to insufficient grade; excavation responds to excessive rise. Geometry, support, length and stock availability validate intentions. The local rule's preference for deeper/eastward ground is experimental, not a globally optimized route or an authored construction schedule.
+This is a tool envelope, not an anatomical arm length. The old 3-unit descending span's far joint lies about 3.75 units from the near worker's shoulder, so it is no longer immediately placeable. A 2.4-unit test stopped too early against the coarse geology; 3.2 units admits bounded near-face work while still requiring construction access.
 
-Fixed 1/30-second ticks own agents and granular physics, with a seeded RNG. Rendering and wall clock do not choose physical outcomes. Camera gestures do not change the world. Sparse warm lights follow workers and physically established works. All modifications carry stable IDs, tick and reason; members record parent access and provenance. Agent and cargo edge traversals are counted in both directions. Inspection/export expose the actual record and coarse slices at selectable granularity. The raw record, not the milestone label, is the evidence.
+Terrain remains a column-linear height section. A changed sample influences the adjacent triangles within one lattice cell (~2.2 units); that interpolation footprint is explicitly coarser than the contact samples. This is not voxel-scale hand excavation or enclosed-tunnel work.
 
-Construction stock is finite and visible. A transported member is a simplified bundle of walking surface and bracing, placed as one operation, with explicit geological foot/length checks. It is not engineering-grade structural simulation. Removing a support disables an edge and lets the member fall under the inherited gravity component. Unsupported routes are unavailable to workers. Rock removal emits finite representative bearings, not a calibrated mass-conserving continuum. Haulers move individual bearings physically; no offscreen resource teleport occurs.
+## Excavation earned by execution
+A bounded near cut replaces the old entire-corridor mutation. Current surface geometry chooses a shallow rising approach through a higher face (+0.40 grade) or a descending landing (-0.30 grade). A lateral strip widens that approach. Only useful, reachable surface columns are removed. Each successful cut creates one representative physical spoil bearing, not calibrated mass conservation.
 
-Limitations: the section uses a single highest surface at each X/Z; no enclosed stacked floors. Foot locomotion is kinematic on verified surfaces. Material units and strength are qualitative. One shared local commitment avoids competing work races. These are first-expedition boundaries, not resolutions of the broader open research questions.
+The near working datum persists while handling spoil. Fresh sub-grid footholds are tested against current support and the same slope constraint. The worker must physically walk to a usable foothold before it can work from there. Intention remains in world coordinates rather than depending on disposable edge identity.
 
-## Repairs earned by execution
+## Intermediate apparatus
+One short, narrow cantilever staging platform is the earned apparatus. It consumes one actual carried timber bundle. Its near contact is either geology/back bearing or an existing full member. Its far tip is about halfway along the desired span. It creates an actual supporting surface and traversable edge; it grants no reach multiplier. The worker walks onto it, returns for another finite bundle, and erects the full span while both deck joints are in reach. The staging persists after the full span exists. It cannot independently grow an unlimited chain of cantilevers.
 
-- The ancestor's million-slot bearing allocation is capped at 4,096 for this bounded three-worker experiment; this retains the same arrays and solver while eliminating large empty scans. This is an E1 capacity choice, not a replacement particle framework.
-- Under E1's column-linear signed density, fast support uses the same X/Z triangle diagonal as the inherited tetrahedral mesh. A 40-position audit compares it with ray hits against the actual retained mesh. The restriction is explicit: any future overhang or multi-surface field requires a layer-aware query rather than this shortcut.
-- Constructed support is restricted to the member's actual length and width. Falling bearings accept a member only when a swept vertical step approaches it from above; matter below an elevated member is not lifted onto it. Rock support retains Foundry's height-surface approximation.
-- Gentle slopes now have a 0.55 repose threshold in the inherited granular contact response. Without resting friction, hauled spoil continually returned downhill and occupied workers indefinitely. Steep slopes still mobilize it.
-- Excavation yield scales qualitatively with field change (one to twelve representative bearings). It is not volumetric conservation. A shallow ineffective cut can be abandoned after two diminishing attempts, retaining its geometry and event history rather than grinding forever.
-- Natural route samples use a nominal 0.62 loaded grade with a 0.035-unit sample tolerance. The sampling interval is 0.3 units. This is deliberately a coarse locomotion approximation, not a certified engineering safety limit.
-- After a route fails under an agent, that agent can become isolated and remains subject to gravity; no return-to-network teleport repairs it. Recovery beyond replay is future work.
-- Support failure is an endpoint-foot/length model. The recorded loadLimit is reserved metadata, not a stress or buckling solver. A transported bundle abstracts a walking member and its bracing; units do not model cut lengths or material mass.
+Structural approximation remains intentionally crude. Full spans retain the baseline's prefabricated member-bundle abstraction, geometric geological feet and 9-unit support-length limit. Checking deck-joint access does NOT simulate the assembly/lowering of each long post, brace or fastener. Their geological contacts are bearing contacts, not remotely operated anchors. Staging deepens the construction-access model; it is not a full carpentry or erection solver. A future expedition can earn explicit post deployment or lifting machinery.
 
-## Continuation and ownership
+Staging fails if its geological attachment is lost or its supporting full member fails. Full members still fail on loss of geological feet. Failure releases physical debris, torches and cargo; an occupying worker may die, leave a corpse, and be replaced. No rollback or stock refund is introduced.
 
-Canonical ancestor commit: 7b158fa10515c7b42dcfba4e755fb506201bea10.
-Canonical index.html SHA-256: 19873d16b4564c51796ffaa9e1423dc266025c0fecfe26a152ee7fb0c1d5f71c.
-The original index.html, README and design contract remain unchanged. No remote publication or canonical promotion occurred.
+## Spoil responsibility
+SpoilPolicy and Disposition are independent components. The disposition system consumes existing cargo; excavation does not choose its destination. The default cliff policy examines reachable known footholds within 7 units, probes eight directions for a drop of at least 2 units over 2.4 units, walks to a selected drop edge, then releases the same bearing from hand height with a bounded ballistic impulse. Gravity/collision owns the rest. Home release is the fallback and a selectable policy through the diagnostic API. A released bearing is not deleted or replaced by an effect.
 
-Build: python expedition/build_candidate.py. The builder reads the immutable ancestor and applies the scoped extension, UI, embedded current semantics, design contract and vendored Three.js 0.180.0 modules. The resulting HTML opens directly without a network connection. Source and third-party module provenance are retained; old Foundry/WORKS machinery remains embedded as archaeology.
+Pickup is local and revalidated at contact. A single tagged cargo slot remains authoritative. No new global queue, project, shared exploration memory or concurrency protocol was added.
 
-Inspection: the panel exposes worker commitments, physical stock, history, routes, member IDs, geological feet, traffic in each direction, and selectable semantic slice thickness. EXPORT RECORD exports current actual state and history. The global VerticalAccretion interface exposes snapshot(), advance(ticks), reset(), audit(), camera(), pause(), breakSupport(), and terrainProbe(x,z). advance runs the same fixed-step systems as normal observation; it does not install a target state. Observer support removal is logged as an intervention. REPLAY keeps the observer camera.
+## Recovery and investigation scars
+- Simply rejecting distant targets exposed real access failures but did not provide a useful vocabulary.
+- A downward-only near cut dug the worker into a low position. Geometry-conditioned rising approaches replaced it.
+- Small movement segments exposed a distance-independent grade tolerance. It now scales with actual segment length.
+- Finer terrain sampling was tried and discarded: the original resolution works with the revised cut shape.
+- An unreachable local cut originally stopped the entire expedition. It now leaves worker-local physical evidence and permits other approaches and traversal/exploration.
+- Invalidating every local failure after any terrain revision caused repeated rediscovery. Failure memory is now invalidated by material changes at the remembered physical samples.
+- Failed-cut memory once rejected a reposition edge as another excavation, trapping seed 253538 in a repeated approach. Exclusion now applies only to actual excavation/construction candidates, never walking.
+- Fractional foothold keys are normalized to avoid floating-point duplicates.
+- Replays reset history serials as well as world state.
 
-Open research questions remain open: the first result establishes one bounded constructive example, not general autonomous excavation, a mature civilization, a layered cave solver, or stability across arbitrary seeds. Natural route discovery and the priority of eastward/deeper nearby work are intentionally simple. The strongest next experiment is varying local grade/support/material constraints and comparing the physical histories, rather than adding building classes.
+## Blocked-route excavation evidence
+An intact constructed route whose walking corridor intersects geology is now actionable local evidence rather than a waiting state. When the worker physically occupies an attached endpoint, reachable obstruction samples inside the ordinary WorkingEnvelope are offered to the existing excavation operation. Cuts remain narrow, local, and reach-gated; the member is neither deleted nor granted traversal authority. Terrain refresh then revalidates the same persistent structure. If no obstructing sample is within physical reach, no excavation action is invented and the limitation remains real.
 
-## Final executable evidence (seed 741)
+## Constructed traversal clearance
+Structural survival and locomotion validity are separate. A full member or staging platform can remain physically intact while surviving geology intersects its walking corridor. Constructed edges therefore sample geological height along the actual deck and are traversable only while that corridor is clear. A blocked member is not broken or deleted; later excavation may make the same persistent structure usable. Movement revalidates clearance before stepping onto a member so stale graph state cannot authorize clipping through terrain.
 
-At tick 11,408 (380.27 simulated seconds), E5 / event H27 had carried three loaded downward crossings and two loaded upward crossings. H29 is a subsequent supported placement whose parent access is H27. The evidence check requires at least two loaded crossings each way; it does not infer usability from connectivity alone.
+## Observation and extension seams
+Normal view stays world-first. INSPECT adds the working envelope, action/intent, cargo, temporary/full works, cliff throws, local limitations and persistent deaths; EXPORT RECORD carries the physical contact audit and provenance. Camera gestures remain observer state. Boot/runtime/WebGL errors remain visible.
 
-At tick 14,400: eight persistent members, twelve removals, seventeen representative spoil bearings, twelve delivered spoil bearings and twenty unplaced stock bundles remained. Natural-ground walking preceded alteration. The first material access cut, later graded works and excavation beyond those works all remain in the record.
+The useful future Worker #2 seams are capability-owned reach, independent spoil policy/transport, the existing one-object cargo slot, actual material identity, attachment-dependent structures, world-space intent and private evidence. Atomic claims and multi-worker scheduling are deliberately not implemented. Worker #2 remains out of scope.
 
-Two reset runs, one advanced in a single 14,400-tick batch and one in 48 batches of 300 ticks, produced equal exported state and history. A 40-position terrain audit found maximum mesh/support disagreement of 0.000002619 world units. Stock cardinality was conserved and all active members satisfied the configured length and foot-height checks. Recorded foot removal disabled its route and produced a falling member. Chromium execution reported no uncaught page errors. Desktop camera persistence, 390×844 control bounds and emulated two-finger pinch/persistence passed. This is browser/emulation evidence, not a test on physical Android hardware.
+## Executed acceptance record
+Ordinary fixed-step Chromium runs: seed 741 stopped at tick 37091 with 3 cuts, 14 staging platforms, 14 full spans, 2 cliff throws and all 28 bundles spent. Seed 42 stopped at tick 13079 after 7 cuts and 90 exploration events, exhausting its local repertoire. Seed 12345 spent all 28 bundles at tick 45107 with 14 stages/14 full spans and no cuts. Seed 253538 stopped at tick 90137 after 49 cuts, 6 cliff throws and 490 exploration events; its previously repeating approach loop was repaired. No route coordinates were added for these seeds.
 
-Preliminary timings in working notes or conversations were superseded by this final geometry. In particular, restricting member support to its actual footprint changed where spoil fell and delayed the milestone. The physical correction was retained instead of preserving a faster but invalid demonstration.
+Complete exported snapshots matched byte-for-byte on independent replay at the first three endpoints and at tick 90000 for seed 253538. All four retained 28 material identities, no invalid active members and no page errors. Seed 741's 31 successful contact-gated operations had maximum contact distance 3.151147 < 3.2. Persistent cliff-bearing identities were checked after landing. Home policy was independently exercised.
+
+Natural unperturbed runs did not kill a worker. A recorded support-removal intervention on occupied staging at tick 1930 killed worker 29 at tick 1931, retained three debris entities and a persistent corpse, and spawned exactly one replacement. By tick 11171 that worker had resumed construction with 11 total member records including the failed platform. No rollback/refund occurred. Visible invalid-seed failure reporting and final world/INSPECT rendering were checked.
+
+Component exhaustion reports the limits of this bounded local repertoire. It is not proof that the geology admits no possible solution. Failure-memory generalization uses nearby origins/targets and two changing support samples; more sophisticated access or lifting apparatus remains unearned future work. Cliff disposal changes traffic: repeated loaded outward trips and unloaded returns occur, so the earlier loaded-both-directions milestone need not fire under the new policy.
 
 </script><script type="text/plain" id="expedition-contract">
 # VERTICAL ACCRETION / DESCENT LAB
 
 **Model-ready design document for independent realization from Foundry**
 
-> **Status:** Implementation contract for an exploratory laboratory expedition. `VERTICAL_ACCRETION_REFERENCE.png` is perceptual reference evidence; Foundry is the inherited executable apparatus. This document intentionally fixes some engineering constraints while preserving open research questions.
+> **Status:** Original E1 design lineage. The current semantics section and Physical Vocabulary brief supersede incompatible population, planning and construction assumptions below. This is not an additional active authority. Original scope: implementation contract for an exploratory laboratory expedition. `VERTICAL_ACCRETION_REFERENCE.png` is perceptual reference evidence; Foundry is the inherited executable apparatus. This document intentionally fixes some engineering constraints while preserving open research questions.
 
 ### Perceptual reference
 
@@ -3197,4 +4075,115 @@ Do not broaden the expedition merely because additional systems are imaginable. 
 
 If the simulation discovers a form we did not name, prefer the evidence over the vocabulary in this document. If the implementation contradicts a fixed invariant above, repair the implementation or surface the conflict.
 
-</script></body></html>
+</script>
+<script type="text/plain" id="vertical-accretion-expansion-contract-v11">
+# Vertical Accretion — exploration expansion contract
+
+STATUS: retained v11 expansion contract. Its physical invariants remain binding; the current semantics section describes the implemented v12 scope. Multi-worker and unearned apparatus directions remain future work. The accepted v10/seed-741 behavior is the control. New capability must preserve physical ownership and local causality; do not resurrect deleted global planner/commitment/job machinery.
+
+## North star
+Grow from one worker making a crude descent into a small embodied expedition whose infrastructure is an archaeological record of local solutions. Geometry should force invention. New mechanisms should appear because existing embodied capabilities fail at a concrete physical situation, not because an architectural taxonomy says they ought to exist.
+
+## Hard invariants
+1. Physical entities own physical truth. One rock is one spoil entity/bearing; one member is one material entity; one corpse persists as one entity. No parallel abstract inventory may duplicate them.
+2. Workers are produced by one worker factory. Entity IDs are allocator-owned. A Worker tag/capability defines participation; personal/local names have no simulation authority.
+3. Fixed seed + fixed inputs + fixed policy produce deterministic history. Tie-breaking is explicit and deterministic.
+4. Workers reason from embodied position/state plus bounded derived perception. Global state may support diagnostics, never silently become worker omniscience.
+5. Topology/reachability are derived perception, not persistent authority. Deformation may invalidate/rebuild them. World-space intent survives only while physically meaningful.
+6. Physics owns consequence. Construction policy may knowingly take risks. Collapse, debris, death, blocked routes, stranded cargo and redundant works are legitimate history.
+7. Every new system earns its existence by taking a responsibility out of a worker's simple orchestration or by adding a new physical affordance. Do not add coordinating abstractions merely to make behavior tidy.
+8. Normal failures must remain visible and diagnosable. Never convert an implementation failure into an experimental terminal condition.
+
+## Worker capability decomposition
+Keep worker behavior decomposable into replaceable capabilities rather than one expanding state machine:
+- perceive local geometry / reachable working surfaces
+- select bounded descent intent
+- traverse
+- excavate one physical cut
+- acquire / carry / release physical cargo
+- dispose spoil according to a replaceable policy
+- place a member within physical working reach
+- explore existing traversable works
+- recover from changed topology
+Future systems may assume these responsibilities without changing the physical operations beneath them.
+
+## Exploration behavior to build
+A worker with no actionable local descent intent explores rather than asking for a global frontier. Exploration is deterministic and embodied.
+- Walk only physically traversable current edges/surfaces.
+- Maintain worker-local visited/backtrack memory; death discards that memory.
+- Probe for ordinary local work at every reached foothold before continuing exploration.
+- Backtrack when a branch is exhausted; discard trail segments made unreachable by collapse.
+- Distinguish 'locally exhausted' from 'entire connected component exhausted.'
+- Add richer evidence incrementally: previously modified terrain, existing works, depth trend, route connectivity, debris, abandoned cuts, working light, and signs of prior traffic may inform local choice without revealing a global target.
+- Redundant rediscovery is allowed. Better exploration should reduce it through evidence, not omniscience.
+- Later multi-worker exploration memory should remain embodied/communicated if shared; do not introduce a magical shared visited set.
+
+## Construction reach: eliminate building over nothing
+Finished scaffold placement currently stands in for too much construction process. Introduce a bounded working envelope from surfaces/structures that physically support the worker.
+- A worker may excavate, attach, or place only within tool/body reach from a current supporting surface unless an apparatus extends that reach.
+- A desired span outside the envelope is not immediately placeable even if its final geometry would be legal.
+- This should create legitimate intermediate-work failures rather than trigger a smarter global planner.
+- Existing finished-member representation may remain as the final state, but access to create it must be earned physically.
+
+## Intermediate works vocabulary
+Add only when demanded by a concrete failed expedition state. Candidate physical affordances, not pre-authored projects:
+- short temporary beam / cantilever: extend working reach a small amount
+- post / prop: establish a geological support/contact
+- working platform: create a new supported place from which a worker can act
+- anchor: attachment point in geology or existing works
+- ladder: cheap worker-only vertical access
+- rope: connection / suspension without a walking surface
+- pulley / hoist: move physical cargo between elevations
+- lift: persistent moving support/logistics apparatus after simpler hoisting proves insufficient
+- temporary staging: construction-enabling works that may later become redundant, reused, or collapse
+The substrate should represent what these things physically do; semantic labels are conveniences, not authority.
+
+## Excavation expansion
+Current excavation is a broad corridor cut toward a descent intent. Expand the vocabulary incrementally while preserving physical spoil and deterministic deformation.
+Candidate affordances:
+- continue a working face through repeated cuts
+- widen a face to create worker clearance
+- cut a landing / stable working surface
+- clear access around wreckage or a broken route
+- cut toward a lower locally perceived surface
+- eventually cut ramps/steps when ordinary grade requires them
+Each operation must specify a bounded deformation volume and produce corresponding representative spoil. Excavation is never authorized merely because terrain is removable.
+
+## Spoil/logistics expansion
+Separate 'what excavation creates' from 'where workers choose to put it.' The first policy experiment should be cliff disposal: carry an actual loose spoil entity to a locally viable drop edge and release/throw it. Later policies may stockpile, fill, reuse, or deliberately create ramps. Changing disposal policy must not alter excavation identity or duplicate material.
+
+## Multiple workers
+Add workers incrementally from the same factory: two, then three, then more only after evidence.
+- Do not add a team planner first.
+- Each worker independently perceives and acts on the shared ECS/world.
+- Entity ownership prevents duplicate cargo automatically.
+- Add atomic claims/reservations only where two bodies can physically attempt the same indivisible action (for example, the same loose object or same excavation volume). Claims are components/state transitions on the relevant physical opportunity, not jobs/projects.
+- Workers may cooperate only when a physical mechanism demands it. A hoist may eventually require an operator and receiver; that need should emerge from the apparatus.
+- Concurrency bugs are evidence of missing ownership semantics. Fix the data boundary before adding scheduling policy.
+
+## Collapse, death, debris, recovery
+Preserve v9/v10 consequential collapse.
+- Valid deformation may destabilize old works.
+- Broken structural pieces, torches, cargo and corpses persist physically.
+- Dead workers do not resurrect; the factory creates replacements.
+- New workers inherit only the physical world and whatever information has been physically/persistently externalized.
+Future recovery affordances may include recognizing a severed route, retrieving reachable reusable members, clearing debris, rebuilding a crossing, recovering stranded cargo, or routing around a corpse/wreck. Add these as ordinary local opportunities, not a special 'repair project.'
+
+## Structural model
+Do not attempt engineering-grade structural simulation unless an experiment earns it. The current geological-foot model is an explicit approximation. Improve support only when a concrete research question requires richer contacts/load transfer. Visual structure should progressively converge toward the contacts the physics actually models, but causal legibility matters more than realism.
+
+## Expansion sequence
+A. Freeze/control: retain v10 seed 741 as behavioral reference; v11 cleanup should remain behaviorally equivalent.
+B. Spoil policy seam: implement cliff disposal as a replaceable logistics policy and compare history against return-to-home.
+C. Working envelope: forbid magical construction beyond physical reach and observe the first legitimate construction-access failure.
+D. Smallest intermediate work: add only the apparatus required by that failure (likely temporary beam/platform/anchor before lift machinery).
+E. Second worker: spawn from the same factory with no team planner; repair only ownership/concurrency failures actually observed.
+F. Excavation vocabulary: add landing/widening/clearance operations as demanded by failures.
+G. Hoisting: when vertical material logistics, not pathfinding, becomes the limiting factor, introduce rope/anchor/pulley and later lift behavior.
+H. Scale: only after concurrency and intermediate construction are coherent, increase workers, stock, depth, and run duration.
+
+## Acceptance evidence for future passes
+A pass is successful when its new capability appears as an understandable causal response to a physical limitation and leaves persistent evidence in the world. Preserve successful prior behavior. Do not judge success by visual complexity, depth alone, or number of systems.
+</script>
+
+</body></html>
