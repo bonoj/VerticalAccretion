@@ -2,348 +2,182 @@
 
 ## Purpose
 
-This is the lightweight, replaceable handoff for the **current human-guided iteration** on Vertical Accretion.
+This is the replaceable handoff for the **current working expedition**. It exists so a fresh conversation can resume from repository state without reconstructing the previous chat.
 
-It exists so a fresh conversation can resume directly from repository state without reconstructing the previous chat. It is working context, not canonical design truth and not permanent history. Replace it when the active iteration changes.
+Read [README.md](./README.md) first and follow its authority and inspect → spec when warranted → implement → validate → observe workflow.
 
-Begin with this file, then read [README.md](./README.md) and follow its authority/workflow.
+## Current executable lineage
 
-## Executable state
+The protected accepted E1 head remains:
 
-The protected accepted executable remains:
+- [`index.html`](./index.html) — canonical accepted executable. **Do not overwrite or promote over it without explicit human acceptance.**
 
-- [`index.html`](./index.html) — accepted E1 canonical head. Do not overwrite it without explicit acceptance/promotion authority.
+The current experimental executable is:
 
-The current working executable for the next iteration is:
+- [`candidates/vertical_accretion_async_workers_candidate.html`](./candidates/vertical_accretion_async_workers_candidate.html) — asynchronous-worker candidate preserved from the current manual iteration.
+- Git blob identity: `80aca0a4e1238e640dd2cca7a7796eacf7d83ff7`.
 
-- [`candidates/vertical_accretion_async_workers_candidate.html`](./candidates/vertical_accretion_async_workers_candidate.html) — asynchronous-worker candidate preserved exactly at Git blob `80aca0a4e1238e640dd2cca7a7796eacf7d83ff7`.
+This candidate is evidence and the starting implementation surface for the next pass. It is **not canonical**.
 
-This candidate is evidence, not canonical state. It successfully exposed concurrency that earlier serialization had hidden, and in doing so exposed deeper ownership errors.
+## Active implementation contract
 
-Known control seed: **741**.
+The next work is governed by:
 
-## What the asynchronous candidate taught us
+- [`VERTICAL_ACCRETION_TEAM_COMMITMENT_SPEC.md`](./VERTICAL_ACCRETION_TEAM_COMMITMENT_SPEC.md)
 
-The asynchronous activity machinery itself is worth preserving:
+The spec was written after code archaeology and direct observation of the asynchronous candidate. Do not replace its ownership model with remembered chat context.
 
-- deterministic fixed-step simulation remains authoritative;
-- workers advance independent persistent activities in simulation time;
-- no JavaScript promises/threads/nondeterministic concurrency are required;
-- one worker may travel while another explores or performs physical work;
-- sequential ECS stepping already gives physical mutations a deterministic commit order.
-
-The observed failure state was useful:
-
-- multiple sibling wooden works appeared;
-- workers excavated beneath/near existing works;
-- workers fetched planks speculatively;
-- the history bound eventually threw `History bound reached; export and start another expedition.`.
-
-These are not reasons to return to global worker serialization.
-
-They exposed an ownership problem.
-
-## Core correction
-
-The world is **not a god object** and does not decide what work is valid, best, useful, or desirable.
-
-The world simply exists and can be acted upon.
-
-It owns physical facts and deterministic consequences:
-
-- geometry and material;
-- support and gravity;
-- occupancy;
-- topology;
-- whether a body can traverse current geometry;
-- whether a proposed placement is physically possible now;
-- whether a proposed removal can physically occur;
-- what changes after an action.
-
-Physical possibility is not intention.
-
-Likewise, individual workers should not independently turn every physically possible mutation into construction or excavation.
-
-There is a missing coordination boundary:
-
-```text
-PHYSICAL WORLD
-        ↓
-PERCEPTION / POSSIBLE INTERVENTIONS
-        ↓
-TEAM DECISION
-"We are doing this."
-        ↓
-LOGISTICAL DECOMPOSITION
-        ↓
-ASYNCHRONOUS EMBODIED EXECUTION
-        ↓
-PHYSICAL CONSEQUENCE
-        ↓
-observe changed world
-        ↓
-next team decision
-```
-
-A **foreman entity is not required**. A **team decision is required**.
-
-A future experiment may implement that decision through a foreman, consensus, disagreement, voting, negotiation, rotating authority, or something stranger. Do not solve that now.
-
-For the current small simulation, use the smallest deterministic, explicitly provisional surrogate for a team decision.
-
-## Hard ownership invariant for the next work
+Its core causal boundary is:
 
 > **Coordination chooses the intervention. Logistics realizes it. Physics decides what happens.**
 
-Construction and excavation logistics begin **only after** the team has committed to a specific intervention.
+The physical world does not decide what work is strategically valid. It exposes physical facts, predicates, and deterministic consequences. A team decision selects a specific intervention. Only then do embodied logistics begin.
 
-Wrong causal order:
+A foreman entity is not required. Genuine team deliberation is deliberately deferred. For this expedition, use the smallest deterministic, isolated, replaceable surrogate for team commitment.
 
-```text
-world enumerates possible placements
-→ placement count becomes demand
-→ workers fetch planks
-→ carriers choose somewhere to put them
+## Why this pass exists
+
+The asynchronous worker implementation successfully exposed a deeper scheduling/ownership error that previous serialization had hidden.
+
+Observed failure at seed 741 included:
+
+- multiple sibling wooden works growing from nearby possibilities;
+- excavation occurring beneath/around existing works;
+- speculative plank retrieval driven by globally enumerated placement demand;
+- eventual fatal `History bound reached` instrumentation failure.
+
+The important diagnosis is **not** “ban concurrent work” and not “the world should expose the best edge.”
+
+The current machinery collapses:
+
+```
+physical possibility
+→ intentional work
+→ logistics
 ```
 
-Required causal order:
+The required ownership is:
 
-```text
-team commits to PLACE A→B
-→ one embodied member is required
-→ worker retrieves that member
-→ worker travels
-→ immediately before placement, current physical state is revalidated
-→ place or fail
+```
+physical world
+→ perception / possible interventions
+→ team decision
+→ persistent intervention commitment
+→ logistical decomposition
+→ asynchronous embodied execution
+→ physical consequence
+→ observe changed world
+→ next team decision
 ```
 
-Excavation follows the same boundary:
+## Critical invariants
 
-```text
-team commits to REMOVE at target
-→ worker travels / executes
-→ immediately before mutation, current physical state is revalidated
-→ remove or fail
-→ physical spoil/support/topology consequences occur
-```
+- No construction material retrieval without a **specific committed placement**.
+- No excavation merely because terrain is geometrically removable; excavation also requires a team commitment.
+- Workers execute asynchronously below the commitment boundary.
+- A completed placement does **not** automatically mean “place another plank.”
+- A completed excavation does **not** automatically mean “excavate again.”
+- After each intervention, topology/support/terrain consequences become current truth before the next team decision.
+- Immediately before placement or excavation, revalidate the intended physical action against the current world.
+- Commit-time validation asks whether the action **can physically happen now**, not whether it is strategically good.
+- If a carried plank becomes orphaned by invalidation, preserve embodied state; do not invent cleanup or opportunistic retargeting.
+- Do not add `Foreman`, `BridgeProject`, `Switchback`, `continueBridge`, `noBranches`, or infrastructure-protection semantics.
+- Physical failure remains legitimate. Digging away support may cause a member to fall.
+- Logging/history capacity must not terminate physics.
 
-No worker excavates merely because an edge is mutable.
+## Expected emergent result
 
-No worker fetches a plank merely because a placement is possible.
+The immediate experimental goal is to watch the team continue downward through natural traversal, excavation, and finite member placement until they either:
 
-## Important consequence: continuation is also a decision
+- consume all available planks while continued placement remains selected and physically viable; or
+- reach an honest physical/material/decision dead end.
 
-A placed plank does **not** mean "therefore place another plank."
+During ordinary sustained continuation we should **not** see sibling branching plank works.
 
-After every intervention, observe the changed physical world and make another team decision.
+That is an expected consequence of coherent team commitment and decision continuity, **not a hard-coded no-branch rule**.
 
-If natural terrain is now traversable, ordinary movement/exploration may resume.
+A later branch is legitimate if the previous direction becomes invalid, is abandoned, or the team decision mechanism selects another continuation.
 
-If another placement is selected, fetch and place another member.
+Before works exist, workers roaming and surveying different parts of the hillside is fine. Exploration does not itself authorize mutation.
 
-If excavation is selected, excavate.
+## Current code archaeology that should not be rediscovered from scratch
 
-If the current line is no longer viable or no longer selected, the team may eventually choose another direction.
+The asynchronous candidate currently has:
 
-Do not add semantic project state such as:
+- deterministic fixed-step sequential ECS execution;
+- per-worker persistent Activity state;
+- independent worker movement/work timing;
+- physical finite member entities;
+- physical terrain deformation and representative spoil;
+- support/gravity consequences;
+- topology refresh after placement/removal;
+- stale-path rerouting rather than automatic isolation.
 
-- bridge project;
-- finish bridge;
-- continue bridge;
-- switchback;
-- no branches;
-- keep same heading.
+The problematic current layer is centered around `vaDeriveWork()` and its consumers:
 
-## Target behavior
+- it scans reachable nodes and turns surveyed unreachable neighbors directly into `remove` / `place` work;
+- it globally scores those mutations;
+- empty workers prefer available excavation;
+- member carriers prefer available placement;
+- placement opportunity count drives member retrieval demand.
 
-The immediate experimental goal is to watch the team descend as far as it coherently can, potentially spending the entire finite plank stock.
+Sequential worker stepping means there is no true simultaneous placement race. Earlier same-step mutations are visible to later workers. Preserve that determinism; do not introduce JS async, threads, promises, locks, or random timing.
 
-For an ordinary sustained continuation we should **not see sibling branching plank works**.
+Existing `vaPlace()` already performs useful physical support/length checks and refreshes topology afterward, but its strategic predicate is too weak because stale globally-derived work can still look physically placeable.
 
-That is not because branching is hard-coded away.
+Existing `vaRemove()` mutates a corridor broader than a nominal edge, so an excavation can physically undermine nearby support. That consequence is legitimate; arbitrary excavation selection is the ownership problem.
 
-It should be an emergent consequence of coordinated commitment: once the team has selected a place to extend access, logistics execute that intervention; the changed local situation is then reconsidered before another intervention is chosen.
+## Implementation cadence
 
-A later branch remains legitimate if the previous way forward becomes physically impossible or the team decision changes because another continuation is selected.
+Follow the spec in bounded passes. Do **not** implement the whole correction in one rewrite.
 
-> **No branching-by-rule. No branching-by-accident.**
+### Pass A — ownership seam
 
-## What code archaeology established
+Start here.
 
-The current candidate's `vaDeriveWork()` is conceptually wrong for this ownership model.
-
-It scans home-reachable nodes and turns surveyed unreachable neighbors directly into `remove` or `place` work items, then scores them. This promotes geometric possibility directly into intentional work.
-
-The current async selector compounds the problem:
-
-- empty workers prioritize available excavation;
-- member carriers prioritize available placement;
-- placement-opportunity count creates lumber demand.
-
-That is why true worker concurrency produced multiple works and arbitrary carving.
-
-Do not repair this by making the world choose a smaller set of "best work."
-
-The world should not choose work at all.
-
-A data structure named `vaWork` may survive if useful, but its semantics must no longer be "every mutable edge adjacent to reachable space." It may represent committed/executing work or another clearly owned concept.
-
-## Commit-time physical revalidation
-
-The final thing a worker does before mutating the world is ask the physical substrate whether the **already intended action can still physically occur now**.
-
-For placement, re-evaluate current geometry/support/reach/occupancy using the existing physical predicates.
-
-For excavation, re-evaluate the intended current geometry before removal.
-
-Do not ask the world whether the action is strategically good.
-
-Workers are advanced synchronously in deterministic entity order, so an earlier worker's mutation is visible before a later worker reaches its own commit point. No locks, promises, or concurrency primitives are needed at this scale.
-
-If revalidation fails:
-
-- do not mutate;
-- record the physical failure;
-- invalidate/complete the commitment as appropriate;
-- preserve embodied state;
-- return to team decision.
-
-A worker carrying a now-orphaned plank keeps a real plank. Do not invent automatic cleanup or opportunistic retargeting.
-
-## Excavation and infrastructure
-
-Do not add `dontExcavateUnderBridge` or infrastructure immunity.
-
-Excavating beneath a supported member may be physically possible, and the member falling afterward is legitimate physical evidence.
-
-The problem in the async candidate is that arbitrary excavation became intentional work without team commitment—not that destructive excavation must be physically forbidden.
-
-## History bound
-
-The current fatal history limit is instrumentation killing physics.
-
-Repair it so observational storage pressure is nonfatal. A deterministic ring buffer, bounded recent history plus counters, or another bounded representation is acceptable.
-
-Invariant:
-
-> **Instrumentation must not terminate the physical simulation.**
-
-Keep this correction narrow.
-
-## Implementation sequence
-
-Do **not** do all of this in one pass.
-
-### Pass A — Ownership seam
-
-Establish explicit team commitment and remove speculative work demand.
-
-- introduce provisional team commitment state;
-- stop treating all derived physical possibilities as active jobs;
+- establish explicit provisional team commitment state;
+- stop treating all physical possibilities as active jobs;
 - remove placement-count → plank-retrieval coupling;
-- make excavation require commitment;
-- make member retrieval require a specific placement commitment;
-- preserve asynchronous worker activities;
-- make history exhaustion nonfatal if necessary for observation.
+- require commitment before excavation;
+- require committed placement before member retrieval;
+- preserve asynchronous Activity machinery;
+- make history exhaustion nonfatal if needed for observation.
 
-**Pass A probe:** with no active commitment, workers do not excavate or fetch a plank merely because physical possibilities exist.
+**Pass-A stop/probe:** with no active commitment, workers must not excavate or fetch a plank merely because physical possibilities exist.
 
-Stop and inspect after Pass A. Do not automatically continue because the code compiles.
+Do not proceed into Pass B merely because Pass A compiles. Run and inspect the Pass-A probes first.
 
-### Pass B — Embodied execution
+### Later passes
 
-Make one committed intervention execute correctly.
+The spec defines subsequent bounded work:
 
-- assign concrete worker activity from commitment;
-- retrieve exactly the required embodied member for placement;
-- travel asynchronously;
-- revalidate immediately before physical mutation;
-- execute placement/removal;
-- refresh support/topology;
-- complete or invalidate commitment;
-- preserve orphan material on failure.
+- **Pass B:** embodied execution of committed interventions and commit-time physical revalidation.
+- **Pass C:** deliberately boring/replaceable deterministic team-decision surrogate with decision continuity.
+- **Pass D:** long-run observation, deterministic replay, material exhaustion/termination, and repair.
 
-**Probe:** make the member trip long. Other workers remain alive/asynchronous; exactly one member is fetched; the carrier never shops for another edge.
+Let executable evidence determine whether each pass is ready for the next.
 
-### Pass C — Provisional team-decision continuity
+## Known control
 
-Only after A and B are observed, implement the smallest deterministic surrogate for collective choice.
+Seed **741** remains the primary regression/control specimen.
 
-Requirements:
+The current async candidate reached a useful failure state rather than a successful expedition. Preserve that failure as evidence; do not rewrite history to make the candidate appear correct.
 
-- at most one active intervention commitment for this controlled expedition;
-- choose only at decision boundaries;
-- reconsider the changed state after each intervention;
-- may select excavation or placement;
-- no architectural nouns;
-- no hard-coded branch prohibition;
-- strongly preserve local continuation when the surrogate still selects that way forward;
-- may abandon/revise when continuation is no longer viable or selected;
-- isolated and replaceable so later genuine team deliberation can replace it.
+## Durable context
 
-This is not an experiment in collective intelligence. Do not add voting, dialogue, worker disagreement, LLM reasoning, a Foreman entity, or global optimal planning.
+Also consult as needed:
 
-### Pass D — Long-run observation
+- [`VERTICAL_ACCRETION_DESIGN.md`](./VERTICAL_ACCRETION_DESIGN.md) — experiment intent and fixed invariants.
+- [`EXPERIMENT_LOG.md`](./EXPERIMENT_LOG.md) — accepted evidence and archaeology.
+- [`VERTICAL_ACCRETION_REFERENCE.png`](./VERTICAL_ACCRETION_REFERENCE.png) — perceptual reference evidence, not target geometry.
+- [`README.md`](./README.md) — repository authority and workflow.
 
-Run the apparatus long enough to falsify it.
-
-Look for:
-
-- substantial or complete plank-stock consumption where continuation remains viable;
-- repeated natural traversal / excavation / placement transitions;
-- no speculative lumber train;
-- no accidental sibling plank works;
-- physically legitimate support failure still possible;
-- honest stopping when material or continuation is exhausted;
-- deterministic replay;
-- no fatal history exhaustion.
-
-Repair observed causal failures, not imagined future architecture.
-
-## Acceptance observations
-
-The implementation is not successful merely because the ownership classes look clean.
-
-We want executable evidence that:
-
-1. no placement commitment means no plank retrieval;
-2. one placement commitment produces one member logistics chain;
-3. several mutable excavation sites do not cause independent arbitrary carving;
-4. completed physical consequence is observed before the next team decision;
-5. natural traversable ground can dissolve immediate construction pressure;
-6. sustained chosen continuation can accumulate into a long coherent works;
-7. sibling plank works do not appear merely because nearby placements are physically possible;
-8. a later branch is still possible when the chosen direction fails or the decision changes;
-9. finite material can genuinely run out;
-10. physical support failure remains real;
-11. deterministic replay remains intact;
-12. history instrumentation cannot kill the simulation.
-
-## Explicit non-goals
-
-Do not add during this iteration:
-
-- Foreman entity;
-- voting/consensus/negotiation;
-- worker dialogue;
-- LLM reasoning;
-- bridge/stair/switchback project types;
-- hard-coded no-branch rule;
-- automatic plank-chain continuation;
-- infrastructure immunity from excavation;
-- global optimal route planning;
-- speculative material staging;
-- automatic orphan-material cleanup;
-- generalized task-market architecture.
+Historical failed semantic/LLM-agent work is archaeology only. Do not revive it.
 
 ## Fresh-thread instruction
 
-A fresh conversation should begin from this repository and say to continue the current manual iteration.
+A fresh conversation should be able to begin with the repository alone:
 
-Read this handoff and README first. Inspect the preserved async candidate before editing it.
+> Work directly from this repository. Read README.md and MANUAL_ITERATION.md, then follow the active team-commitment spec. Begin at Pass A. Inspect the preserved asynchronous candidate before editing. Do not promote over index.html without explicit acceptance.
 
-Begin with **Pass A only**.
-
-Make ordinary implementation decisions without asking the human to choose them. Preserve successful asynchronous machinery. Validate against the Pass A probe and return executable evidence for inspection before broadening into Pass B.
-
-The protected canonical `index.html` remains untouched until a later candidate is explicitly accepted for promotion.
+The repository should carry the reasoning needed to continue. If the next thread requires reconstruction of this conversation, this handoff is insufficient and should be repaired.
