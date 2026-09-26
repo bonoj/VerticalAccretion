@@ -97,6 +97,27 @@ Desired use:
 
 Do not assume every seed will produce a successful descent. Failure, stall, awkward infrastructure, material exhaustion, or other differences may be experimental evidence.
 
+## Current seed and legibility evidence
+
+The manual seed affordance has now been exercised beyond the accepted control specimen.
+
+Initial seed exposure revealed that E1's original `vaSeed` influenced only a small FBM ripple term while the dominant ridge/drop/wall geology remained fixed. A working candidate therefore preserves **seed 741 as the exact accepted geological control** while allowing other seeds to deterministically vary bounded parameters of the same E1 geological grammar: ridge placement/width/height, staged-drop placement/magnitude, overall descent slope, cross-wall pressure, broad relief, and local ripple.
+
+This is controlled geological diversity, not arbitrary terrain generation. The purpose is to create changed engineering circumstances in which later systems can produce different histories while preserving a recognizable common experimental envelope.
+
+Human inspection of seed **253538** through roughly 995 simulated seconds showed a long crooked accumulated access work whose successive local placements remain visibly readable as history. The construction layer is currently much more legible than the active causal layer.
+
+The strongest current perceptual seam is therefore **worker state and spoil/material manipulation**:
+
+- stationary workers at termini or junctions are visible, but the world does not distinguish ordinary availability/holding position from an explicit wait, obstruction, isolation, or recently completed work;
+- code archaeology confirms that completed placement returns a worker to `observe`, after which frontier movement, spoil claims, or new jobs may follow;
+- worker 0 has first responsibility for frontier pursuit/job ownership, so other workers may legitimately remain stationary when they have nothing claimable;
+- `waiting for spoil clearance` is a real causal state when enough loose bearings obstruct a proposed segment;
+- `isolated after support loss` is a materially different stationary failure state;
+- carried spoil is physically real and synchronized to the carrier, but remains too small/ambiguous at the normal miniature scale.
+
+The next legibility intervention should preserve scheduling and causal behavior. Prefer a small embodied/perceptual vocabulary on the workers themselves and a clearer carried-spoil relationship over floating labels or conventional game-status UI.
+
 ## Things deliberately deferred to future expeditions
 
 Do **not** rush to implement these during manual polish merely because they are interesting:
