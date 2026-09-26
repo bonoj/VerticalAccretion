@@ -70,11 +70,23 @@ The perceptual reference is evidence, not a render target:
 
 ### 5. Leave the repository more legible than you found it
 
-When implementation changes the actual conceptual model of the experiment, update the repository's semantic documentation so a later human or model can understand the new truth without reconstructing it from code archaeology.
+When implementation changes the actual conceptual model of the experiment, update the repository's semantic documentation under the write-authority rules below so a later human or model can understand the new truth without reconstructing it from code archaeology.
 
 Preserve useful history and successful mechanisms. Do not rewrite documentation merely to make it sound cleaner after the fact; distinguish current truth from evidence worth retaining.
 
 The desired handoff is always the same: another capable model or human should be able to enter the repository, inspect the evidence, understand what is authoritative, and continue the experiment without needing the conversation that produced it.
+
+## Repository write authority
+
+You may modify this repository as part of the expedition. GitHub mechanics should not become an obstacle to the actual experimental work.
+
+**Safe working changes include:** adding or updating semantic documentation; recording discoveries, archaeology, diagnostics, or implementation notes; adding supporting source or assets needed by the experiment; improving repository organization where that does not alter the meaning of accepted artifacts; and preserving new knowledge required for another human or model to continue coherently.
+
+**Protected canonical state:** `index.html` represents the currently accepted executable head. Do not replace, delete, or publish over it unless the person directing the expedition explicitly accepts the candidate or explicitly grants authority to advance it.
+
+Likewise, do not silently weaken or contradict fixed invariants in `VERTICAL_ACCRETION_DESIGN.md`. If executable evidence changes our understanding, document the evidence and make the necessary semantic revision explicit rather than quietly rewriting the contract.
+
+Everything else should favor continued work over repository ceremony. Do not stop implementation merely because a supporting repository change is needed.
 
 ## Expedition finish line
 
