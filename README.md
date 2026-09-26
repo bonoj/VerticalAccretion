@@ -88,7 +88,7 @@ The desired handoff is always the same: another capable model or human should be
 
 ## Artifact transport — FUUTP
 
-This laboratory uses **FUUTP** as an optional external transport protocol for moving artifacts across model, repository, conversation, and execution-runtime boundaries:
+This laboratory uses **FUUTP** as the transport boundary for moving artifacts across model, repository, conversation, and execution-runtime boundaries when ordinary direct repository operations are insufficient:
 
 https://github.com/bonoj/FUUTP
 
@@ -105,6 +105,29 @@ When a human or model says **“FUUTP”**, **“use FUUTP”**, **“FUUTP it�
 7. Do not ask the human to manually shuttle an artifact merely because an obvious connector operation fails before consulting FUUTP's current documented routes.
 
 FUUTP should remain reusable by other models, runtimes, and projects. Vertical Accretion records only the invocation relationship and invariants above; the transport mechanics belong to FUUTP itself.
+
+### Working-state topology
+
+**Git is durable working storage. Execution runtimes are temporary working space. Conversation carries intent, observations, decisions, and reports—not artifact bytes.**
+
+Prefer ordinary direct repository reads and writes when they preserve the artifact exactly. If an artifact must cross a repository/runtime/conversation boundary and that direct path becomes nontrivial, invoke FUUTP automatically before asking the human to move files. Human download/upload or copy/paste is a last-resort transport failure state, never a normal development step.
+
+An unfinished executable should normally be preserved back into durable repository state under an appropriate noncanonical path such as `candidates/`, with enough identity to resume it exactly. A fresh conversation should be able to recover that working head from the repository and continue without a conversation attachment.
+
+The normal lifecycle is:
+
+```text
+repository
+→ FUUTP when needed
+→ temporary execution/runtime work
+→ implement / execute / inspect / refine
+→ FUUTP when needed
+→ durable repository candidate
+→ human inspection / explicit acceptance
+→ canonical promotion
+```
+
+Do not emit a large executable through the conversational response merely to preserve or hand it off when repository storage is available. Transport and preservation belong to the repository/FUUTP path; the response should identify the durable artifact and report what happened.
 
 ## Repository write authority
 
@@ -126,16 +149,16 @@ Do not stop merely because a plausible first implementation exists.
 
 Before finishing, inspect the resulting experiment against the design contract and repair material gaps that can reasonably be addressed within the expedition.
 
-Then return:
+Then:
 
-1. the **complete resulting executable artifact**;
-2. a **brief expedition report** describing what was built, what was learned, important failures or compromises, and any discoveries that should influence subsequent work.
+1. preserve the **complete resulting executable candidate** in durable repository state, using FUUTP when necessary; normally use a noncanonical path such as `candidates/` unless canonical promotion has been explicitly authorized;
+2. return the candidate's repository location/identity and a **brief expedition report** describing what was built, what was learned, important failures or compromises, and any discoveries that should influence subsequent work.
 
-The returned artifact is a **candidate**, not automatically the repository's new accepted state.
+The preserved artifact is a **candidate**, not automatically the repository's new accepted state. Do not require the conversational response or the human to carry the executable bytes merely to complete the handoff.
 
-Do not replace `index.html`, publish to this repository, or otherwise advance canonical repository state unless explicitly instructed by the person directing the expedition.
+Do not replace `index.html`, publish over it, or otherwise advance canonical repository state unless explicitly instructed by the person directing the expedition.
 
-Repository publication is a separate acceptance step and may be performed by a human, another model, CI, or any other transport mechanism. This laboratory places no requirement on how publication occurs.
+Canonical promotion is a separate acceptance step. Once authorized, perform the repository update directly, using FUUTP if transport requires it, and verify the promoted artifact with the strongest practical identity check.
 
 ## Reproducing the workflow
 
