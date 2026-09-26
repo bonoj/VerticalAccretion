@@ -2,7 +2,17 @@
 
 **Model-ready design document for independent realization from Foundry**
 
-> **Status:** Implementation contract for an exploratory laboratory expedition. The supplied raster is perceptual reference evidence; Foundry is the inherited executable apparatus. This document intentionally fixes some engineering constraints while preserving open research questions.
+> **Status:** Implementation contract for an exploratory laboratory expedition. `VERTICAL_ACCRETION_REFERENCE.png` is perceptual reference evidence; Foundry is the inherited executable apparatus. This document intentionally fixes some engineering constraints while preserving open research questions.
+
+### Perceptual reference
+
+`VERTICAL_ACCRETION_REFERENCE.png` is the principal perceptual reference for this expedition.
+
+Treat it as **evidence for how a mature Vertical Accretion run might read**, not as a scene to reproduce, a layout to reconstruct, or a target state toward which the simulation must converge.
+
+Preserve the qualities it demonstrates where the simulation earns them: overwhelming geological mass and vertical depth; construction subordinate to terrain; accumulated crude structural works; darkness as spatial information; sparse warm working light; tiny human scale; and the sense that access downward has been established incrementally over a long physical history.
+
+> **Do not build the image. Build the processes capable of earning an image like it.**
 
 ## 1. Expedition intent
 
@@ -10,7 +20,7 @@ Build a simulation in which a small population progressively makes inaccessible 
 
 The interesting object is not the final mine, settlement, cave, or construction. It is the accumulated physical history of decisions that made continued descent possible.
 
-The supplied raster is perceptual evidence for a plausible mature state: geology/materials/structural-engineering forward; enormous vertical scale; darkness; sparse warm working light; crude accumulated structural works; tiny actors where visible; terrain and construction interpenetrating; no fantasy architecture or decorative magical language. The simulation must earn anything resembling that image.
+`VERTICAL_ACCRETION_REFERENCE.png` is perceptual evidence for a plausible mature state: geology/materials/structural-engineering forward; enormous vertical scale; darkness; sparse warm working light; crude accumulated structural works; tiny actors where visible; terrain and construction interpenetrating; no fantasy architecture or decorative magical language. The simulation must earn anything resembling that image.
 
 ## 2. Research questions
 
@@ -199,7 +209,7 @@ The interesting question is not whether Astra can make green-metal buildings. It
 
 ## 16. Visual realization
 
-The supplied raster is the principal perceptual reference. Preserve its reading, not its literal composition.
+`VERTICAL_ACCRETION_REFERENCE.png` is the principal perceptual reference. Preserve its reading, not its literal composition.
 
 Important qualities:
 
@@ -224,7 +234,7 @@ Avoid:
 
 > **The visual target should communicate: people have been trying to get downward for a very long time. It should not communicate: someone designed a cool underground city.**
 
-The raster depicts a plausible late-stage archaeological reading, not a target T0 and not a mandate that every run converge on the same visual history.
+`VERTICAL_ACCRETION_REFERENCE.png` depicts a plausible late-stage archaeological reading, not a target T0 and not a mandate that every run converge on the same visual history.
 
 ## 17. Inspection and diagnostics
 
@@ -294,7 +304,7 @@ A particularly valuable stopping point is the first time yesterday's solution be
 
 ## 21. Handoff posture
 
-Treat Foundry as the working ancestor, this document as the implementation contract, and the supplied raster as perceptual evidence.
+Treat Foundry as the working ancestor, this document as the implementation contract, and `VERTICAL_ACCRETION_REFERENCE.png` as perceptual evidence.
 
 **Build the world, not a plan for the world.**
 
