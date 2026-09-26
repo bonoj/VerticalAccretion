@@ -1,176 +1,83 @@
 # Vertical Accretion / Descent Lab
 
-Vertical Accretion is an exploratory simulation laboratory about a small population making progressively deeper space usable by physically changing its environment.
+Vertical Accretion is a deterministic embodied descent experiment about progressively making inaccessible nearby space operationally reachable through physical exploration, excavation, logistics, and construction.
 
-It begins from the working **Foundry** apparatus rather than from a blank application. The experiment is interested in autonomous descent, terrain deformation, construction, material logistics, gravity, accumulated infrastructure, and the possibility that a mature environment can become a readable record of the decisions that produced it.
+The repository is intentionally small. Its live surface should answer two questions without requiring conversational context:
 
-This repository is intentionally small. It is both a runnable artifact and a self-contained handoff for humans or models who want to reproduce, extend, challenge, or fork the experiment.
+1. **What can the experiment actually do?**
+2. **What do those capabilities currently mean?**
 
 ## Start here
 
-The repository contains three authoritative expedition artifacts:
+Read these in order:
 
-- [VERTICAL_ACCRETION_DESIGN.md](./VERTICAL_ACCRETION_DESIGN.md) — the implementation contract: research questions, fixed invariants, inherited capabilities, open decisions, non-goals, and success conditions.
-- [index.html](./index.html) — the inherited executable Foundry apparatus and working implementation surface. Do not treat it as disposable scaffolding.
-- [VERTICAL_ACCRETION_REFERENCE.png](./VERTICAL_ACCRETION_REFERENCE.png) — perceptual reference evidence for how a mature run might read. It is not a scene to reproduce or a target state.
+1. [SEMANTIC_SURFACE.md](./SEMANTIC_SURFACE.md) — the present-tense semantic interpretation of the accepted experiment: authority boundaries, earned capabilities, important distinctions, and explicit non-claims.
+2. [index.html](./index.html) — the accepted executable head. This is the ground truth for whether a capability actually exists.
+3. [VERTICAL_ACCRETION_REFERENCE.png](./VERTICAL_ACCRETION_REFERENCE.png) — perceptual evidence for the geological/material/structural character of a mature run. It is evidence, not a scene to reproduce.
 
-The design contract governs interpretation of the executable and reference image.
+The executable governs capability. The semantic surface governs the repository's present interpretation of that capability.
 
----
+If they materially disagree, executable behavior is evidence that the semantic surface needs revision.
 
-## Model handoff
+Historical designs, expedition specifications, experiment logs, rejected candidates, and prior handoffs live in Git history. They are archaeology, not additional current authority.
 
-If you are a model being asked to realize or continue Vertical Accretion, work directly from this repository.
+## Working posture
 
-### 1. Establish the evidence
+Work from semantic intent and executable evidence.
 
-Read [VERTICAL_ACCRETION_DESIGN.md](./VERTICAL_ACCRETION_DESIGN.md) completely before making implementation decisions.
+Preserve the distinctions in the semantic surface unless new executable evidence earns a change. Preserve useful implementation machinery when it helps, but do not treat current code architecture, helper names, constants, state-machine decomposition, or historical implementation choices as semantic invariants.
 
-Inspect [index.html](./index.html) as executable inherited machinery. Determine what already works before changing it.
+A future implementation may substantially replace today's machinery while preserving the experiment's meaning. Conversely, changing code does not automatically change the semantic surface: a new semantic claim should be earned by executable behavior.
 
-Inspect [VERTICAL_ACCRETION_REFERENCE.png](./VERTICAL_ACCRETION_REFERENCE.png) under the perceptual-reference rules in the design contract.
+The central loop is:
 
-Do not infer hidden architecture, requirements, backstory, or intended systems beyond the repository evidence.
+**local physical evidence → embodied intention → physically reachable intervention → logistics → physical consequence → new local evidence**
 
-### 2. Preserve inherited machinery until evidence says otherwise
+The current experiment is simulation-forward. Ordinary engineering decisions belong to the implementer. When behavior is uncertain, prefer implementation, execution, inspection, diagnosis, and refinement over speculative architecture.
 
-Foundry already contains substantial working terrain, physics, material-flow, ECS, camera, interaction, diagnostic, and procedural machinery. These are inherited capabilities, not problems to solve again.
+Keep failures visible. Do not silently convert physical limitations into permissions merely to make a run continue.
 
-Do not replace working machinery because another implementation seems cleaner, more general, more familiar, or more elegant. Modify inherited systems when executable evidence shows that Vertical Accretion requires it.
+## Semantic maintenance
 
-The existing ECS is a required extensibility surface. Extend it where new independently composable behavior is earned; do not retreat into payload-specific monolithic actors or invent a large speculative component ontology.
+Update [SEMANTIC_SURFACE.md](./SEMANTIC_SURFACE.md) when executable evidence materially changes what the project knows about itself.
 
-### 3. Build through executable evidence
+Do not use the semantic surface as a roadmap or wish list. It describes what the accepted executable has earned now.
 
-Do not return a plan in place of the experiment.
+Temporary expedition briefs and working specifications are useful when a concrete investigation needs them. They do not become permanent root authority merely because they helped produce a successful change. Once their relevant discoveries have been incorporated into the accepted executable and semantic surface, Git history is sufficient archaeology.
 
-Implement, run, inspect, diagnose, refine, and continue. Preserve successful behavior as the realization grows. When an approach fails, repair or replace it rather than preserving it merely because work has already been invested.
+The live root should remain legible to a capable human or model arriving cold.
 
-Make ordinary engineering, architectural, procedural, simulation, and visual decisions yourself. Surface a decision only when choosing one interpretation would materially close a research question that the design contract deliberately leaves open.
+## Executable state
 
-Keep runtime failures visible and diagnostically useful.
+[index.html](./index.html) is the currently accepted executable head.
 
-#### Development cadence — inspect before systemic change
+Do not replace, delete, or publish over it without explicit acceptance from the person directing the experiment. A working implementation may be preserved in Git while it is under investigation, but superseded candidates should not accumulate in the live root as competing versions of present truth.
 
-Use the weight and causal clarity of a change to choose the workflow rather than requiring ceremony for every edit.
-
-For a narrow change whose cause and ownership are already clear, implement and validate it directly.
-
-When an observed failure or requested change is non-obvious, crosses system or ownership boundaries, alters systemic behavior, or would benefit from a new abstraction, do not jump from symptom to code. Inspect the current executable and relevant inherited machinery first. If inspection shows that a bounded contract would improve the change, write an evidence-derived spec covering invariants, ownership boundaries, non-goals, and executable acceptance probes. Then implement one coherent pass, validate mechanically where possible, and return to executable observation.
-
-The model is expected to judge when this heavier inspect → spec → implement → validate → observe workflow is warranted and may create the intermediate spec without being asked. A human may also request a spec explicitly. Inspection precedes specification. A spec is an epistemic tool, not a mandatory deliverable. Do not write one for an obvious local defect merely to satisfy process. Executable evidence remains authoritative over both diagnosis and specification.
-
-### 4. Preserve the experiment's epistemology
-
-The simulation should earn its forms.
-
-Do not begin from architectural nouns and force the world to instantiate them. Prefer physical operations and consequences from which recognizable infrastructure can emerge.
-
-Natural terrain is legitimate infrastructure. Construction and excavation answer insufficient access; they are not prerequisites for movement.
-
-Traversal is logistical rather than merely topological: agents and relevant material should be able to move sufficiently safely and repeatedly both downward and upward.
-
-Accumulated infrastructure should retain history rather than continually optimizing itself away.
-
-Semantic reasoning may eventually influence intention, but deterministic physical consequence remains authoritative.
-
-The perceptual reference is evidence, not a render target:
-
-> **Do not build the image. Build the processes capable of earning an image like it.**
-
-### 5. Leave the repository more legible than you found it
-
-When implementation changes the actual conceptual model of the experiment, update the repository's semantic documentation under the write-authority rules below so a later human or model can understand the new truth without reconstructing it from code archaeology.
-
-Preserve useful history and successful mechanisms. Do not rewrite documentation merely to make it sound cleaner after the fact; distinguish current truth from evidence worth retaining.
-
-The desired handoff is always the same: another capable model or human should be able to enter the repository, inspect the evidence, understand what is authoritative, and continue the experiment without needing the conversation that produced it.
+Acceptance and transport are separate concerns.
 
 ## Artifact transport — FUUTP
 
-This laboratory uses **FUUTP** as the transport boundary for moving artifacts across model, repository, conversation, and execution-runtime boundaries when ordinary direct repository operations are insufficient:
+Use [FUUTP](https://github.com/bonoj/FUUTP) when an artifact must cross repository, model, conversation, or execution-runtime boundaries and the ordinary direct path is insufficient.
 
-https://github.com/bonoj/FUUTP
-
-FUUTP is a standalone public repository and is **not part of Vertical Accretion, not ChatGPT-specific, and not application architecture**. Do not copy its current transport implementation into this repository or make the executable depend on it.
-
-When a human or model says **“FUUTP”**, **“use FUUTP”**, **“FUUTP it”**, or otherwise invokes FUUTP while transferring an artifact:
-
-1. Read the current FUUTP README from its public repository.
-2. Treat that README as the transport authority; its implementation may evolve as different model/tool environments expose different seams.
-3. Infer transfer direction from the surrounding task and use the simplest exact-fidelity route available in the current environment.
-4. Preserve the transported artifact exactly unless modification is separately part of the task. Transport does not authorize parsing/reserialization, reconstruction, minification, refactoring, or semantic change.
-5. Verify transfer fidelity using the strongest identity mechanism available. For Git-backed artifacts, exact Git blob identity is preferred when practical.
-6. Keep **transport authority separate from canonical-state authority**. Successfully moving a candidate into or out of a repository does not accept, publish, or promote that candidate.
-7. Do not ask the human to manually shuttle an artifact merely because an obvious connector operation fails before consulting FUUTP's current documented routes.
-
-FUUTP should remain reusable by other models, runtimes, and projects. Vertical Accretion records only the invocation relationship and invariants above; the transport mechanics belong to FUUTP itself.
-
-### Working-state topology
+The transport invariant is simple:
 
 **Git is durable working storage. Execution runtimes are temporary working space. Conversation carries intent, observations, decisions, and reports—not artifact bytes.**
 
-Prefer ordinary direct repository reads and writes when they preserve the artifact exactly. If an artifact must cross a repository/runtime/conversation boundary and that direct path becomes nontrivial, invoke FUUTP automatically before asking the human to move files. Human download/upload or copy/paste is a last-resort transport failure state, never a normal development step.
+Prefer direct repository reads and writes when they preserve exact fidelity. When that seam fails or cannot carry the artifact, read the current FUUTP README and use the simplest exact-fidelity route available.
 
-An unfinished executable should normally be preserved back into durable repository state under an appropriate noncanonical path such as `candidates/`, with enough identity to resume it exactly. A fresh conversation should be able to recover that working head from the repository and continue without a conversation attachment.
+Transport does not authorize semantic change, reconstruction, minification, refactoring, or canonical promotion. Human download/upload or copy/paste is a last-resort transport failure state, not the normal workflow.
 
-The normal lifecycle is:
+## Continuing the experiment
 
-```text
-repository
-→ FUUTP when needed
-→ temporary execution/runtime work
-→ implement / execute / inspect / refine
-→ FUUTP when needed
-→ durable repository candidate
-→ human inspection / explicit acceptance
-→ canonical promotion
-```
+A capable successor should be able to enter from this repository alone:
 
-Do not emit a large executable through the conversational response merely to preserve or hand it off when repository storage is available. Transport and preservation belong to the repository/FUUTP path; the response should identify the durable artifact and report what happened.
+- read the semantic surface;
+- inspect and execute the accepted head;
+- identify a concrete question or observed failure;
+- alter or replace implementation as needed without accidentally inheriting archaeological constraints;
+- test the result through executable evidence;
+- revise the semantic surface only when the evidence earns a new present-tense understanding.
 
-## Repository write authority
+The repository should preserve **understanding and capability**, not ceremony.
 
-You may modify this repository as part of the expedition. GitHub mechanics should not become an obstacle to the actual experimental work.
-
-**Safe working changes include:** adding or updating semantic documentation; recording discoveries, archaeology, diagnostics, or implementation notes; adding supporting source or assets needed by the experiment; improving repository organization where that does not alter the meaning of accepted artifacts; and preserving new knowledge required for another human or model to continue coherently.
-
-**Protected canonical state:** `index.html` represents the currently accepted executable head. Do not replace, delete, or publish over it unless the person directing the expedition explicitly accepts the candidate or explicitly grants authority to advance it.
-
-Likewise, do not silently weaken or contradict fixed invariants in `VERTICAL_ACCRETION_DESIGN.md`. If executable evidence changes our understanding, document the evidence and make the necessary semantic revision explicit rather than quietly rewriting the contract.
-
-Everything else should favor continued work over repository ceremony. Do not stop implementation merely because a supporting repository change is needed.
-
-## Expedition finish line
-
-Continue through implementation, execution, inspection, diagnosis, and refinement until the design contract's success conditions have been materially addressed or further progress is blocked by a concrete limitation.
-
-Do not stop merely because a plausible first implementation exists.
-
-Before finishing, inspect the resulting experiment against the design contract and repair material gaps that can reasonably be addressed within the expedition.
-
-Then:
-
-1. preserve the **complete resulting executable candidate** in durable repository state, using FUUTP when necessary; normally use a noncanonical path such as `candidates/` unless canonical promotion has been explicitly authorized;
-2. return the candidate's repository location/identity and a **brief expedition report** describing what was built, what was learned, important failures or compromises, and any discoveries that should influence subsequent work.
-
-The preserved artifact is a **candidate**, not automatically the repository's new accepted state. Do not require the conversational response or the human to carry the executable bytes merely to complete the handoff.
-
-Do not replace `index.html`, publish over it, or otherwise advance canonical repository state unless explicitly instructed by the person directing the expedition.
-
-Canonical promotion is a separate acceptance step. Once authorized, perform the repository update directly, using FUUTP if transport requires it, and verify the promoted artifact with the strongest practical identity check.
-
-## Reproducing the workflow
-
-Nothing about this workflow depends on privileged conversational context.
-
-To create a new laboratory from scratch:
-
-1. Start with a working executable ancestor, or the smallest executable apparatus that already provides the machinery your question needs.
-2. Write a compact design contract that separates fixed invariants, inherited capabilities, open research questions, non-goals, and observable success conditions.
-3. Add perceptual or semantic references only when they provide evidence the contract can interpret; do not let references silently become specifications.
-4. Add a short repository README that tells the next human or model which artifacts are authoritative and how to work from them.
-5. Give the repository to another capable model with a lightweight instruction to work directly from it.
-6. Judge progress through executable evidence, and promote discoveries back into the repository when they become part of the experiment's durable truth.
-
-The repository, not the originating chat, should carry the experiment forward.
+Git history preserves how we got here.
