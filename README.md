@@ -76,6 +76,26 @@ Preserve useful history and successful mechanisms. Do not rewrite documentation 
 
 The desired handoff is always the same: another capable model or human should be able to enter the repository, inspect the evidence, understand what is authoritative, and continue the experiment without needing the conversation that produced it.
 
+## Artifact transport — FUUTP
+
+This laboratory uses **FUUTP** as an optional external transport protocol for moving artifacts across model, repository, conversation, and execution-runtime boundaries:
+
+https://github.com/bonoj/FUUTP
+
+FUUTP is a standalone public repository and is **not part of Vertical Accretion, not ChatGPT-specific, and not application architecture**. Do not copy its current transport implementation into this repository or make the executable depend on it.
+
+When a human or model says **“FUUTP”**, **“use FUUTP”**, **“FUUTP it”**, or otherwise invokes FUUTP while transferring an artifact:
+
+1. Read the current FUUTP README from its public repository.
+2. Treat that README as the transport authority; its implementation may evolve as different model/tool environments expose different seams.
+3. Infer transfer direction from the surrounding task and use the simplest exact-fidelity route available in the current environment.
+4. Preserve the transported artifact exactly unless modification is separately part of the task. Transport does not authorize parsing/reserialization, reconstruction, minification, refactoring, or semantic change.
+5. Verify transfer fidelity using the strongest identity mechanism available. For Git-backed artifacts, exact Git blob identity is preferred when practical.
+6. Keep **transport authority separate from canonical-state authority**. Successfully moving a candidate into or out of a repository does not accept, publish, or promote that candidate.
+7. Do not ask the human to manually shuttle an artifact merely because an obvious connector operation fails before consulting FUUTP's current documented routes.
+
+FUUTP should remain reusable by other models, runtimes, and projects. Vertical Accretion records only the invocation relationship and invariants above; the transport mechanics belong to FUUTP itself.
+
 ## Repository write authority
 
 You may modify this repository as part of the expedition. GitHub mechanics should not become an obstacle to the actual experimental work.
