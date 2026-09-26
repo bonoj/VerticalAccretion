@@ -50,6 +50,16 @@ Make ordinary engineering, architectural, procedural, simulation, and visual dec
 
 Keep runtime failures visible and diagnostically useful.
 
+#### Development cadence — inspect before systemic change
+
+Use the weight and causal clarity of a change to choose the workflow rather than requiring ceremony for every edit.
+
+For a narrow change whose cause and ownership are already clear, implement and validate it directly.
+
+When an observed failure or requested change is non-obvious, crosses system or ownership boundaries, alters systemic behavior, or would benefit from a new abstraction, do not jump from symptom to code. Inspect the current executable and relevant inherited machinery first. If inspection shows that a bounded contract would improve the change, write an evidence-derived spec covering invariants, ownership boundaries, non-goals, and executable acceptance probes. Then implement one coherent pass, validate mechanically where possible, and return to executable observation.
+
+The model is expected to judge when this heavier inspect → spec → implement → validate → observe workflow is warranted and may create the intermediate spec without being asked. A human may also request a spec explicitly. Inspection precedes specification. A spec is an epistemic tool, not a mandatory deliverable. Do not write one for an obvious local defect merely to satisfy process. Executable evidence remains authoritative over both diagnosis and specification.
+
 ### 4. Preserve the experiment's epistemology
 
 The simulation should earn its forms.
