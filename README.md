@@ -76,6 +76,25 @@ Preserve useful history and successful mechanisms. Do not rewrite documentation 
 
 The desired handoff is always the same: another capable model or human should be able to enter the repository, inspect the evidence, understand what is authoritative, and continue the experiment without needing the conversation that produced it.
 
+## Expedition finish line
+
+Continue through implementation, execution, inspection, diagnosis, and refinement until the design contract's success conditions have been materially addressed or further progress is blocked by a concrete limitation.
+
+Do not stop merely because a plausible first implementation exists.
+
+Before finishing, inspect the resulting experiment against the design contract and repair material gaps that can reasonably be addressed within the expedition.
+
+Then return:
+
+1. the **complete resulting executable artifact**;
+2. a **brief expedition report** describing what was built, what was learned, important failures or compromises, and any discoveries that should influence subsequent work.
+
+The returned artifact is a **candidate**, not automatically the repository's new accepted state.
+
+Do not replace `index.html`, publish to this repository, or otherwise advance canonical repository state unless explicitly instructed by the person directing the expedition.
+
+Repository publication is a separate acceptance step and may be performed by a human, another model, CI, or any other transport mechanism. This laboratory places no requirement on how publication occurs.
+
 ## Reproducing the workflow
 
 Nothing about this workflow depends on privileged conversational context.
