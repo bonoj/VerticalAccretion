@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./VERTICAL_ACCRETION_REFERENCE.png" alt="Vertical Accretion" width="900">
+</p>
+
 # Vertical Accretion / Descent Lab
 
 Vertical Accretion is a deterministic embodied descent experiment about progressively making inaccessible nearby space operationally reachable through physical exploration, excavation, logistics, and construction.
